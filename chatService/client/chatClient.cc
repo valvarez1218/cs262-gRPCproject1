@@ -1,4 +1,5 @@
-#include "../chatService.pb.h"
+#include "../../build/chatService.pb.h"
+#include "../../build/chatService.grpc.pb.h"
 
 int main() {
     chatService::chatMessage msg;
