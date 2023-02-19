@@ -1,0 +1,122 @@
+syntax = "proto3";
+
+package chatService;
+
+service chatService {
+    rpc CreateAccount(createAccountMessage) returns (createAccountReply);
+    rpc Login(loginMessage) returns (loginReply);
+    rpc Logout(logoutMessage) returns (logoutReply);
+    rpc ListUsers(queryUsersMessage) returns (stream user);
+    rpc SendMessage(chatMessage) returns (sendMessageReply);
+    rpc QueryNotifications(queryNotificationsMessage) returns (stream notification);
+    rpc QueryMessages(queryMessagesMessage) returns (stream chatMessage);
+    rpc DeleteAccount(deleteAccountMessage) returns (deleteAccountReply);
+
+    // May not need this anymore?
+    rpc MessagesSeen(messagesSeenMessage) returns (messagesSeenMessage);
+
+
+    // Server->client
+    rpc NewMessage(chatMessage) returns (newMessageReply);
+}
+
+
+message createAccountMessage {
+    string username=1;
+    string password=2;
+}
+
+
+message createAccountReply {
+    bool createAccountSuccess=1;
+    optional string errorMsg=2;
+}
+
+
+message loginMessage {
+    string username=1;
+    string password=2;
+}
+
+
+message loginReply {
+    bool loginSuccess=1;
+    optional string errorMsg=2;
+}
+
+
+message logoutMessage {
+    bool loggingOut=1;
+}
+
+
+message logoutReply {
+    bool loggedOut=1;
+    optional string errorMsg=2;
+}
+
+
+message queryUsersMessage {
+    optional string username=1;
+}
+
+
+message user {
+    string username=1;
+}
+
+
+// message chatMessage {
+//     string recipientUsername=1;
+//     string msgContent=2;
+// }
+
+
+message sendMessageReply {
+    bool messageSent=1;
+    optional string errorMsg=2;
+}
+
+
+message queryNotificationsMessage {
+    bool queryingNotifications=1;
+}
+
+
+message notification {
+    string user=1;
+    int32 numberOfNotifications=2;
+}
+
+
+message queryMessagesMessage {
+    string username=1;
+}
+
+
+message chatMessage {
+    string senderUsername=1;
+    string msgContent=2;
+}
+
+
+message deleteAccountMessage {
+    bool deletingAccount=1;
+}
+
+
+message deleteAccountReply {
+    bool deletedAccount=1;
+    optional string errorMsg=2;
+}
+
+
+message messagesSeenMessage {
+    int32 messagesSeen=1;
+    int32 firstMessageIdx=2;
+}
+
+
+message newMessageReply {
+    bool received=1;
+}
