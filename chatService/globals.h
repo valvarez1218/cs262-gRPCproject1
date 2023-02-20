@@ -28,6 +28,10 @@
 
 #define REFRESH_REQUEST             21
 // #define NEW_MESSAGE_REPLY           19
+#define HELP                        22
+
+// This is a value corresponding to the supported operations
+typedef char opCode;
 
 // global variables
 const size_t g_UsernameLimit = 32;

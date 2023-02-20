@@ -1,6 +1,7 @@
 // #include "../messageTypes.h"
 #include "userOperations.h"
 
+#include <vector>
 #include <unordered_map>
 
 // DECLARING GLOBALS
@@ -90,12 +91,27 @@ std::vector<std::string> makeStringVector (std::string inputString) {
 }
 
 
+void printUsage();
+
+struct ParsedInput {
+    opCode operation;
+    std::vector<std::string> arguments;
+
+    // Default constructor initialized nothing
+    ParsedInput(){}
+
+    ParsedInput(opCode op, std::vector<std::string> args) {
+        operation = op;
+        arguments = args;
+    }
+};
 
 // This function will parse the user input and return the corresponding operation code
-void parseInput (std::string userInput) {
+ParsedInput parseInput (std::string userInput) {
     if (userInput.size() == 0) {
         return;
     }
+
     // Convert input string into vector of strings
     std::vector<std::string> inputVector;
     try {
@@ -114,142 +130,23 @@ void parseInput (std::string userInput) {
         throw std::invalid_argument(errorMessage);
     }
     opCode operation = operationMap.at(firstToken);
-
     // remove operation from beginning of input vector
     std::vector<std::string> remainingInputVector(inputVector.begin()+1, inputVector.end());
-    // Message* message;
-    switch (operation)
-    {
-        case CREATE_ACCOUNT:
-            {            
-                CreateAccountMessage create_account_message;
-                try {
-                    create_account_message.populate(remainingInputVector);
-                    createAccount(server_socket, create_account_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In Case CREATE_ACCOUNT:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
 
-        case LOGIN:
-            {
-                LoginMessage login_message;
-                try {
-                    login_message.populate(remainingInputVector);
-                    login(server_socket, login_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In case LOGIN:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
-
-        case LOGOUT:
-            {
-                LogoutMessage logout_message;
-                try {
-                    logout_message.populate(remainingInputVector);
-                    logout(server_socket, logout_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In case LOGOUT:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
-        
-        case LIST_USERS:
-            {
-                ListUsersMessage list_users_message;
-                try {
-                    list_users_message.populate(remainingInputVector);
-                    listUsers(server_socket, list_users_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In case LIST_USERS:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
-        
-        case SEND_MESSAGE:
-            {
-                SendMessageMessage send_message_message;
-                try {
-                    send_message_message.populate(remainingInputVector);
-                    sendMessage(server_socket, send_message_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In case SEND_MESSAGE:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
-        
-        case QUERY_NOTIFICATIONS:
-            {
-                QueryNotificationsMessage query_notes_message;
-                try {
-                    query_notes_message.populate(remainingInputVector);
-                    queryNotifications(server_socket, query_notes_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In case QUERY_NOTIFICATIONS:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
-
-        case QUERY_MESSAGES:
-            {
-                QueryMessagesMessage query_messages_message;
-                try {
-                    query_messages_message.populate(remainingInputVector);
-                    queryMessages(server_socket, query_messages_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In case QUERY_MESSAGES:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
-        
-        case DELETE_ACCOUNT:
-            {
-                DeleteAccountMessage delete_account_message;
-                try {
-                    delete_account_message.populate(remainingInputVector);
-                    deleteAccount(server_socket, delete_account_message);
-                } catch (std::runtime_error &e) {
-                    std::cout << "In case DELETE_ACCOUNT:" << std::endl;
-                    std::cout << e.what() << std::endl;
-                } catch (std::invalid_argument &e) {
-                    std::cout << e.what() << std::endl;
-                }
-            }
-            break;
-
-        default:
-            throw std::invalid_argument("No matching operation case.");
-            break;
-    }
+    return ParsedInput(operation, remainingInputVector);
 }
 
 
 void printUsage() {
-    // TODO: print usage for user
     std::cout << "Chat Usage:" << std::endl;
-    std::cout << "      If Not Logged In:" << std::endl;
-    std::cout << "          - create_account username password:         creates account and logs you in." << std::endl;
+    std::cout << "  If not logged in:" << std::endl;
+    std::cout << "\n      - create_account username password:                 creates account and logs you in." << std::endl;
+    std::cout << "\n      - login username password:                          logs you into existing account" << std::endl;
+    std::cout << "\n  If logged in:" << std::endl;
+    std::cout << "\n      - logout:                                           logs you out and closes application." << std::endl;
+    std::cout << "\n      - list_users prefix:                                lists all users with prefix to command line, if no prefix given lists all users" << std::endl;
+    std::cout << "\n      - send_message username \"message_content\":        sends message content to specified user" << std::endl;
+    std::cout << "\n      - query_notifications:                              prints notifications as 'user: # message(s)'" << std::endl;
+    std::cout << "\n      - query_messages username:                          prints out messages with specified user, up to 20 at at time" << std::endl;
+    std::cout << "\n      - delete_account username password:                 delets account associated with username and exits application." << std::endl;
 }

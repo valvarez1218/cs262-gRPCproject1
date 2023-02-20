@@ -29,6 +29,8 @@ using chatservice::SendMessageReply;
 using chatservice::Notification;
 using chatservice::DeleteAccountReply;
 using chatservice::NewMessageReply;
+using chatservice::RefreshRequest;
+using chatservice::RefreshResponse;
 
 class ChatServiceImpl final : public chatservice::ChatService::Service {
     private:
@@ -44,7 +46,6 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             // Mutex lock, check for existing users, add user, etc.
             if (userTrie.userExists(create_account_message->username())) {
                 std::string errorMsg = "Username '" + create_account_message->username() + "' already exists.";
-                server_reply->set_createaccountsuccess(false); // Username exists already, 
                 server_reply->set_errormsg(errorMsg);
             } else {
                 // Update storage with new user
@@ -62,8 +63,8 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
                 socketDictionary_mutex.unlock();
 
                 std::cout << "Username '" << username << "' added with client_fd: " << std::to_string(client_fd) << ", and thread id: "<< thread_id << std::endl;
-            }
-            
+                return Status::OK;
+            }           
         }
 
         // TODO
@@ -75,7 +76,7 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             userTrie_mutex.lock();
             bool verified = userTrie.verifyUser(username, password);
             userTrie_mutex.unlock();
-    }
+        }
 
         // TODO
         Status Logout(ServerContext* context, const LogoutMessage* logout_message, LogoutReply* server_reply) {
@@ -118,6 +119,11 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
 
         // TODO: might not need this one, it's from server to client
         Status NewMessage(ServerContext* context, const ChatMessage* msg, NewMessageReply* client_reply) {
+
+        }
+
+        // TODO: send client updates
+        Status RefreshClient(ServerContext* context, const RefreshRequest* request, RefreshResponse* reply) {
 
         }
 };

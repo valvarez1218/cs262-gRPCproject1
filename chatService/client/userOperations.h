@@ -1,8 +1,46 @@
-// #include "../messageTypes.h"
-#include "establishConnection.h"
+#include "../globals.h"
+#include "../chatService.grpc.pb.h"
 
-// Boolean determining whether the user has logged in
-bool USER_LOGGED_IN = false;
+#include <grpc/grpc.h>
+#include <grpcpp/channel.h>
+#include <grpcpp/create_channel.h>
+#include <grpcpp/client_context.h>
+#include <grpcpp/create_channel.h>
+#include <grpcpp/security/credentials.h>
+
+
+using grpc::Channel;
+using grpc::ClientContext;
+using grpc::ClientReader;
+using grpc::ClientReaderWriter;
+using grpc::ClientWriter;
+using grpc::Status;
+
+using chatservice::ChatService;
+// Messages
+using chatservice::CreateAccountMessage;
+using chatservice::LoginMessage;
+using chatservice::LogoutMessage;
+using chatservice::QueryUsersMessage;
+using chatservice::ChatMessage;
+using chatservice::QueryNotificationsMessage;
+using chatservice::QueryMessagesMessage;
+using chatservice::DeleteAccountMessage;
+using chatservice::MessagesSeenMessage;
+// Replies
+using chatservice::CreateAccountReply;
+using chatservice::LoginReply;
+using chatservice::LogoutReply;
+using chatservice::User;
+using chatservice::SendMessageReply;
+using chatservice::Notification;
+using chatservice::DeleteAccountReply;
+using chatservice::NewMessageReply;
+using chatservice::RefreshRequest;
+using chatservice::RefreshResponse;
+
+
+
 // Boolean determining whether program is still running
 bool g_ProgramRunning = true;
 
@@ -10,191 +48,215 @@ std::string loggedInErrorMsg(std::string operationAttempted) {
     return "User must be logged in to perform " + operationAttempted;
 }
 
-void createAccount(int socket_fd, CreateAccountMessage &create_account_message) {
-    if (USER_LOGGED_IN) {
-        throw std::runtime_error("Cannot create account if already logged in.");
-    }
 
-    int valsent = send(socket_fd, &create_account_message, sizeof(CreateAccountMessage), 0);
+struct ChatServiceClient {
+    private:
+        std::unique_ptr<ChatService::Stub> stub_;
+        // Boolean determining whether the user has logged in
+        bool USER_LOGGED_IN = false;
+        std::string clientUsername;
 
-    CreateAccountReply serverReply;
-    int valread = read(socket_fd, &serverReply, sizeof(CreateAccountReply));
-
-    if (valread == -1) {
-        throw std::runtime_error("Error reading server response from socket.");
-    }
-
-    if (serverReply.queryStatus == 1) {
-        throw std::runtime_error("Username was taken, could not create account.");
-    }
-
-    std::cout << "Welcome " << create_account_message.userName << "!" << std::endl;
-
-    USER_LOGGED_IN = true;
-}
-
-
-void login(int socket_fd, LoginMessage &login_message) {
-    if (USER_LOGGED_IN) {
-        throw std::runtime_error("Cannot log in if already logged in.");
-    }
-
-    send(socket_fd, &login_message, sizeof(LoginMessage), 0);
-    LoginReply serverReply;
-    int valread = read(socket_fd, &serverReply, sizeof(LoginReply));
-
-    if (valread == -1) {
-        throw std::runtime_error("Error reading server response from socket.");
-    }
-
-    if (serverReply.queryStatus == 1) {
-        throw std::runtime_error("Incorrect username or password.");
-    }
-    std::cout << "Welcome " << login_message.userName << "!" << std::endl;
-    USER_LOGGED_IN = true;
-}
-
-
-// ALL FUNCTIONS BELOW HERE REQUIRE USER TO BE LOGGED IN
-
-
-void logout(int socket_fd, LogoutMessage &logout_message) {
-    if (!USER_LOGGED_IN) {
-        throw std::runtime_error(loggedInErrorMsg("logout"));
-    }
-
-    send(socket_fd, &logout_message, sizeof(LogoutMessage), 0);
-    USER_LOGGED_IN = false;
-    g_ProgramRunning = false;
-    std::cout << "Logged out, goodbye!" << std::endl;
-}
-
-
-void listUsers(int socket_fd, ListUsersMessage &list_users_message) {
-    if (!USER_LOGGED_IN) {
-        throw std::runtime_error(loggedInErrorMsg("list_users"));
-    }
-
-    send(socket_fd, &list_users_message, sizeof(ListUsersMessage), 0);
-
-    ListUsersReply serverReply;
-    
-    try {
-        // the parse function prints usernames to command line
-        serverReply.readUsernames(socket_fd);
-    } catch(std::runtime_error &e) {
-        throw e;
-    }
-}
-
-
-void sendMessage(int socket_fd, SendMessageMessage &send_message_message) {
-    if (!USER_LOGGED_IN) {
-        throw std::runtime_error(loggedInErrorMsg("send_message"));
-    }
-
-    send(socket_fd, &send_message_message, sizeof(SendMessageMessage), 0);
-
-    SendMessageReply serverReply;
-    int valread = read(socket_fd, &serverReply, sizeof(SendMessageReply));
-    if (valread == -1) {
-        throw std::runtime_error("Error reading SendMessageReply from server.");
-    }
-    if (serverReply.queryStatus == 1) {
-        std::string errorMsg = "User " + std::string(send_message_message.recipientUsername) + " was not found.";
-        throw std::runtime_error(errorMsg);
-    } else {
-        std::cout << "Message sent to " << std::string(send_message_message.recipientUsername) << std::endl;
-    }
-
-}
-
-
-void queryNotifications(int socket_fd, QueryNotificationsMessage &query_notification_message) {
-    if (!USER_LOGGED_IN) {
-        throw std::runtime_error(loggedInErrorMsg("query_notifications"));
-    }
-
-    int valsent = send(socket_fd, &query_notification_message, sizeof(QueryNotificationsMessage), 0);
-
-    QueryNotificationReply serverReply;
-    serverReply.readNotifications(socket_fd);
-}
-
-
-void queryMessages(int socket_fd, QueryMessagesMessage &query_messages_message) {
-    if (!USER_LOGGED_IN) {
-        throw std::runtime_error(loggedInErrorMsg("query_messages"));
-    }
-
-    send(socket_fd, &query_messages_message, sizeof(QueryMessagesMessage), 0);
-
-    QueryMessagesReply serverReply;
-    try {
-        int messagesRead = serverReply.readMessages(socket_fd);
-        int firstIdx = serverReply.firstMessageIndex;
-        MessagesSeenMessage msg(messagesRead, firstIdx);
-        send(socket_fd, &msg, sizeof(MessagesSeenMessage), 0);
-    } catch (std::runtime_error &e) {
-        MessagesSeenMessage msg(0, -1);
-        send(socket_fd, &msg, sizeof(MessagesSeenMessage), 0);
-        throw e;
-    }
-
-}
-
-
-void deleteAccount(int socket_fd, DeleteAccountMessage &delete_account_message) {
-    if (!USER_LOGGED_IN) {
-        throw std::runtime_error(loggedInErrorMsg("delete_account"));
-    }
-
-    send(socket_fd, &delete_account_message, sizeof(DeleteAccountMessage), 0);
-    USER_LOGGED_IN = false;
-    g_ProgramRunning = false;
-    std::cout << "Account deleted, goodbye!" << std::endl;
-}
-
-
-// handle server messages
-void readSocket() {
-    opCode operation = REFRESH_REQUEST;
-    send(server_socket, &operation, sizeof(opCode), 0);
-    timeval tv;
-    tv.tv_sec = 0;
-    tv.tv_usec = 500000;
-    setsockopt(server_socket, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
-    while (true) {
-        int valread = read(server_socket, &operation, sizeof(opCode));
-        if (valread == -1) {
-            std::cout << "No new updates." << std::endl;
-            tv.tv_usec = 0;
-            setsockopt(server_socket, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
-            return;
+    public:
+        ChatServiceClient(std::shared_ptr<Channel> channel) {
+            stub_ = ChatService::NewStub(channel);
         }
-        // int valread = read(server_socket, &operation, sizeof(opCode));
-        std::cout << "Read " << std::to_string(valread) << " bytes. Value is " << std::to_string(operation) << std::endl;
 
-        switch (operation) {
-            case NEW_MESSAGE:
-                {
-                    NewMessageMessage msg;
-                    try {
-                        msg.parse(server_socket);
-                    } catch (std::runtime_error &e) {
-                        throw e;
-                    }
-                }
-                break;
-            case FORCE_LOG_OUT:
-                {
-                    std::cout << "Log in on another device detected. Session ended." << std::endl;
+        void createAccount(std::string username, std::string password) {
+            if (USER_LOGGED_IN) {
+                throw std::runtime_error("Cannot create account if already logged in.");
+            }
+
+            ClientContext context;
+            CreateAccountMessage message;
+            message.set_username(username);
+            message.set_password(password);
+
+            CreateAccountReply reply;
+            Status status = stub_->CreateAccount(&context, message, &reply);
+            if (status.ok()) {
+                std::cout << "Welcome " << username << "!" << std::endl;
+            } else {
+                std::cout << reply.errormsg() << std::endl;
+            }
+
+            USER_LOGGED_IN = true;
+            clientUsername = username;
+        }
+
+        void login(std::string username, std::string password) {
+            if (USER_LOGGED_IN) {
+                throw std::runtime_error("Cannot log in if already logged in.");
+            }
+
+            ClientContext context;
+            LoginMessage message;
+            message.set_username(username);
+            message.set_password(password);
+
+            LoginReply reply;
+            Status status = stub_->Login(&context, message, &reply);
+            if (status.ok()) {
+                std::cout << "Welcome " << username << "!" << std::endl;
+            } else {
+                std::cout << reply.errormsg() << std::endl;
+            }
+
+            USER_LOGGED_IN = true;
+            clientUsername = username;
+        }
+
+
+        // ALL FUNCTIONS BELOW HERE REQUIRE USER TO BE LOGGED IN
+        void logout() {
+            if (!USER_LOGGED_IN) {
+                throw std::runtime_error(loggedInErrorMsg("logout"));
+            }
+
+            ClientContext context;
+            LogoutMessage message;
+            LogoutReply reply;
+            Status status = stub_->Logout(&context, message, &reply);
+            if (status.ok()) {
+                std::cout << "Goodbye!" << std::endl;
+            } else {
+                std::cout << reply.errormsg() << std::endl;
+            }
+
+            USER_LOGGED_IN = false;
+        }
+
+        void listUsers(std::string prefix) {
+            if (!USER_LOGGED_IN) {
+                throw std::runtime_error(loggedInErrorMsg("list_users"));
+            }
+
+            ClientContext context;
+            QueryUsersMessage message;
+            message.set_username(prefix);
+
+            User user;
+            
+            std::unique_ptr<ClientReader<User>> reader(stub_->ListUsers(&context, message));
+            std::cout << "Found Following Users:" << std::endl;
+            while (reader->Read(&user)) {
+                std::cout << user.username() << std::endl;
+            }
+            Status status = reader->Finish();
+            if (!status.ok()) {
+                std::cout << "list_users failed." << std::endl;
+            }
+        }
+
+        void sendMessage(std::string recipient, std::string message_content) {
+            if (!USER_LOGGED_IN) {
+                throw std::runtime_error(loggedInErrorMsg("send_message"));
+            }
+
+            ClientContext context;
+            ChatMessage message;
+            message.set_msgcontent(message_content);
+            message.set_recipientusername(recipient);
+            message.set_senderusername(clientUsername);
+            
+            SendMessageReply reply;
+            Status status = stub_->SendMessage(&context, message, &reply);
+            if (status.ok()) {
+                std::cout << "Message sent to " << recipient << "!" << std::endl;
+            } else {
+                std::cout << reply.errormsg() << std::endl;
+            }
+        }
+
+
+        void queryNotifications() {
+            if (!USER_LOGGED_IN) {
+                throw std::runtime_error(loggedInErrorMsg("query_notifications"));
+            }
+            ClientContext context;
+            QueryNotificationsMessage message;
+
+            Notification notification;
+            
+            std::unique_ptr<ClientReader<Notification>> reader(stub_->QueryNotifications(&context, message));
+            std::cout << "Found Following Users:" << std::endl;
+            while (reader->Read(&notification)) {
+                std::cout << notification.user() << ": " << std::to_string(notification.numberofnotifications()) << std::endl;
+            }
+            Status status = reader->Finish();
+            if (!status.ok()) {
+                std::cout << "query_notifications failed." << std::endl;
+            }
+        }
+
+
+        void queryMessages(std::string username) {
+            if (!USER_LOGGED_IN) {
+                throw std::runtime_error(loggedInErrorMsg("query_messages"));
+            }
+            ClientContext context;
+            QueryMessagesMessage message;
+            message.set_username(username);
+
+            ChatMessage msg;
+            
+            std::unique_ptr<ClientReader<ChatMessage>> reader(stub_->QueryMessages(&context, message));
+            std::cout << "Found Following Users:" << std::endl;
+            while (reader->Read(&msg)) {
+                std::cout << msg.senderusername() << ": " << msg.msgcontent() << std::endl;
+            }
+            Status status = reader->Finish();
+            if (!status.ok()) {
+                std::cout << "query_messages failed." << std::endl;
+            }
+        }
+
+
+        void deleteAccount(std::string username, std::string password) {
+            if (!USER_LOGGED_IN) {
+                throw std::runtime_error(loggedInErrorMsg("delete_account"));
+            }
+
+            ClientContext context;
+            DeleteAccountMessage message;
+            message.set_username(username);
+            message.set_password(password);
+            DeleteAccountReply reply;
+
+            Status status = stub_->DeleteAccount(&context, message, &reply);
+            if (status.ok()) {
+                std::cout << "Account deleted, goobye!" << std::endl;
+                USER_LOGGED_IN = false;
+            } else {
+                std::cout << reply.errormsg() << std::endl;
+            }
+
+        }
+
+        // handle server messages
+        void refresh() {
+            // If user not logged in there's nothing to refresh
+            if (!USER_LOGGED_IN) {
+                return;
+            }
+
+            ClientContext context;
+            RefreshRequest request;
+            RefreshResponse reply;
+
+            Status status = stub_->RefreshClient(&context, request, &reply);
+            if (!status.ok()) {
+                std::cout << "Refresh failed" << std::endl;
+            } else {
+                if (reply.forcelogout()) {
+                    std::cout << "Logged in on another device. Ending session here." << std::endl;
                     USER_LOGGED_IN = false;
-                    g_ProgramRunning = false;
+                    return;
                 }
-                break;
-            default:
-                std::cout << "Did not recognize operation from server" << std::endl;
+
+                for (int idx=0; idx < reply.notifications_size(); idx++) {
+                    const Notification note = reply.notifications(idx);
+                    std::cout << note.user() << ": " << std::to_string(note.numberofnotifications()) << " new message(s)" << std::endl;
+                }
+            }
         }
-    }
-}
+};

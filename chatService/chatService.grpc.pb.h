@@ -97,6 +97,13 @@ class ChatService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::DeleteAccountReply>> PrepareAsyncDeleteAccount(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::DeleteAccountReply>>(PrepareAsyncDeleteAccountRaw(context, request, cq));
     }
+    virtual ::grpc::Status RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::chatservice::RefreshResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::RefreshResponse>> AsyncRefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::RefreshResponse>>(AsyncRefreshClientRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::RefreshResponse>> PrepareAsyncRefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::RefreshResponse>>(PrepareAsyncRefreshClientRaw(context, request, cq));
+    }
     // May not need this anymore?
     virtual ::grpc::Status MessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::chatservice::MessagesSeenMessage* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::MessagesSeenMessage>> AsyncMessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::grpc::CompletionQueue* cq) {
@@ -129,6 +136,8 @@ class ChatService final {
       virtual void QueryMessages(::grpc::ClientContext* context, const ::chatservice::QueryMessagesMessage* request, ::grpc::ClientReadReactor< ::chatservice::ChatMessage>* reactor) = 0;
       virtual void DeleteAccount(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage* request, ::chatservice::DeleteAccountReply* response, std::function<void(::grpc::Status)>) = 0;
       virtual void DeleteAccount(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage* request, ::chatservice::DeleteAccountReply* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       // May not need this anymore?
       virtual void MessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage* request, ::chatservice::MessagesSeenMessage* response, std::function<void(::grpc::Status)>) = 0;
       virtual void MessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage* request, ::chatservice::MessagesSeenMessage* response, ::grpc::ClientUnaryReactor* reactor) = 0;
@@ -159,6 +168,8 @@ class ChatService final {
     virtual ::grpc::ClientAsyncReaderInterface< ::chatservice::ChatMessage>* PrepareAsyncQueryMessagesRaw(::grpc::ClientContext* context, const ::chatservice::QueryMessagesMessage& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::DeleteAccountReply>* AsyncDeleteAccountRaw(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::DeleteAccountReply>* PrepareAsyncDeleteAccountRaw(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::RefreshResponse>* AsyncRefreshClientRaw(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::RefreshResponse>* PrepareAsyncRefreshClientRaw(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::MessagesSeenMessage>* AsyncMessagesSeenRaw(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::MessagesSeenMessage>* PrepareAsyncMessagesSeenRaw(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::chatservice::NewMessageReply>* AsyncNewMessageRaw(::grpc::ClientContext* context, const ::chatservice::ChatMessage& request, ::grpc::CompletionQueue* cq) = 0;
@@ -229,6 +240,13 @@ class ChatService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::DeleteAccountReply>> PrepareAsyncDeleteAccount(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::DeleteAccountReply>>(PrepareAsyncDeleteAccountRaw(context, request, cq));
     }
+    ::grpc::Status RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::chatservice::RefreshResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>> AsyncRefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>>(AsyncRefreshClientRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>> PrepareAsyncRefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>>(PrepareAsyncRefreshClientRaw(context, request, cq));
+    }
     ::grpc::Status MessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::chatservice::MessagesSeenMessage* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::MessagesSeenMessage>> AsyncMessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::chatservice::MessagesSeenMessage>>(AsyncMessagesSeenRaw(context, request, cq));
@@ -259,6 +277,8 @@ class ChatService final {
       void QueryMessages(::grpc::ClientContext* context, const ::chatservice::QueryMessagesMessage* request, ::grpc::ClientReadReactor< ::chatservice::ChatMessage>* reactor) override;
       void DeleteAccount(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage* request, ::chatservice::DeleteAccountReply* response, std::function<void(::grpc::Status)>) override;
       void DeleteAccount(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage* request, ::chatservice::DeleteAccountReply* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response, std::function<void(::grpc::Status)>) override;
+      void RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void MessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage* request, ::chatservice::MessagesSeenMessage* response, std::function<void(::grpc::Status)>) override;
       void MessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage* request, ::chatservice::MessagesSeenMessage* response, ::grpc::ClientUnaryReactor* reactor) override;
       void NewMessage(::grpc::ClientContext* context, const ::chatservice::ChatMessage* request, ::chatservice::NewMessageReply* response, std::function<void(::grpc::Status)>) override;
@@ -293,6 +313,8 @@ class ChatService final {
     ::grpc::ClientAsyncReader< ::chatservice::ChatMessage>* PrepareAsyncQueryMessagesRaw(::grpc::ClientContext* context, const ::chatservice::QueryMessagesMessage& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::chatservice::DeleteAccountReply>* AsyncDeleteAccountRaw(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::chatservice::DeleteAccountReply>* PrepareAsyncDeleteAccountRaw(::grpc::ClientContext* context, const ::chatservice::DeleteAccountMessage& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>* AsyncRefreshClientRaw(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>* PrepareAsyncRefreshClientRaw(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::chatservice::MessagesSeenMessage>* AsyncMessagesSeenRaw(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::chatservice::MessagesSeenMessage>* PrepareAsyncMessagesSeenRaw(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::chatservice::NewMessageReply>* AsyncNewMessageRaw(::grpc::ClientContext* context, const ::chatservice::ChatMessage& request, ::grpc::CompletionQueue* cq) override;
@@ -305,6 +327,7 @@ class ChatService final {
     const ::grpc::internal::RpcMethod rpcmethod_QueryNotifications_;
     const ::grpc::internal::RpcMethod rpcmethod_QueryMessages_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteAccount_;
+    const ::grpc::internal::RpcMethod rpcmethod_RefreshClient_;
     const ::grpc::internal::RpcMethod rpcmethod_MessagesSeen_;
     const ::grpc::internal::RpcMethod rpcmethod_NewMessage_;
   };
@@ -322,6 +345,7 @@ class ChatService final {
     virtual ::grpc::Status QueryNotifications(::grpc::ServerContext* context, const ::chatservice::QueryNotificationsMessage* request, ::grpc::ServerWriter< ::chatservice::Notification>* writer);
     virtual ::grpc::Status QueryMessages(::grpc::ServerContext* context, const ::chatservice::QueryMessagesMessage* request, ::grpc::ServerWriter< ::chatservice::ChatMessage>* writer);
     virtual ::grpc::Status DeleteAccount(::grpc::ServerContext* context, const ::chatservice::DeleteAccountMessage* request, ::chatservice::DeleteAccountReply* response);
+    virtual ::grpc::Status RefreshClient(::grpc::ServerContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response);
     // May not need this anymore?
     virtual ::grpc::Status MessagesSeen(::grpc::ServerContext* context, const ::chatservice::MessagesSeenMessage* request, ::chatservice::MessagesSeenMessage* response);
     // Server->client
@@ -488,12 +512,32 @@ class ChatService final {
     }
   };
   template <class BaseClass>
+  class WithAsyncMethod_RefreshClient : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_RefreshClient() {
+      ::grpc::Service::MarkMethodAsync(8);
+    }
+    ~WithAsyncMethod_RefreshClient() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RefreshClient(::grpc::ServerContext* /*context*/, const ::chatservice::RefreshRequest* /*request*/, ::chatservice::RefreshResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestRefreshClient(::grpc::ServerContext* context, ::chatservice::RefreshRequest* request, ::grpc::ServerAsyncResponseWriter< ::chatservice::RefreshResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithAsyncMethod_MessagesSeen : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_MessagesSeen() {
-      ::grpc::Service::MarkMethodAsync(8);
+      ::grpc::Service::MarkMethodAsync(9);
     }
     ~WithAsyncMethod_MessagesSeen() override {
       BaseClassMustBeDerivedFromService(this);
@@ -504,7 +548,7 @@ class ChatService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMessagesSeen(::grpc::ServerContext* context, ::chatservice::MessagesSeenMessage* request, ::grpc::ServerAsyncResponseWriter< ::chatservice::MessagesSeenMessage>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -513,7 +557,7 @@ class ChatService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_NewMessage() {
-      ::grpc::Service::MarkMethodAsync(9);
+      ::grpc::Service::MarkMethodAsync(10);
     }
     ~WithAsyncMethod_NewMessage() override {
       BaseClassMustBeDerivedFromService(this);
@@ -524,10 +568,10 @@ class ChatService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestNewMessage(::grpc::ServerContext* context, ::chatservice::ChatMessage* request, ::grpc::ServerAsyncResponseWriter< ::chatservice::NewMessageReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CreateAccount<WithAsyncMethod_Login<WithAsyncMethod_Logout<WithAsyncMethod_ListUsers<WithAsyncMethod_SendMessage<WithAsyncMethod_QueryNotifications<WithAsyncMethod_QueryMessages<WithAsyncMethod_DeleteAccount<WithAsyncMethod_MessagesSeen<WithAsyncMethod_NewMessage<Service > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_CreateAccount<WithAsyncMethod_Login<WithAsyncMethod_Logout<WithAsyncMethod_ListUsers<WithAsyncMethod_SendMessage<WithAsyncMethod_QueryNotifications<WithAsyncMethod_QueryMessages<WithAsyncMethod_DeleteAccount<WithAsyncMethod_RefreshClient<WithAsyncMethod_MessagesSeen<WithAsyncMethod_NewMessage<Service > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CreateAccount : public BaseClass {
    private:
@@ -730,18 +774,45 @@ class ChatService final {
       ::grpc::CallbackServerContext* /*context*/, const ::chatservice::DeleteAccountMessage* /*request*/, ::chatservice::DeleteAccountReply* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithCallbackMethod_RefreshClient : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_RefreshClient() {
+      ::grpc::Service::MarkMethodCallback(8,
+          new ::grpc::internal::CallbackUnaryHandler< ::chatservice::RefreshRequest, ::chatservice::RefreshResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response) { return this->RefreshClient(context, request, response); }));}
+    void SetMessageAllocatorFor_RefreshClient(
+        ::grpc::MessageAllocator< ::chatservice::RefreshRequest, ::chatservice::RefreshResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::chatservice::RefreshRequest, ::chatservice::RefreshResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_RefreshClient() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RefreshClient(::grpc::ServerContext* /*context*/, const ::chatservice::RefreshRequest* /*request*/, ::chatservice::RefreshResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* RefreshClient(
+      ::grpc::CallbackServerContext* /*context*/, const ::chatservice::RefreshRequest* /*request*/, ::chatservice::RefreshResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithCallbackMethod_MessagesSeen : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_MessagesSeen() {
-      ::grpc::Service::MarkMethodCallback(8,
+      ::grpc::Service::MarkMethodCallback(9,
           new ::grpc::internal::CallbackUnaryHandler< ::chatservice::MessagesSeenMessage, ::chatservice::MessagesSeenMessage>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::chatservice::MessagesSeenMessage* request, ::chatservice::MessagesSeenMessage* response) { return this->MessagesSeen(context, request, response); }));}
     void SetMessageAllocatorFor_MessagesSeen(
         ::grpc::MessageAllocator< ::chatservice::MessagesSeenMessage, ::chatservice::MessagesSeenMessage>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::chatservice::MessagesSeenMessage, ::chatservice::MessagesSeenMessage>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -762,13 +833,13 @@ class ChatService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_NewMessage() {
-      ::grpc::Service::MarkMethodCallback(9,
+      ::grpc::Service::MarkMethodCallback(10,
           new ::grpc::internal::CallbackUnaryHandler< ::chatservice::ChatMessage, ::chatservice::NewMessageReply>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::chatservice::ChatMessage* request, ::chatservice::NewMessageReply* response) { return this->NewMessage(context, request, response); }));}
     void SetMessageAllocatorFor_NewMessage(
         ::grpc::MessageAllocator< ::chatservice::ChatMessage, ::chatservice::NewMessageReply>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(10);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::chatservice::ChatMessage, ::chatservice::NewMessageReply>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -783,7 +854,7 @@ class ChatService final {
     virtual ::grpc::ServerUnaryReactor* NewMessage(
       ::grpc::CallbackServerContext* /*context*/, const ::chatservice::ChatMessage* /*request*/, ::chatservice::NewMessageReply* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CreateAccount<WithCallbackMethod_Login<WithCallbackMethod_Logout<WithCallbackMethod_ListUsers<WithCallbackMethod_SendMessage<WithCallbackMethod_QueryNotifications<WithCallbackMethod_QueryMessages<WithCallbackMethod_DeleteAccount<WithCallbackMethod_MessagesSeen<WithCallbackMethod_NewMessage<Service > > > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_CreateAccount<WithCallbackMethod_Login<WithCallbackMethod_Logout<WithCallbackMethod_ListUsers<WithCallbackMethod_SendMessage<WithCallbackMethod_QueryNotifications<WithCallbackMethod_QueryMessages<WithCallbackMethod_DeleteAccount<WithCallbackMethod_RefreshClient<WithCallbackMethod_MessagesSeen<WithCallbackMethod_NewMessage<Service > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CreateAccount : public BaseClass {
@@ -922,12 +993,29 @@ class ChatService final {
     }
   };
   template <class BaseClass>
+  class WithGenericMethod_RefreshClient : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_RefreshClient() {
+      ::grpc::Service::MarkMethodGeneric(8);
+    }
+    ~WithGenericMethod_RefreshClient() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RefreshClient(::grpc::ServerContext* /*context*/, const ::chatservice::RefreshRequest* /*request*/, ::chatservice::RefreshResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
   class WithGenericMethod_MessagesSeen : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_MessagesSeen() {
-      ::grpc::Service::MarkMethodGeneric(8);
+      ::grpc::Service::MarkMethodGeneric(9);
     }
     ~WithGenericMethod_MessagesSeen() override {
       BaseClassMustBeDerivedFromService(this);
@@ -944,7 +1032,7 @@ class ChatService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_NewMessage() {
-      ::grpc::Service::MarkMethodGeneric(9);
+      ::grpc::Service::MarkMethodGeneric(10);
     }
     ~WithGenericMethod_NewMessage() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1116,12 +1204,32 @@ class ChatService final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_RefreshClient : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_RefreshClient() {
+      ::grpc::Service::MarkMethodRaw(8);
+    }
+    ~WithRawMethod_RefreshClient() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RefreshClient(::grpc::ServerContext* /*context*/, const ::chatservice::RefreshRequest* /*request*/, ::chatservice::RefreshResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestRefreshClient(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawMethod_MessagesSeen : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_MessagesSeen() {
-      ::grpc::Service::MarkMethodRaw(8);
+      ::grpc::Service::MarkMethodRaw(9);
     }
     ~WithRawMethod_MessagesSeen() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1132,7 +1240,7 @@ class ChatService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMessagesSeen(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1141,7 +1249,7 @@ class ChatService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_NewMessage() {
-      ::grpc::Service::MarkMethodRaw(9);
+      ::grpc::Service::MarkMethodRaw(10);
     }
     ~WithRawMethod_NewMessage() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1152,7 +1260,7 @@ class ChatService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestNewMessage(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1332,12 +1440,34 @@ class ChatService final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithRawCallbackMethod_RefreshClient : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_RefreshClient() {
+      ::grpc::Service::MarkMethodRawCallback(8,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->RefreshClient(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_RefreshClient() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RefreshClient(::grpc::ServerContext* /*context*/, const ::chatservice::RefreshRequest* /*request*/, ::chatservice::RefreshResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* RefreshClient(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithRawCallbackMethod_MessagesSeen : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_MessagesSeen() {
-      ::grpc::Service::MarkMethodRawCallback(8,
+      ::grpc::Service::MarkMethodRawCallback(9,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->MessagesSeen(context, request, response); }));
@@ -1359,7 +1489,7 @@ class ChatService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_NewMessage() {
-      ::grpc::Service::MarkMethodRawCallback(9,
+      ::grpc::Service::MarkMethodRawCallback(10,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->NewMessage(context, request, response); }));
@@ -1511,12 +1641,39 @@ class ChatService final {
     virtual ::grpc::Status StreamedDeleteAccount(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::chatservice::DeleteAccountMessage,::chatservice::DeleteAccountReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
+  class WithStreamedUnaryMethod_RefreshClient : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_RefreshClient() {
+      ::grpc::Service::MarkMethodStreamed(8,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::chatservice::RefreshRequest, ::chatservice::RefreshResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::chatservice::RefreshRequest, ::chatservice::RefreshResponse>* streamer) {
+                       return this->StreamedRefreshClient(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_RefreshClient() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status RefreshClient(::grpc::ServerContext* /*context*/, const ::chatservice::RefreshRequest* /*request*/, ::chatservice::RefreshResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedRefreshClient(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::chatservice::RefreshRequest,::chatservice::RefreshResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_MessagesSeen : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_MessagesSeen() {
-      ::grpc::Service::MarkMethodStreamed(8,
+      ::grpc::Service::MarkMethodStreamed(9,
         new ::grpc::internal::StreamedUnaryHandler<
           ::chatservice::MessagesSeenMessage, ::chatservice::MessagesSeenMessage>(
             [this](::grpc::ServerContext* context,
@@ -1543,7 +1700,7 @@ class ChatService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_NewMessage() {
-      ::grpc::Service::MarkMethodStreamed(9,
+      ::grpc::Service::MarkMethodStreamed(10,
         new ::grpc::internal::StreamedUnaryHandler<
           ::chatservice::ChatMessage, ::chatservice::NewMessageReply>(
             [this](::grpc::ServerContext* context,
@@ -1564,7 +1721,7 @@ class ChatService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedNewMessage(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::chatservice::ChatMessage,::chatservice::NewMessageReply>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CreateAccount<WithStreamedUnaryMethod_Login<WithStreamedUnaryMethod_Logout<WithStreamedUnaryMethod_SendMessage<WithStreamedUnaryMethod_DeleteAccount<WithStreamedUnaryMethod_MessagesSeen<WithStreamedUnaryMethod_NewMessage<Service > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_CreateAccount<WithStreamedUnaryMethod_Login<WithStreamedUnaryMethod_Logout<WithStreamedUnaryMethod_SendMessage<WithStreamedUnaryMethod_DeleteAccount<WithStreamedUnaryMethod_RefreshClient<WithStreamedUnaryMethod_MessagesSeen<WithStreamedUnaryMethod_NewMessage<Service > > > > > > > > StreamedUnaryService;
   template <class BaseClass>
   class WithSplitStreamingMethod_ListUsers : public BaseClass {
    private:
@@ -1647,7 +1804,7 @@ class ChatService final {
     virtual ::grpc::Status StreamedQueryMessages(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::chatservice::QueryMessagesMessage,::chatservice::ChatMessage>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_ListUsers<WithSplitStreamingMethod_QueryNotifications<WithSplitStreamingMethod_QueryMessages<Service > > > SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CreateAccount<WithStreamedUnaryMethod_Login<WithStreamedUnaryMethod_Logout<WithSplitStreamingMethod_ListUsers<WithStreamedUnaryMethod_SendMessage<WithSplitStreamingMethod_QueryNotifications<WithSplitStreamingMethod_QueryMessages<WithStreamedUnaryMethod_DeleteAccount<WithStreamedUnaryMethod_MessagesSeen<WithStreamedUnaryMethod_NewMessage<Service > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CreateAccount<WithStreamedUnaryMethod_Login<WithStreamedUnaryMethod_Logout<WithSplitStreamingMethod_ListUsers<WithStreamedUnaryMethod_SendMessage<WithSplitStreamingMethod_QueryNotifications<WithSplitStreamingMethod_QueryMessages<WithStreamedUnaryMethod_DeleteAccount<WithStreamedUnaryMethod_RefreshClient<WithStreamedUnaryMethod_MessagesSeen<WithStreamedUnaryMethod_NewMessage<Service > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace chatservice
