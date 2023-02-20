@@ -9,7 +9,6 @@ void handleClient(int client_fd) {
 
     std::cout << "thread id: " << thread_id << std::endl;
 
-
     std::cout << "New thread up!" << std::endl;
 
     while (true) {
@@ -59,15 +58,15 @@ void handleClient(int client_fd) {
         switch (operation) {
             case CREATE_ACCOUNT:
             {
-                // Parse Message
-                CreateAccountMessage createAccountMessage;
-                createAccountMessage.parse(client_fd);
-                int queryResult = 0; // No error
+                // // Parse Message
+                // CreateAccountMessage createAccountMessage;
+                // createAccountMessage.parse(client_fd);
+                // int queryResult = 0; // No error
 
-                std::cout << "We've parse the createAccountMessage" << std::endl;
-                // Verify username
-                std::string username = createAccountMessage.userName;
-                std::string password = createAccountMessage.password;
+                // std::cout << "We've parse the createAccountMessage" << std::endl;
+                // // Verify username
+                // std::string username = createAccountMessage.userName;
+                // std::string password = createAccountMessage.password;
 
 
 
