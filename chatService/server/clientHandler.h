@@ -29,18 +29,18 @@ void handleClient(int client_fd) {
         }
 
         // Checks for queued operations
-        if (queuedOperationsDictionary.find(client_fd) != queuedOperationsDictionary.end()) {
-            std::cout << "Running queued operations for '" << clientUsername << "'" << std::endl;
-            for (int i = 0; i < queuedOperationsDictionary[client_fd].size(); i++) {
-                NewMessageMessage newMessageMessage = queuedOperationsDictionary[client_fd][i];
+        // if (queuedOperationsDictionary.find(client_fd) != queuedOperationsDictionary.end()) {
+        //     std::cout << "Running queued operations for '" << clientUsername << "'" << std::endl;
+        //     for (int i = 0; i < queuedOperationsDictionary[client_fd].size(); i++) {
+        //         NewMessageMessage newMessageMessage = queuedOperationsDictionary[client_fd][i];
 
-                send(client_fd, &newMessageMessage, sizeof(newMessageMessage), 0);
-                std::cout << "Sent message to '" << clientUsername << "'" << std::endl;
+        //         send(client_fd, &newMessageMessage, sizeof(newMessageMessage), 0);
+        //         std::cout << "Sent message to '" << clientUsername << "'" << std::endl;
 
-            }
+        //     }
 
-            queuedOperationsDictionary.erase(client_fd);
-        }
+        //     queuedOperationsDictionary.erase(client_fd);
+        // }
         
         opCode operation;
         valread = read(client_fd, &operation, sizeof(opCode));
@@ -166,53 +166,53 @@ void handleClient(int client_fd) {
                 std::cout << "Logging out username '" << clientUsername << "'" << std::endl;
 
                 // Closes thread
-                socketDictionary_mutex.lock();
-                threadDictionary_mutex.lock();
-                cleanup(std::string(clientUsername), thread_id, client_fd);
-                socketDictionary_mutex.unlock();
-                threadDictionary_mutex.unlock();
+                // socketDictionary_mutex.lock();
+                // threadDictionary_mutex.lock();
+                // cleanup(std::string(clientUsername), thread_id, client_fd);
+                // socketDictionary_mutex.unlock();
+                // threadDictionary_mutex.unlock();
 
-                std::cout << "after cleanup" << std::endl;
+                // std::cout << "after cleanup" << std::endl;
 
-                strcpy(threadExitReturnVal, "Thread exited");
-                pthread_exit(threadExitReturnVal);
+                // strcpy(threadExitReturnVal, "Thread exited");
+                // pthread_exit(threadExitReturnVal);
 
-                std::cout << "thread exited" << std::endl;
+                // std::cout << "thread exited" << std::endl;
                 
             } 
             break;
             case LIST_USERS:
             {
-                // Parse message
-                ListUsersMessage listUsersMessage;
-                listUsersMessage.parse(client_fd);
+                // // Parse message
+                // ListUsersMessage listUsersMessage;
+                // listUsersMessage.parse(client_fd);
 
-                std::cout << "Getting users for '" << clientUsername << "'" << std::endl;
-                // Get users with prefix
-                userTrie_mutex.lock();
-                std::vector<std::string> usernames = userTrie.returnUsersWithPrefix(listUsersMessage.prefix);
-                userTrie_mutex.unlock();
+                // std::cout << "Getting users for '" << clientUsername << "'" << std::endl;
+                // // Get users with prefix
+                // userTrie_mutex.lock();
+                // std::vector<std::string> usernames = userTrie.returnUsersWithPrefix(listUsersMessage.prefix);
+                // userTrie_mutex.unlock();
 
-                std::cout << "got users from trie" << std::endl;
+                // std::cout << "got users from trie" << std::endl;
 
-                for (int i = 0; i < usernames.size(); i++) {
-                    std::cout << "User: " << usernames[i] << std::endl;
-                }
+                // for (int i = 0; i < usernames.size(); i++) {
+                //     std::cout << "User: " << usernames[i] << std::endl;
+                // }
 
-                // Construct and send a reply
-                ListUsersReply listUsersReply(usernames.size());
-                send(client_fd, &listUsersReply, sizeof(listUsersReply), 0);
+                // // Construct and send a reply
+                // ListUsersReply listUsersReply(usernames.size());
+                // send(client_fd, &listUsersReply, sizeof(listUsersReply), 0);
 
-                for (int i = 0; i < usernames.size(); i++) {
-                    Username user(usernames[i]);
-                    std::cout << user.username << std::endl;
-                    int valsent = send(client_fd, &user, sizeof(user), 0);
-                    std::cout << "Sent " << valsent << " bytes" << std::endl;
-                }
+                // for (int i = 0; i < usernames.size(); i++) {
+                //     Username user(usernames[i]);
+                //     std::cout << user.username << std::endl;
+                //     int valsent = send(client_fd, &user, sizeof(user), 0);
+                //     std::cout << "Sent " << valsent << " bytes" << std::endl;
+                // }
 
-                std::cout << "sent code" << std::endl;
+                // std::cout << "sent code" << std::endl;
                
-                std::cout << "sent data " <<  std::string(*usernames.data()) <<std::endl;
+                // std::cout << "sent data " <<  std::string(*usernames.data()) <<std::endl;
 
             }
             break;

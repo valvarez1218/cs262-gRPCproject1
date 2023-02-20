@@ -34,10 +34,12 @@ using chatservice::ChatMessage;
 // };
 
 struct CurrentConversation {
-    char username[g_UsernameLimit];
+    std::string username;
     int messagesSentStartIndex;
     int messagesSentEndIndex;
 };
+
+std::map<std::string, CurrentConversation> currentConversationsDict;
 
 // Key: user with active conversations, Value: map from users to number of notifications they have
 struct ConversationsDictionary {
@@ -45,7 +47,7 @@ struct ConversationsDictionary {
     std::mutex notificationsMutex; // TODO: had to move lock up 1 level :(
 
     // increment new messages
-    void newNotification(char senderUsername[g_UsernameLimit], char recipientUsername[g_UsernameLimit]) {
+    void newNotification(std::string senderUsername, std::string recipientUsername) {
         notificationsMutex.lock();
         conversations[recipientUsername][senderUsername]++;
         notificationsMutex.unlock();
@@ -59,7 +61,7 @@ struct ConversationsDictionary {
     }
 
     // TODO: Package notifications to be sent out
-    std::vector<std::pair<char [g_UsernameLimit], char> > getNotifications(char recipientUsername [g_UsernameLimit]) {
+    std::vector<std::pair<char [g_UsernameLimit], char> > getNotifications(std::string recipientUsername) {
         std::vector<std::pair<char [g_UsernameLimit], char> > allNotifications;
 
         for (auto const& pair : conversations[recipientUsername]) {
@@ -86,18 +88,16 @@ struct UserPair {
     std::string largerUsername; // lexicographically larger username
 
     // Initializes user pair using lexicographic ordering
-    UserPair (char username1[g_UsernameLimit], char username2[g_UsernameLimit]) {
-        std::string username1String = username1;
-        std::string username2String = username2;
+    UserPair (std::string username1, std::string username2) {
 
-        int compResult = username1String.compare(username2String);
+        int compResult = username1.compare(username2);
 
         if (compResult >= 0) {
-            smallerUsername = std::string(username2);
-            largerUsername = std::string(username1);
+            smallerUsername = username2;
+            largerUsername = username1;
         } else {
-            smallerUsername = std::string(username1);
-            largerUsername = std::string(username2);
+            smallerUsername = username1;
+            largerUsername = username2;
         }
     }
 
@@ -114,7 +114,7 @@ struct StoredMessage {
     bool isRead;
     std::string messageContent;
 
-    StoredMessage (char username[g_UsernameLimit], bool read, char content[g_MessageLimit]) {
+    StoredMessage (std::string username, bool read, std::string content) {
         senderUsername = username;
         isRead = read;
         messageContent = content;
@@ -135,7 +135,7 @@ struct StoredMessages {
 
     // Adding a new message onto the messageList
     // TODO: have this return thread of the recipient?
-    void addMessage(char senderUsername[g_UsernameLimit], char recipientUsername[g_UsernameLimit], char message[g_MessageLimit]) {
+    void addMessage(std::string senderUsername, std::string recipientUsername, std::string message) {
         messageMutex.lock();
 
         StoredMessage newMessage(senderUsername, false, message);
@@ -162,7 +162,7 @@ struct StoredMessages {
     // Returning the messages a user queries
     // TODO: lastMessageDeliveredIndex should be updated upon CONSECUTIVE query messages calls and reset when the user queries other messages
     // It should also not run if the lastMessageDelivered index is zero, 
-    GetStoredMessagesReturnValue getStoredMessages(char readerUsername[g_UsernameLimit], int lastMessageDeliveredIndex) {
+    GetStoredMessagesReturnValue getStoredMessages(std::string readerUsername, int lastMessageDeliveredIndex) {
         // assert(lastMessageDeliveredIndex!=0);
         messageMutex.lock();
 
@@ -216,11 +216,14 @@ struct std::hash<UserPair>
 
 std::unordered_map<UserPair, StoredMessages> messagesDictionary;
 
-std::mutex socketDictionary_mutex;
-std::map<std::string, std::pair<std::thread::id, int>> socketDictionary;
+// std::mutex socketDictionary_mutex;
+// std::map<std::string, std::pair<std::thread::id, int>> socketDictionary;
 
-std::mutex threadDictionary_mutex;
-std::unordered_map<std::thread::id, pthread_t> threadDictionary;
+std::mutex activeUser_mutex;
+std::unordered_set<std::string> activeUsers;
+
+// std::mutex threadDictionary_mutex;
+// std::unordered_map<std::thread::id, pthread_t> threadDictionary;
 
 
 struct CharNode {
@@ -376,16 +379,16 @@ UserTrie userTrie;
 
 // Global storage for new messsage operations
 std::mutex queuedOperations_mutex;
-std::unordered_map<int, std::vector<ChatMessage>> queuedOperationsDictionary;
+std::unordered_map<std::string, std::vector<ChatMessage>> queuedOperationsDictionary;
 std::unordered_map<int, bool> forceLogoutDictionary;
 
 
 // Cleaning up session-related storage structures
 void cleanup(std::string clientUsername, std::thread::id thread_id, int client_fd) {
     std::cout << "killing thread :" << thread_id << std::endl;
-    threadDictionary.erase(thread_id);
-    queuedOperationsDictionary.erase(client_fd);
-    socketDictionary.erase(clientUsername);
+    // threadDictionary.erase(thread_id);
+    queuedOperationsDictionary.erase(clientUsername);
+    // socketDictionary.erase(clientUsername);
     close(client_fd);
 }
 

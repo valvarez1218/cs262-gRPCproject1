@@ -32,6 +32,7 @@ int main (void) {
             printUsage();
         }
 
+
         // Process input
         switch (input.operation)
         {
@@ -96,9 +97,12 @@ int main (void) {
                         break;
                     }
                     
-                    std::string prefix = input.arguments[0];
                     try {
-                        validateField("username", prefix, g_UsernameLimit);
+                        std::string prefix;
+                        if (input.arguments.size() == 1) {
+                            prefix = input.arguments[0];
+                            validateField("username", prefix, g_UsernameLimit);
+                        }
                         client.listUsers(prefix);
                     } catch (std::invalid_argument &e) {
                         std::cout << e.what() << std::endl;
@@ -195,7 +199,6 @@ int main (void) {
                 break;
 
             default:
-                throw std::invalid_argument("No matching operation case.");
                 break;
         }
 
