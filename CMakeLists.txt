@@ -37,19 +37,16 @@ target_link_libraries(cs_grpc_proto
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF})
 
-# Targets greeter_[async_](client|server)
-# foreach(_target
-#   chatClient)
-#   add_executable(${_target} "${_target}.cc")
-#   target_link_libraries(${_target}
-#     cs_grpc_proto
-#     ${_REFLECTION}
-#     ${_GRPC_GRPCPP}
-#     ${_PROTOBUF_LIBPROTOBUF})
-# endforeach()
 
 add_executable(chatClient ./chatService/client/chatClient.cc)
 target_link_libraries(chatClient
+    cs_grpc_proto
+    ${_REFLECTION}
+    ${_GRPC_GRPCPP}
+    ${_PROTOBUF_LIBPROTOBUF})
+
+add_executable(chatServer ./chatService/server/chatServer.cc)
+target_link_libraries(chatServer
     cs_grpc_proto
     ${_REFLECTION}
     ${_GRPC_GRPCPP}

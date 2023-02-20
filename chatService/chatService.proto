@@ -11,6 +11,7 @@ service ChatService {
     rpc QueryNotifications(QueryNotificationsMessage) returns (stream Notification);
     rpc QueryMessages(QueryMessagesMessage) returns (stream ChatMessage);
     rpc DeleteAccount(DeleteAccountMessage) returns (DeleteAccountReply);
+    rpc RefreshClient(RefreshRequest) returns (RefreshResponse);
 
     // May not need this anymore?
     rpc MessagesSeen(MessagesSeenMessage) returns (MessagesSeenMessage);
@@ -28,7 +29,7 @@ message CreateAccountMessage {
 
 
 message CreateAccountReply {
-    bool createAccountSuccess=1;
+    // bool createAccountSuccess=1;
     optional string errorMsg=2;
 }
 
@@ -40,18 +41,18 @@ message LoginMessage {
 
 
 message LoginReply {
-    bool loginSuccess=1;
+    // bool loginSuccess=1;
     optional string errorMsg=2;
 }
 
 
 message LogoutMessage {
-    bool loggingOut=1;
+    // bool loggingOut=1;
 }
 
 
 message LogoutReply {
-    bool loggedOut=1;
+    // bool loggedOut=1;
     optional string errorMsg=2;
 }
 
@@ -73,13 +74,13 @@ message User {
 
 
 message SendMessageReply {
-    bool messageSent=1;
+    // bool messageSent=1;
     optional string errorMsg=2;
 }
 
 
 message QueryNotificationsMessage {
-    bool queryingNotifications=1;
+    // bool queryingNotifications=1;
 }
 
 
@@ -96,17 +97,19 @@ message QueryMessagesMessage {
 
 message ChatMessage {
     string senderUsername=1;
-    string msgContent=2;
+    string recipientUsername=2;
+    string msgContent=3;
 }
 
 
 message DeleteAccountMessage {
-    bool deletingAccount=1;
+    string username=1;
+    string password=2;
 }
 
 
 message DeleteAccountReply {
-    bool deletedAccount=1;
+    // bool deletedAccount=1;
     optional string errorMsg=2;
 }
 
@@ -119,4 +122,13 @@ message MessagesSeenMessage {
 
 message NewMessageReply {
     bool received=1;
+}
+
+message RefreshRequest {
+    // bool request=1;
+}
+
+message RefreshResponse {
+    bool forceLogout=1;
+    repeated Notification notifications=2;
 }

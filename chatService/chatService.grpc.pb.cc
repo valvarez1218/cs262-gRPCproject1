@@ -30,6 +30,7 @@ static const char* ChatService_method_names[] = {
   "/chatservice.ChatService/QueryNotifications",
   "/chatservice.ChatService/QueryMessages",
   "/chatservice.ChatService/DeleteAccount",
+  "/chatservice.ChatService/RefreshClient",
   "/chatservice.ChatService/MessagesSeen",
   "/chatservice.ChatService/NewMessage",
 };
@@ -49,8 +50,9 @@ ChatService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channe
   , rpcmethod_QueryNotifications_(ChatService_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   , rpcmethod_QueryMessages_(ChatService_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   , rpcmethod_DeleteAccount_(ChatService_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_MessagesSeen_(ChatService_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_NewMessage_(ChatService_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_RefreshClient_(ChatService_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_MessagesSeen_(ChatService_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_NewMessage_(ChatService_method_names[10], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status ChatService::Stub::CreateAccount(::grpc::ClientContext* context, const ::chatservice::CreateAccountMessage& request, ::chatservice::CreateAccountReply* response) {
@@ -216,6 +218,29 @@ void ChatService::Stub::async::DeleteAccount(::grpc::ClientContext* context, con
   return result;
 }
 
+::grpc::Status ChatService::Stub::RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::chatservice::RefreshResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::chatservice::RefreshRequest, ::chatservice::RefreshResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_RefreshClient_, context, request, response);
+}
+
+void ChatService::Stub::async::RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::chatservice::RefreshRequest, ::chatservice::RefreshResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RefreshClient_, context, request, response, std::move(f));
+}
+
+void ChatService::Stub::async::RefreshClient(::grpc::ClientContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RefreshClient_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>* ChatService::Stub::PrepareAsyncRefreshClientRaw(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::chatservice::RefreshResponse, ::chatservice::RefreshRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_RefreshClient_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::chatservice::RefreshResponse>* ChatService::Stub::AsyncRefreshClientRaw(::grpc::ClientContext* context, const ::chatservice::RefreshRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncRefreshClientRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 ::grpc::Status ChatService::Stub::MessagesSeen(::grpc::ClientContext* context, const ::chatservice::MessagesSeenMessage& request, ::chatservice::MessagesSeenMessage* response) {
   return ::grpc::internal::BlockingUnaryCall< ::chatservice::MessagesSeenMessage, ::chatservice::MessagesSeenMessage, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_MessagesSeen_, context, request, response);
 }
@@ -346,6 +371,16 @@ ChatService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       ChatService_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< ChatService::Service, ::chatservice::RefreshRequest, ::chatservice::RefreshResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](ChatService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::chatservice::RefreshRequest* req,
+             ::chatservice::RefreshResponse* resp) {
+               return service->RefreshClient(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      ChatService_method_names[9],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< ChatService::Service, ::chatservice::MessagesSeenMessage, ::chatservice::MessagesSeenMessage, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](ChatService::Service* service,
              ::grpc::ServerContext* ctx,
@@ -354,7 +389,7 @@ ChatService::Service::Service() {
                return service->MessagesSeen(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      ChatService_method_names[9],
+      ChatService_method_names[10],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< ChatService::Service, ::chatservice::ChatMessage, ::chatservice::NewMessageReply, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](ChatService::Service* service,
@@ -418,6 +453,13 @@ ChatService::Service::~Service() {
 }
 
 ::grpc::Status ChatService::Service::DeleteAccount(::grpc::ServerContext* context, const ::chatservice::DeleteAccountMessage* request, ::chatservice::DeleteAccountReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status ChatService::Service::RefreshClient(::grpc::ServerContext* context, const ::chatservice::RefreshRequest* request, ::chatservice::RefreshResponse* response) {
   (void) context;
   (void) request;
   (void) response;
