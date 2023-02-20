@@ -109,7 +109,7 @@ struct ParsedInput {
 // This function will parse the user input and return the corresponding operation code
 ParsedInput parseInput (std::string userInput) {
     if (userInput.size() == 0) {
-        return;
+        return ParsedInput(-1, {});
     }
 
     // Convert input string into vector of strings
@@ -117,8 +117,7 @@ ParsedInput parseInput (std::string userInput) {
     try {
         inputVector = makeStringVector(userInput);
     } catch(std::invalid_argument &e) {
-        std::cout << e.what() << std::endl;
-        return;
+        throw e;
     }
 
     // check that first token is operation recognized by program

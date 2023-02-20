@@ -74,13 +74,17 @@ struct ChatServiceClient {
             CreateAccountReply reply;
             Status status = stub_->CreateAccount(&context, message, &reply);
             if (status.ok()) {
-                std::cout << "Welcome " << username << "!" << std::endl;
-            } else {
-                std::cout << reply.errormsg() << std::endl;
-            }
 
-            USER_LOGGED_IN = true;
-            clientUsername = username;
+                if (reply.createaccountsuccess()) {
+                    std::cout << "Welcome " << username << "!" << std::endl;
+                    USER_LOGGED_IN = true;
+                    clientUsername = username;
+                } else {
+                    std::cout << reply.errormsg() << std::endl;
+                }
+            } else {
+                std::cout << status.error_code() << ": " << status.error_message() << std::endl;
+            }
         }
 
         void login(std::string username, std::string password) {
@@ -96,13 +100,17 @@ struct ChatServiceClient {
             LoginReply reply;
             Status status = stub_->Login(&context, message, &reply);
             if (status.ok()) {
-                std::cout << "Welcome " << username << "!" << std::endl;
+                if (reply.loginsuccess()) {
+                    std::cout << "Welcome " << username << "!" << std::endl;
+                    USER_LOGGED_IN = true;
+                    clientUsername = username;
+                } else {
+                    std::cout << reply.errormsg() << std::endl;
+                }
             } else {
-                std::cout << reply.errormsg() << std::endl;
+                std::cout << status.error_code() << ": " << status.error_message() << std::endl;
             }
 
-            USER_LOGGED_IN = true;
-            clientUsername = username;
         }
 
 
@@ -119,7 +127,7 @@ struct ChatServiceClient {
             if (status.ok()) {
                 std::cout << "Goodbye!" << std::endl;
             } else {
-                std::cout << reply.errormsg() << std::endl;
+                std::cout << status.error_code() << ": " << status.error_message() << std::endl;
             }
 
             USER_LOGGED_IN = false;
@@ -161,9 +169,13 @@ struct ChatServiceClient {
             SendMessageReply reply;
             Status status = stub_->SendMessage(&context, message, &reply);
             if (status.ok()) {
-                std::cout << "Message sent to " << recipient << "!" << std::endl;
+                if (reply.messagesent()) {
+                    std::cout << "Message sent to " << recipient << "!" << std::endl;
+                } else {
+                    std::cout << reply.errormsg() << std::endl;
+                }
             } else {
-                std::cout << reply.errormsg() << std::endl;
+                std::cout << status.error_code() << ": " << status.error_message() << std::endl;
             }
         }
 
@@ -174,6 +186,7 @@ struct ChatServiceClient {
             }
             ClientContext context;
             QueryNotificationsMessage message;
+            message.set_user(clientUsername);
 
             Notification notification;
             
@@ -195,7 +208,8 @@ struct ChatServiceClient {
             }
             ClientContext context;
             QueryMessagesMessage message;
-            message.set_username(username);
+            message.set_otherusername(username);
+            message.set_clientusername(clientUsername);
 
             ChatMessage msg;
             
@@ -224,12 +238,15 @@ struct ChatServiceClient {
 
             Status status = stub_->DeleteAccount(&context, message, &reply);
             if (status.ok()) {
-                std::cout << "Account deleted, goobye!" << std::endl;
-                USER_LOGGED_IN = false;
+                if (reply.deletedaccount()) {
+                    std::cout << "Account deleted, goobye!" << std::endl;
+                    USER_LOGGED_IN = false;
+                } else {
+                    std::cout << reply.errormsg() << std::endl;
+                }
             } else {
-                std::cout << reply.errormsg() << std::endl;
+                std::cout << status.error_code() << ": " << status.error_message() << std::endl;
             }
-
         }
 
         // handle server messages
@@ -239,11 +256,13 @@ struct ChatServiceClient {
                 return;
             }
 
+            std::cout << "Refreshing!" << std::endl;
             ClientContext context;
             RefreshRequest request;
             RefreshResponse reply;
 
             Status status = stub_->RefreshClient(&context, request, &reply);
+
             if (!status.ok()) {
                 std::cout << "Refresh failed" << std::endl;
             } else {

@@ -29,7 +29,7 @@ message CreateAccountMessage {
 
 
 message CreateAccountReply {
-    // bool createAccountSuccess=1;
+    bool createAccountSuccess=1;
     optional string errorMsg=2;
 }
 
@@ -41,7 +41,7 @@ message LoginMessage {
 
 
 message LoginReply {
-    // bool loginSuccess=1;
+    bool loginSuccess=1;
     optional string errorMsg=2;
 }
 
@@ -74,13 +74,14 @@ message User {
 
 
 message SendMessageReply {
-    // bool messageSent=1;
+    bool messageSent=1;
     optional string errorMsg=2;
 }
 
 
 message QueryNotificationsMessage {
     // bool queryingNotifications=1;
+    string user=1;
 }
 
 
@@ -91,7 +92,8 @@ message Notification {
 
 
 message QueryMessagesMessage {
-    string username=1;
+    string clientUsername=1;
+    string otherUsername=2;
 }
 
 
@@ -109,7 +111,7 @@ message DeleteAccountMessage {
 
 
 message DeleteAccountReply {
-    // bool deletedAccount=1;
+    bool deletedAccount=1;
     optional string errorMsg=2;
 }
 
