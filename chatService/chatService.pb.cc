@@ -20,7 +20,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
-namespace chatService {
+namespace chatservice {
 PROTOBUF_CONSTEXPR createAccountMessage::createAccountMessage(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.username_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -258,195 +258,195 @@ struct newMessageReplyDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 newMessageReplyDefaultTypeInternal _newMessageReply_default_instance_;
-}  // namespace chatService
+}  // namespace chatservice
 static ::_pb::Metadata file_level_metadata_chatService_2eproto[17];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_chatService_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_chatService_2eproto = nullptr;
 
 const uint32_t TableStruct_chatService_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::createAccountMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::createAccountMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::createAccountMessage, _impl_.username_),
-  PROTOBUF_FIELD_OFFSET(::chatService::createAccountMessage, _impl_.password_),
-  PROTOBUF_FIELD_OFFSET(::chatService::createAccountReply, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::chatService::createAccountReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::createAccountMessage, _impl_.username_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::createAccountMessage, _impl_.password_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::createAccountReply, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::createAccountReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::createAccountReply, _impl_.createaccountsuccess_),
-  PROTOBUF_FIELD_OFFSET(::chatService::createAccountReply, _impl_.errormsg_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::createAccountReply, _impl_.createaccountsuccess_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::createAccountReply, _impl_.errormsg_),
   ~0u,
   0,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::loginMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::loginMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::loginMessage, _impl_.username_),
-  PROTOBUF_FIELD_OFFSET(::chatService::loginMessage, _impl_.password_),
-  PROTOBUF_FIELD_OFFSET(::chatService::loginReply, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::chatService::loginReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::loginMessage, _impl_.username_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::loginMessage, _impl_.password_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::loginReply, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::loginReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::loginReply, _impl_.loginsuccess_),
-  PROTOBUF_FIELD_OFFSET(::chatService::loginReply, _impl_.errormsg_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::loginReply, _impl_.loginsuccess_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::loginReply, _impl_.errormsg_),
   ~0u,
   0,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::logoutMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::logoutMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::logoutMessage, _impl_.loggingout_),
-  PROTOBUF_FIELD_OFFSET(::chatService::logoutReply, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::chatService::logoutReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::logoutMessage, _impl_.loggingout_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::logoutReply, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::logoutReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::logoutReply, _impl_.loggedout_),
-  PROTOBUF_FIELD_OFFSET(::chatService::logoutReply, _impl_.errormsg_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::logoutReply, _impl_.loggedout_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::logoutReply, _impl_.errormsg_),
   ~0u,
   0,
-  PROTOBUF_FIELD_OFFSET(::chatService::queryUsersMessage, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::chatService::queryUsersMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::queryUsersMessage, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::queryUsersMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::queryUsersMessage, _impl_.username_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::queryUsersMessage, _impl_.username_),
   0,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::user, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::user, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::user, _impl_.username_),
-  PROTOBUF_FIELD_OFFSET(::chatService::sendMessageReply, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::chatService::sendMessageReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::user, _impl_.username_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::sendMessageReply, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::sendMessageReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::sendMessageReply, _impl_.messagesent_),
-  PROTOBUF_FIELD_OFFSET(::chatService::sendMessageReply, _impl_.errormsg_),
-  ~0u,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::queryNotificationsMessage, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::queryNotificationsMessage, _impl_.queryingnotifications_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::notification, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::notification, _impl_.user_),
-  PROTOBUF_FIELD_OFFSET(::chatService::notification, _impl_.numberofnotifications_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::queryMessagesMessage, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::queryMessagesMessage, _impl_.username_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::chatMessage, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::chatMessage, _impl_.senderusername_),
-  PROTOBUF_FIELD_OFFSET(::chatService::chatMessage, _impl_.msgcontent_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::deleteAccountMessage, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::deleteAccountMessage, _impl_.deletingaccount_),
-  PROTOBUF_FIELD_OFFSET(::chatService::deleteAccountReply, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::chatService::deleteAccountReply, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::deleteAccountReply, _impl_.deletedaccount_),
-  PROTOBUF_FIELD_OFFSET(::chatService::deleteAccountReply, _impl_.errormsg_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::sendMessageReply, _impl_.messagesent_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::sendMessageReply, _impl_.errormsg_),
   ~0u,
   0,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::messagesSeenMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::queryNotificationsMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::messagesSeenMessage, _impl_.messagesseen_),
-  PROTOBUF_FIELD_OFFSET(::chatService::messagesSeenMessage, _impl_.firstmessageidx_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::queryNotificationsMessage, _impl_.queryingnotifications_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::chatService::newMessageReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::notification, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::chatService::newMessageReply, _impl_.received_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::notification, _impl_.user_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::notification, _impl_.numberofnotifications_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::chatservice::queryMessagesMessage, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::chatservice::queryMessagesMessage, _impl_.username_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::chatservice::chatMessage, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::chatservice::chatMessage, _impl_.senderusername_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::chatMessage, _impl_.msgcontent_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::chatservice::deleteAccountMessage, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::chatservice::deleteAccountMessage, _impl_.deletingaccount_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::deleteAccountReply, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::deleteAccountReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::chatservice::deleteAccountReply, _impl_.deletedaccount_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::deleteAccountReply, _impl_.errormsg_),
+  ~0u,
+  0,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::chatservice::messagesSeenMessage, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::chatservice::messagesSeenMessage, _impl_.messagesseen_),
+  PROTOBUF_FIELD_OFFSET(::chatservice::messagesSeenMessage, _impl_.firstmessageidx_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::chatservice::newMessageReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::chatservice::newMessageReply, _impl_.received_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::chatService::createAccountMessage)},
-  { 8, 16, -1, sizeof(::chatService::createAccountReply)},
-  { 18, -1, -1, sizeof(::chatService::loginMessage)},
-  { 26, 34, -1, sizeof(::chatService::loginReply)},
-  { 36, -1, -1, sizeof(::chatService::logoutMessage)},
-  { 43, 51, -1, sizeof(::chatService::logoutReply)},
-  { 53, 60, -1, sizeof(::chatService::queryUsersMessage)},
-  { 61, -1, -1, sizeof(::chatService::user)},
-  { 68, 76, -1, sizeof(::chatService::sendMessageReply)},
-  { 78, -1, -1, sizeof(::chatService::queryNotificationsMessage)},
-  { 85, -1, -1, sizeof(::chatService::notification)},
-  { 93, -1, -1, sizeof(::chatService::queryMessagesMessage)},
-  { 100, -1, -1, sizeof(::chatService::chatMessage)},
-  { 108, -1, -1, sizeof(::chatService::deleteAccountMessage)},
-  { 115, 123, -1, sizeof(::chatService::deleteAccountReply)},
-  { 125, -1, -1, sizeof(::chatService::messagesSeenMessage)},
-  { 133, -1, -1, sizeof(::chatService::newMessageReply)},
+  { 0, -1, -1, sizeof(::chatservice::createAccountMessage)},
+  { 8, 16, -1, sizeof(::chatservice::createAccountReply)},
+  { 18, -1, -1, sizeof(::chatservice::loginMessage)},
+  { 26, 34, -1, sizeof(::chatservice::loginReply)},
+  { 36, -1, -1, sizeof(::chatservice::logoutMessage)},
+  { 43, 51, -1, sizeof(::chatservice::logoutReply)},
+  { 53, 60, -1, sizeof(::chatservice::queryUsersMessage)},
+  { 61, -1, -1, sizeof(::chatservice::user)},
+  { 68, 76, -1, sizeof(::chatservice::sendMessageReply)},
+  { 78, -1, -1, sizeof(::chatservice::queryNotificationsMessage)},
+  { 85, -1, -1, sizeof(::chatservice::notification)},
+  { 93, -1, -1, sizeof(::chatservice::queryMessagesMessage)},
+  { 100, -1, -1, sizeof(::chatservice::chatMessage)},
+  { 108, -1, -1, sizeof(::chatservice::deleteAccountMessage)},
+  { 115, 123, -1, sizeof(::chatservice::deleteAccountReply)},
+  { 125, -1, -1, sizeof(::chatservice::messagesSeenMessage)},
+  { 133, -1, -1, sizeof(::chatservice::newMessageReply)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::chatService::_createAccountMessage_default_instance_._instance,
-  &::chatService::_createAccountReply_default_instance_._instance,
-  &::chatService::_loginMessage_default_instance_._instance,
-  &::chatService::_loginReply_default_instance_._instance,
-  &::chatService::_logoutMessage_default_instance_._instance,
-  &::chatService::_logoutReply_default_instance_._instance,
-  &::chatService::_queryUsersMessage_default_instance_._instance,
-  &::chatService::_user_default_instance_._instance,
-  &::chatService::_sendMessageReply_default_instance_._instance,
-  &::chatService::_queryNotificationsMessage_default_instance_._instance,
-  &::chatService::_notification_default_instance_._instance,
-  &::chatService::_queryMessagesMessage_default_instance_._instance,
-  &::chatService::_chatMessage_default_instance_._instance,
-  &::chatService::_deleteAccountMessage_default_instance_._instance,
-  &::chatService::_deleteAccountReply_default_instance_._instance,
-  &::chatService::_messagesSeenMessage_default_instance_._instance,
-  &::chatService::_newMessageReply_default_instance_._instance,
+  &::chatservice::_createAccountMessage_default_instance_._instance,
+  &::chatservice::_createAccountReply_default_instance_._instance,
+  &::chatservice::_loginMessage_default_instance_._instance,
+  &::chatservice::_loginReply_default_instance_._instance,
+  &::chatservice::_logoutMessage_default_instance_._instance,
+  &::chatservice::_logoutReply_default_instance_._instance,
+  &::chatservice::_queryUsersMessage_default_instance_._instance,
+  &::chatservice::_user_default_instance_._instance,
+  &::chatservice::_sendMessageReply_default_instance_._instance,
+  &::chatservice::_queryNotificationsMessage_default_instance_._instance,
+  &::chatservice::_notification_default_instance_._instance,
+  &::chatservice::_queryMessagesMessage_default_instance_._instance,
+  &::chatservice::_chatMessage_default_instance_._instance,
+  &::chatservice::_deleteAccountMessage_default_instance_._instance,
+  &::chatservice::_deleteAccountReply_default_instance_._instance,
+  &::chatservice::_messagesSeenMessage_default_instance_._instance,
+  &::chatservice::_newMessageReply_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_chatService_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\021chatService.proto\022\013chatService\":\n\024crea"
+  "\n\021chatService.proto\022\013chatservice\":\n\024crea"
   "teAccountMessage\022\020\n\010username\030\001 \001(\t\022\020\n\010pa"
   "ssword\030\002 \001(\t\"V\n\022createAccountReply\022\034\n\024cr"
   "eateAccountSuccess\030\001 \001(\010\022\025\n\010errorMsg\030\002 \001"
@@ -471,26 +471,26 @@ const char descriptor_table_protodef_chatService_2eproto[] PROTOBUF_SECTION_VARI
   "nt\030\001 \001(\010\022\025\n\010errorMsg\030\002 \001(\tH\000\210\001\001B\013\n\t_erro"
   "rMsg\"D\n\023messagesSeenMessage\022\024\n\014messagesS"
   "een\030\001 \001(\005\022\027\n\017firstMessageIdx\030\002 \001(\005\"#\n\017ne"
-  "wMessageReply\022\020\n\010received\030\001 \001(\0102\203\006\n\013chat"
-  "Service\022S\n\rCreateAccount\022!.chatService.c"
-  "reateAccountMessage\032\037.chatService.create"
-  "AccountReply\022;\n\005Login\022\031.chatService.logi"
-  "nMessage\032\027.chatService.loginReply\022>\n\006Log"
-  "out\022\032.chatService.logoutMessage\032\030.chatSe"
-  "rvice.logoutReply\022@\n\tListUsers\022\036.chatSer"
-  "vice.queryUsersMessage\032\021.chatService.use"
-  "r0\001\022F\n\013SendMessage\022\030.chatService.chatMes"
-  "sage\032\035.chatService.sendMessageReply\022Y\n\022Q"
-  "ueryNotifications\022&.chatService.queryNot"
-  "ificationsMessage\032\031.chatService.notifica"
-  "tion0\001\022N\n\rQueryMessages\022!.chatService.qu"
-  "eryMessagesMessage\032\030.chatService.chatMes"
-  "sage0\001\022S\n\rDeleteAccount\022!.chatService.de"
-  "leteAccountMessage\032\037.chatService.deleteA"
-  "ccountReply\022R\n\014MessagesSeen\022 .chatServic"
-  "e.messagesSeenMessage\032 .chatService.mess"
-  "agesSeenMessage\022D\n\nNewMessage\022\030.chatServ"
-  "ice.chatMessage\032\034.chatService.newMessage"
+  "wMessageReply\022\020\n\010received\030\001 \001(\0102\203\006\n\013Chat"
+  "Service\022S\n\rCreateAccount\022!.chatservice.c"
+  "reateAccountMessage\032\037.chatservice.create"
+  "AccountReply\022;\n\005Login\022\031.chatservice.logi"
+  "nMessage\032\027.chatservice.loginReply\022>\n\006Log"
+  "out\022\032.chatservice.logoutMessage\032\030.chatse"
+  "rvice.logoutReply\022@\n\tListUsers\022\036.chatser"
+  "vice.queryUsersMessage\032\021.chatservice.use"
+  "r0\001\022F\n\013SendMessage\022\030.chatservice.chatMes"
+  "sage\032\035.chatservice.sendMessageReply\022Y\n\022Q"
+  "ueryNotifications\022&.chatservice.queryNot"
+  "ificationsMessage\032\031.chatservice.notifica"
+  "tion0\001\022N\n\rQueryMessages\022!.chatservice.qu"
+  "eryMessagesMessage\032\030.chatservice.chatMes"
+  "sage0\001\022S\n\rDeleteAccount\022!.chatservice.de"
+  "leteAccountMessage\032\037.chatservice.deleteA"
+  "ccountReply\022R\n\014MessagesSeen\022 .chatservic"
+  "e.messagesSeenMessage\032 .chatservice.mess"
+  "agesSeenMessage\022D\n\nNewMessage\022\030.chatserv"
+  "ice.chatMessage\032\034.chatservice.newMessage"
   "Replyb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_chatService_2eproto_once;
@@ -508,7 +508,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_chatServ
 
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_chatService_2eproto(&descriptor_table_chatService_2eproto);
-namespace chatService {
+namespace chatservice {
 
 // ===================================================================
 
@@ -520,7 +520,7 @@ createAccountMessage::createAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.createAccountMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.createAccountMessage)
 }
 createAccountMessage::createAccountMessage(const createAccountMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -547,7 +547,7 @@ createAccountMessage::createAccountMessage(const createAccountMessage& from)
     _this->_impl_.password_.Set(from._internal_password(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:chatService.createAccountMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.createAccountMessage)
 }
 
 inline void createAccountMessage::SharedCtor(
@@ -570,7 +570,7 @@ inline void createAccountMessage::SharedCtor(
 }
 
 createAccountMessage::~createAccountMessage() {
-  // @@protoc_insertion_point(destructor:chatService.createAccountMessage)
+  // @@protoc_insertion_point(destructor:chatservice.createAccountMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -589,7 +589,7 @@ void createAccountMessage::SetCachedSize(int size) const {
 }
 
 void createAccountMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.createAccountMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.createAccountMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -611,7 +611,7 @@ const char* createAccountMessage::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_username();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.createAccountMessage.username"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.createAccountMessage.username"));
         } else
           goto handle_unusual;
         continue;
@@ -621,7 +621,7 @@ const char* createAccountMessage::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_password();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.createAccountMessage.password"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.createAccountMessage.password"));
         } else
           goto handle_unusual;
         continue;
@@ -650,7 +650,7 @@ failure:
 
 uint8_t* createAccountMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.createAccountMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.createAccountMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -659,7 +659,7 @@ uint8_t* createAccountMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.createAccountMessage.username");
+      "chatservice.createAccountMessage.username");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_username(), target);
   }
@@ -669,7 +669,7 @@ uint8_t* createAccountMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.createAccountMessage.password");
+      "chatservice.createAccountMessage.password");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_password(), target);
   }
@@ -678,12 +678,12 @@ uint8_t* createAccountMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.createAccountMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.createAccountMessage)
   return target;
 }
 
 size_t createAccountMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.createAccountMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.createAccountMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -717,7 +717,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*createAccountMessage::GetClass
 void createAccountMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<createAccountMessage*>(&to_msg);
   auto& from = static_cast<const createAccountMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.createAccountMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.createAccountMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -732,7 +732,7 @@ void createAccountMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
 }
 
 void createAccountMessage::CopyFrom(const createAccountMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.createAccountMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.createAccountMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -777,7 +777,7 @@ createAccountReply::createAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.createAccountReply)
+  // @@protoc_insertion_point(arena_constructor:chatservice.createAccountReply)
 }
 createAccountReply::createAccountReply(const createAccountReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -798,7 +798,7 @@ createAccountReply::createAccountReply(const createAccountReply& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.createaccountsuccess_ = from._impl_.createaccountsuccess_;
-  // @@protoc_insertion_point(copy_constructor:chatService.createAccountReply)
+  // @@protoc_insertion_point(copy_constructor:chatservice.createAccountReply)
 }
 
 inline void createAccountReply::SharedCtor(
@@ -818,7 +818,7 @@ inline void createAccountReply::SharedCtor(
 }
 
 createAccountReply::~createAccountReply() {
-  // @@protoc_insertion_point(destructor:chatService.createAccountReply)
+  // @@protoc_insertion_point(destructor:chatservice.createAccountReply)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -836,7 +836,7 @@ void createAccountReply::SetCachedSize(int size) const {
 }
 
 void createAccountReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.createAccountReply)
+// @@protoc_insertion_point(message_clear_start:chatservice.createAccountReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -871,7 +871,7 @@ const char* createAccountReply::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_errormsg();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.createAccountReply.errorMsg"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.createAccountReply.errorMsg"));
         } else
           goto handle_unusual;
         continue;
@@ -901,7 +901,7 @@ failure:
 
 uint8_t* createAccountReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.createAccountReply)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.createAccountReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -916,7 +916,7 @@ uint8_t* createAccountReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.createAccountReply.errorMsg");
+      "chatservice.createAccountReply.errorMsg");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_errormsg(), target);
   }
@@ -925,12 +925,12 @@ uint8_t* createAccountReply::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.createAccountReply)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.createAccountReply)
   return target;
 }
 
 size_t createAccountReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.createAccountReply)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.createAccountReply)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -963,7 +963,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*createAccountReply::GetClassDa
 void createAccountReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<createAccountReply*>(&to_msg);
   auto& from = static_cast<const createAccountReply&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.createAccountReply)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.createAccountReply)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -978,7 +978,7 @@ void createAccountReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
 }
 
 void createAccountReply::CopyFrom(const createAccountReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.createAccountReply)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.createAccountReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1017,7 +1017,7 @@ loginMessage::loginMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.loginMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.loginMessage)
 }
 loginMessage::loginMessage(const loginMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1044,7 +1044,7 @@ loginMessage::loginMessage(const loginMessage& from)
     _this->_impl_.password_.Set(from._internal_password(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:chatService.loginMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.loginMessage)
 }
 
 inline void loginMessage::SharedCtor(
@@ -1067,7 +1067,7 @@ inline void loginMessage::SharedCtor(
 }
 
 loginMessage::~loginMessage() {
-  // @@protoc_insertion_point(destructor:chatService.loginMessage)
+  // @@protoc_insertion_point(destructor:chatservice.loginMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1086,7 +1086,7 @@ void loginMessage::SetCachedSize(int size) const {
 }
 
 void loginMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.loginMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.loginMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1108,7 +1108,7 @@ const char* loginMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_username();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.loginMessage.username"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.loginMessage.username"));
         } else
           goto handle_unusual;
         continue;
@@ -1118,7 +1118,7 @@ const char* loginMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_password();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.loginMessage.password"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.loginMessage.password"));
         } else
           goto handle_unusual;
         continue;
@@ -1147,7 +1147,7 @@ failure:
 
 uint8_t* loginMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.loginMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.loginMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1156,7 +1156,7 @@ uint8_t* loginMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.loginMessage.username");
+      "chatservice.loginMessage.username");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_username(), target);
   }
@@ -1166,7 +1166,7 @@ uint8_t* loginMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.loginMessage.password");
+      "chatservice.loginMessage.password");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_password(), target);
   }
@@ -1175,12 +1175,12 @@ uint8_t* loginMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.loginMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.loginMessage)
   return target;
 }
 
 size_t loginMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.loginMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.loginMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1214,7 +1214,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*loginMessage::GetClassData() c
 void loginMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<loginMessage*>(&to_msg);
   auto& from = static_cast<const loginMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.loginMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.loginMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1229,7 +1229,7 @@ void loginMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
 }
 
 void loginMessage::CopyFrom(const loginMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.loginMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.loginMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1274,7 +1274,7 @@ loginReply::loginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.loginReply)
+  // @@protoc_insertion_point(arena_constructor:chatservice.loginReply)
 }
 loginReply::loginReply(const loginReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1295,7 +1295,7 @@ loginReply::loginReply(const loginReply& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.loginsuccess_ = from._impl_.loginsuccess_;
-  // @@protoc_insertion_point(copy_constructor:chatService.loginReply)
+  // @@protoc_insertion_point(copy_constructor:chatservice.loginReply)
 }
 
 inline void loginReply::SharedCtor(
@@ -1315,7 +1315,7 @@ inline void loginReply::SharedCtor(
 }
 
 loginReply::~loginReply() {
-  // @@protoc_insertion_point(destructor:chatService.loginReply)
+  // @@protoc_insertion_point(destructor:chatservice.loginReply)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1333,7 +1333,7 @@ void loginReply::SetCachedSize(int size) const {
 }
 
 void loginReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.loginReply)
+// @@protoc_insertion_point(message_clear_start:chatservice.loginReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1368,7 +1368,7 @@ const char* loginReply::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_errormsg();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.loginReply.errorMsg"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.loginReply.errorMsg"));
         } else
           goto handle_unusual;
         continue;
@@ -1398,7 +1398,7 @@ failure:
 
 uint8_t* loginReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.loginReply)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.loginReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1413,7 +1413,7 @@ uint8_t* loginReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.loginReply.errorMsg");
+      "chatservice.loginReply.errorMsg");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_errormsg(), target);
   }
@@ -1422,12 +1422,12 @@ uint8_t* loginReply::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.loginReply)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.loginReply)
   return target;
 }
 
 size_t loginReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.loginReply)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.loginReply)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1460,7 +1460,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*loginReply::GetClassData() con
 void loginReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<loginReply*>(&to_msg);
   auto& from = static_cast<const loginReply&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.loginReply)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.loginReply)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1475,7 +1475,7 @@ void loginReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
 }
 
 void loginReply::CopyFrom(const loginReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.loginReply)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.loginReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1514,7 +1514,7 @@ logoutMessage::logoutMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.logoutMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.logoutMessage)
 }
 logoutMessage::logoutMessage(const logoutMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1525,7 +1525,7 @@ logoutMessage::logoutMessage(const logoutMessage& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.loggingout_ = from._impl_.loggingout_;
-  // @@protoc_insertion_point(copy_constructor:chatService.logoutMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.logoutMessage)
 }
 
 inline void logoutMessage::SharedCtor(
@@ -1539,7 +1539,7 @@ inline void logoutMessage::SharedCtor(
 }
 
 logoutMessage::~logoutMessage() {
-  // @@protoc_insertion_point(destructor:chatService.logoutMessage)
+  // @@protoc_insertion_point(destructor:chatservice.logoutMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1556,7 +1556,7 @@ void logoutMessage::SetCachedSize(int size) const {
 }
 
 void logoutMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.logoutMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.logoutMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1604,7 +1604,7 @@ failure:
 
 uint8_t* logoutMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.logoutMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.logoutMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1618,12 +1618,12 @@ uint8_t* logoutMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.logoutMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.logoutMessage)
   return target;
 }
 
 size_t logoutMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.logoutMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.logoutMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1648,7 +1648,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*logoutMessage::GetClassData() 
 void logoutMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<logoutMessage*>(&to_msg);
   auto& from = static_cast<const logoutMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.logoutMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.logoutMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1660,7 +1660,7 @@ void logoutMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
 }
 
 void logoutMessage::CopyFrom(const logoutMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.logoutMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.logoutMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1696,7 +1696,7 @@ logoutReply::logoutReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.logoutReply)
+  // @@protoc_insertion_point(arena_constructor:chatservice.logoutReply)
 }
 logoutReply::logoutReply(const logoutReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1717,7 +1717,7 @@ logoutReply::logoutReply(const logoutReply& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.loggedout_ = from._impl_.loggedout_;
-  // @@protoc_insertion_point(copy_constructor:chatService.logoutReply)
+  // @@protoc_insertion_point(copy_constructor:chatservice.logoutReply)
 }
 
 inline void logoutReply::SharedCtor(
@@ -1737,7 +1737,7 @@ inline void logoutReply::SharedCtor(
 }
 
 logoutReply::~logoutReply() {
-  // @@protoc_insertion_point(destructor:chatService.logoutReply)
+  // @@protoc_insertion_point(destructor:chatservice.logoutReply)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1755,7 +1755,7 @@ void logoutReply::SetCachedSize(int size) const {
 }
 
 void logoutReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.logoutReply)
+// @@protoc_insertion_point(message_clear_start:chatservice.logoutReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1790,7 +1790,7 @@ const char* logoutReply::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_errormsg();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.logoutReply.errorMsg"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.logoutReply.errorMsg"));
         } else
           goto handle_unusual;
         continue;
@@ -1820,7 +1820,7 @@ failure:
 
 uint8_t* logoutReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.logoutReply)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.logoutReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1835,7 +1835,7 @@ uint8_t* logoutReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.logoutReply.errorMsg");
+      "chatservice.logoutReply.errorMsg");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_errormsg(), target);
   }
@@ -1844,12 +1844,12 @@ uint8_t* logoutReply::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.logoutReply)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.logoutReply)
   return target;
 }
 
 size_t logoutReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.logoutReply)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.logoutReply)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1882,7 +1882,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*logoutReply::GetClassData() co
 void logoutReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<logoutReply*>(&to_msg);
   auto& from = static_cast<const logoutReply&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.logoutReply)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.logoutReply)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1897,7 +1897,7 @@ void logoutReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
 }
 
 void logoutReply::CopyFrom(const logoutReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.logoutReply)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.logoutReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1940,7 +1940,7 @@ queryUsersMessage::queryUsersMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.queryUsersMessage)
 }
 queryUsersMessage::queryUsersMessage(const queryUsersMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1959,7 +1959,7 @@ queryUsersMessage::queryUsersMessage(const queryUsersMessage& from)
     _this->_impl_.username_.Set(from._internal_username(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.queryUsersMessage)
 }
 
 inline void queryUsersMessage::SharedCtor(
@@ -1978,7 +1978,7 @@ inline void queryUsersMessage::SharedCtor(
 }
 
 queryUsersMessage::~queryUsersMessage() {
-  // @@protoc_insertion_point(destructor:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(destructor:chatservice.queryUsersMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1996,7 +1996,7 @@ void queryUsersMessage::SetCachedSize(int size) const {
 }
 
 void queryUsersMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.queryUsersMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.queryUsersMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2022,7 +2022,7 @@ const char* queryUsersMessage::_InternalParse(const char* ptr, ::_pbi::ParseCont
           auto str = _internal_mutable_username();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.queryUsersMessage.username"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.queryUsersMessage.username"));
         } else
           goto handle_unusual;
         continue;
@@ -2052,7 +2052,7 @@ failure:
 
 uint8_t* queryUsersMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.queryUsersMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2061,7 +2061,7 @@ uint8_t* queryUsersMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.queryUsersMessage.username");
+      "chatservice.queryUsersMessage.username");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_username(), target);
   }
@@ -2070,12 +2070,12 @@ uint8_t* queryUsersMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.queryUsersMessage)
   return target;
 }
 
 size_t queryUsersMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.queryUsersMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.queryUsersMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2103,7 +2103,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*queryUsersMessage::GetClassDat
 void queryUsersMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<queryUsersMessage*>(&to_msg);
   auto& from = static_cast<const queryUsersMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.queryUsersMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2115,7 +2115,7 @@ void queryUsersMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
 }
 
 void queryUsersMessage::CopyFrom(const queryUsersMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.queryUsersMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.queryUsersMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2153,7 +2153,7 @@ user::user(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.user)
+  // @@protoc_insertion_point(arena_constructor:chatservice.user)
 }
 user::user(const user& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2171,7 +2171,7 @@ user::user(const user& from)
     _this->_impl_.username_.Set(from._internal_username(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:chatService.user)
+  // @@protoc_insertion_point(copy_constructor:chatservice.user)
 }
 
 inline void user::SharedCtor(
@@ -2189,7 +2189,7 @@ inline void user::SharedCtor(
 }
 
 user::~user() {
-  // @@protoc_insertion_point(destructor:chatService.user)
+  // @@protoc_insertion_point(destructor:chatservice.user)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2207,7 +2207,7 @@ void user::SetCachedSize(int size) const {
 }
 
 void user::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.user)
+// @@protoc_insertion_point(message_clear_start:chatservice.user)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2228,7 +2228,7 @@ const char* user::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
           auto str = _internal_mutable_username();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.user.username"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.user.username"));
         } else
           goto handle_unusual;
         continue;
@@ -2257,7 +2257,7 @@ failure:
 
 uint8_t* user::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.user)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.user)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2266,7 +2266,7 @@ uint8_t* user::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.user.username");
+      "chatservice.user.username");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_username(), target);
   }
@@ -2275,12 +2275,12 @@ uint8_t* user::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.user)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.user)
   return target;
 }
 
 size_t user::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.user)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.user)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2307,7 +2307,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*user::GetClassData() const { r
 void user::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<user*>(&to_msg);
   auto& from = static_cast<const user&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.user)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.user)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2319,7 +2319,7 @@ void user::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_
 }
 
 void user::CopyFrom(const user& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.user)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.user)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2360,7 +2360,7 @@ sendMessageReply::sendMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.sendMessageReply)
+  // @@protoc_insertion_point(arena_constructor:chatservice.sendMessageReply)
 }
 sendMessageReply::sendMessageReply(const sendMessageReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2381,7 +2381,7 @@ sendMessageReply::sendMessageReply(const sendMessageReply& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.messagesent_ = from._impl_.messagesent_;
-  // @@protoc_insertion_point(copy_constructor:chatService.sendMessageReply)
+  // @@protoc_insertion_point(copy_constructor:chatservice.sendMessageReply)
 }
 
 inline void sendMessageReply::SharedCtor(
@@ -2401,7 +2401,7 @@ inline void sendMessageReply::SharedCtor(
 }
 
 sendMessageReply::~sendMessageReply() {
-  // @@protoc_insertion_point(destructor:chatService.sendMessageReply)
+  // @@protoc_insertion_point(destructor:chatservice.sendMessageReply)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2419,7 +2419,7 @@ void sendMessageReply::SetCachedSize(int size) const {
 }
 
 void sendMessageReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.sendMessageReply)
+// @@protoc_insertion_point(message_clear_start:chatservice.sendMessageReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2454,7 +2454,7 @@ const char* sendMessageReply::_InternalParse(const char* ptr, ::_pbi::ParseConte
           auto str = _internal_mutable_errormsg();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.sendMessageReply.errorMsg"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.sendMessageReply.errorMsg"));
         } else
           goto handle_unusual;
         continue;
@@ -2484,7 +2484,7 @@ failure:
 
 uint8_t* sendMessageReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.sendMessageReply)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.sendMessageReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2499,7 +2499,7 @@ uint8_t* sendMessageReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.sendMessageReply.errorMsg");
+      "chatservice.sendMessageReply.errorMsg");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_errormsg(), target);
   }
@@ -2508,12 +2508,12 @@ uint8_t* sendMessageReply::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.sendMessageReply)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.sendMessageReply)
   return target;
 }
 
 size_t sendMessageReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.sendMessageReply)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.sendMessageReply)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2546,7 +2546,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*sendMessageReply::GetClassData
 void sendMessageReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<sendMessageReply*>(&to_msg);
   auto& from = static_cast<const sendMessageReply&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.sendMessageReply)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.sendMessageReply)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2561,7 +2561,7 @@ void sendMessageReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
 }
 
 void sendMessageReply::CopyFrom(const sendMessageReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.sendMessageReply)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.sendMessageReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2600,7 +2600,7 @@ queryNotificationsMessage::queryNotificationsMessage(::PROTOBUF_NAMESPACE_ID::Ar
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.queryNotificationsMessage)
 }
 queryNotificationsMessage::queryNotificationsMessage(const queryNotificationsMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2611,7 +2611,7 @@ queryNotificationsMessage::queryNotificationsMessage(const queryNotificationsMes
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.queryingnotifications_ = from._impl_.queryingnotifications_;
-  // @@protoc_insertion_point(copy_constructor:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.queryNotificationsMessage)
 }
 
 inline void queryNotificationsMessage::SharedCtor(
@@ -2625,7 +2625,7 @@ inline void queryNotificationsMessage::SharedCtor(
 }
 
 queryNotificationsMessage::~queryNotificationsMessage() {
-  // @@protoc_insertion_point(destructor:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(destructor:chatservice.queryNotificationsMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2642,7 +2642,7 @@ void queryNotificationsMessage::SetCachedSize(int size) const {
 }
 
 void queryNotificationsMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.queryNotificationsMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.queryNotificationsMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2690,7 +2690,7 @@ failure:
 
 uint8_t* queryNotificationsMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.queryNotificationsMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2704,12 +2704,12 @@ uint8_t* queryNotificationsMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.queryNotificationsMessage)
   return target;
 }
 
 size_t queryNotificationsMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.queryNotificationsMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.queryNotificationsMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2734,7 +2734,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*queryNotificationsMessage::Get
 void queryNotificationsMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<queryNotificationsMessage*>(&to_msg);
   auto& from = static_cast<const queryNotificationsMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.queryNotificationsMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2746,7 +2746,7 @@ void queryNotificationsMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
 }
 
 void queryNotificationsMessage::CopyFrom(const queryNotificationsMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.queryNotificationsMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.queryNotificationsMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2778,7 +2778,7 @@ notification::notification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.notification)
+  // @@protoc_insertion_point(arena_constructor:chatservice.notification)
 }
 notification::notification(const notification& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2798,7 +2798,7 @@ notification::notification(const notification& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.numberofnotifications_ = from._impl_.numberofnotifications_;
-  // @@protoc_insertion_point(copy_constructor:chatService.notification)
+  // @@protoc_insertion_point(copy_constructor:chatservice.notification)
 }
 
 inline void notification::SharedCtor(
@@ -2817,7 +2817,7 @@ inline void notification::SharedCtor(
 }
 
 notification::~notification() {
-  // @@protoc_insertion_point(destructor:chatService.notification)
+  // @@protoc_insertion_point(destructor:chatservice.notification)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2835,7 +2835,7 @@ void notification::SetCachedSize(int size) const {
 }
 
 void notification::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.notification)
+// @@protoc_insertion_point(message_clear_start:chatservice.notification)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2857,7 +2857,7 @@ const char* notification::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_user();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.notification.user"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.notification.user"));
         } else
           goto handle_unusual;
         continue;
@@ -2894,7 +2894,7 @@ failure:
 
 uint8_t* notification::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.notification)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.notification)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2903,7 +2903,7 @@ uint8_t* notification::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_user().data(), static_cast<int>(this->_internal_user().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.notification.user");
+      "chatservice.notification.user");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_user(), target);
   }
@@ -2918,12 +2918,12 @@ uint8_t* notification::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.notification)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.notification)
   return target;
 }
 
 size_t notification::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.notification)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.notification)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2955,7 +2955,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*notification::GetClassData() c
 void notification::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<notification*>(&to_msg);
   auto& from = static_cast<const notification&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.notification)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.notification)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2970,7 +2970,7 @@ void notification::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
 }
 
 void notification::CopyFrom(const notification& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.notification)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.notification)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3008,7 +3008,7 @@ queryMessagesMessage::queryMessagesMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.queryMessagesMessage)
 }
 queryMessagesMessage::queryMessagesMessage(const queryMessagesMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3026,7 +3026,7 @@ queryMessagesMessage::queryMessagesMessage(const queryMessagesMessage& from)
     _this->_impl_.username_.Set(from._internal_username(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.queryMessagesMessage)
 }
 
 inline void queryMessagesMessage::SharedCtor(
@@ -3044,7 +3044,7 @@ inline void queryMessagesMessage::SharedCtor(
 }
 
 queryMessagesMessage::~queryMessagesMessage() {
-  // @@protoc_insertion_point(destructor:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(destructor:chatservice.queryMessagesMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3062,7 +3062,7 @@ void queryMessagesMessage::SetCachedSize(int size) const {
 }
 
 void queryMessagesMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.queryMessagesMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.queryMessagesMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3083,7 +3083,7 @@ const char* queryMessagesMessage::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_username();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.queryMessagesMessage.username"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.queryMessagesMessage.username"));
         } else
           goto handle_unusual;
         continue;
@@ -3112,7 +3112,7 @@ failure:
 
 uint8_t* queryMessagesMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.queryMessagesMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3121,7 +3121,7 @@ uint8_t* queryMessagesMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.queryMessagesMessage.username");
+      "chatservice.queryMessagesMessage.username");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_username(), target);
   }
@@ -3130,12 +3130,12 @@ uint8_t* queryMessagesMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.queryMessagesMessage)
   return target;
 }
 
 size_t queryMessagesMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.queryMessagesMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.queryMessagesMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3162,7 +3162,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*queryMessagesMessage::GetClass
 void queryMessagesMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<queryMessagesMessage*>(&to_msg);
   auto& from = static_cast<const queryMessagesMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.queryMessagesMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3174,7 +3174,7 @@ void queryMessagesMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
 }
 
 void queryMessagesMessage::CopyFrom(const queryMessagesMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.queryMessagesMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.queryMessagesMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3211,7 +3211,7 @@ chatMessage::chatMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.chatMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.chatMessage)
 }
 chatMessage::chatMessage(const chatMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3238,7 +3238,7 @@ chatMessage::chatMessage(const chatMessage& from)
     _this->_impl_.msgcontent_.Set(from._internal_msgcontent(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:chatService.chatMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.chatMessage)
 }
 
 inline void chatMessage::SharedCtor(
@@ -3261,7 +3261,7 @@ inline void chatMessage::SharedCtor(
 }
 
 chatMessage::~chatMessage() {
-  // @@protoc_insertion_point(destructor:chatService.chatMessage)
+  // @@protoc_insertion_point(destructor:chatservice.chatMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3280,7 +3280,7 @@ void chatMessage::SetCachedSize(int size) const {
 }
 
 void chatMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.chatMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.chatMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3302,7 +3302,7 @@ const char* chatMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_senderusername();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.chatMessage.senderUsername"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.chatMessage.senderUsername"));
         } else
           goto handle_unusual;
         continue;
@@ -3312,7 +3312,7 @@ const char* chatMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_msgcontent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.chatMessage.msgContent"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.chatMessage.msgContent"));
         } else
           goto handle_unusual;
         continue;
@@ -3341,7 +3341,7 @@ failure:
 
 uint8_t* chatMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.chatMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.chatMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3350,7 +3350,7 @@ uint8_t* chatMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_senderusername().data(), static_cast<int>(this->_internal_senderusername().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.chatMessage.senderUsername");
+      "chatservice.chatMessage.senderUsername");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_senderusername(), target);
   }
@@ -3360,7 +3360,7 @@ uint8_t* chatMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msgcontent().data(), static_cast<int>(this->_internal_msgcontent().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.chatMessage.msgContent");
+      "chatservice.chatMessage.msgContent");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_msgcontent(), target);
   }
@@ -3369,12 +3369,12 @@ uint8_t* chatMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.chatMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.chatMessage)
   return target;
 }
 
 size_t chatMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.chatMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.chatMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3408,7 +3408,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*chatMessage::GetClassData() co
 void chatMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<chatMessage*>(&to_msg);
   auto& from = static_cast<const chatMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.chatMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.chatMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3423,7 +3423,7 @@ void chatMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
 }
 
 void chatMessage::CopyFrom(const chatMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.chatMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.chatMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3464,7 +3464,7 @@ deleteAccountMessage::deleteAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.deleteAccountMessage)
 }
 deleteAccountMessage::deleteAccountMessage(const deleteAccountMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3475,7 +3475,7 @@ deleteAccountMessage::deleteAccountMessage(const deleteAccountMessage& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.deletingaccount_ = from._impl_.deletingaccount_;
-  // @@protoc_insertion_point(copy_constructor:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.deleteAccountMessage)
 }
 
 inline void deleteAccountMessage::SharedCtor(
@@ -3489,7 +3489,7 @@ inline void deleteAccountMessage::SharedCtor(
 }
 
 deleteAccountMessage::~deleteAccountMessage() {
-  // @@protoc_insertion_point(destructor:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(destructor:chatservice.deleteAccountMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3506,7 +3506,7 @@ void deleteAccountMessage::SetCachedSize(int size) const {
 }
 
 void deleteAccountMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.deleteAccountMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.deleteAccountMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3554,7 +3554,7 @@ failure:
 
 uint8_t* deleteAccountMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.deleteAccountMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3568,12 +3568,12 @@ uint8_t* deleteAccountMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.deleteAccountMessage)
   return target;
 }
 
 size_t deleteAccountMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.deleteAccountMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.deleteAccountMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3598,7 +3598,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*deleteAccountMessage::GetClass
 void deleteAccountMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<deleteAccountMessage*>(&to_msg);
   auto& from = static_cast<const deleteAccountMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.deleteAccountMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3610,7 +3610,7 @@ void deleteAccountMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
 }
 
 void deleteAccountMessage::CopyFrom(const deleteAccountMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.deleteAccountMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.deleteAccountMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3646,7 +3646,7 @@ deleteAccountReply::deleteAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(arena_constructor:chatservice.deleteAccountReply)
 }
 deleteAccountReply::deleteAccountReply(const deleteAccountReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3667,7 +3667,7 @@ deleteAccountReply::deleteAccountReply(const deleteAccountReply& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.deletedaccount_ = from._impl_.deletedaccount_;
-  // @@protoc_insertion_point(copy_constructor:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(copy_constructor:chatservice.deleteAccountReply)
 }
 
 inline void deleteAccountReply::SharedCtor(
@@ -3687,7 +3687,7 @@ inline void deleteAccountReply::SharedCtor(
 }
 
 deleteAccountReply::~deleteAccountReply() {
-  // @@protoc_insertion_point(destructor:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(destructor:chatservice.deleteAccountReply)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3705,7 +3705,7 @@ void deleteAccountReply::SetCachedSize(int size) const {
 }
 
 void deleteAccountReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.deleteAccountReply)
+// @@protoc_insertion_point(message_clear_start:chatservice.deleteAccountReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3740,7 +3740,7 @@ const char* deleteAccountReply::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_errormsg();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "chatService.deleteAccountReply.errorMsg"));
+          CHK_(::_pbi::VerifyUTF8(str, "chatservice.deleteAccountReply.errorMsg"));
         } else
           goto handle_unusual;
         continue;
@@ -3770,7 +3770,7 @@ failure:
 
 uint8_t* deleteAccountReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.deleteAccountReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3785,7 +3785,7 @@ uint8_t* deleteAccountReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "chatService.deleteAccountReply.errorMsg");
+      "chatservice.deleteAccountReply.errorMsg");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_errormsg(), target);
   }
@@ -3794,12 +3794,12 @@ uint8_t* deleteAccountReply::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.deleteAccountReply)
   return target;
 }
 
 size_t deleteAccountReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.deleteAccountReply)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.deleteAccountReply)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3832,7 +3832,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*deleteAccountReply::GetClassDa
 void deleteAccountReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<deleteAccountReply*>(&to_msg);
   auto& from = static_cast<const deleteAccountReply&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.deleteAccountReply)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3847,7 +3847,7 @@ void deleteAccountReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
 }
 
 void deleteAccountReply::CopyFrom(const deleteAccountReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.deleteAccountReply)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.deleteAccountReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3886,7 +3886,7 @@ messagesSeenMessage::messagesSeenMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(arena_constructor:chatservice.messagesSeenMessage)
 }
 messagesSeenMessage::messagesSeenMessage(const messagesSeenMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3900,7 +3900,7 @@ messagesSeenMessage::messagesSeenMessage(const messagesSeenMessage& from)
   ::memcpy(&_impl_.messagesseen_, &from._impl_.messagesseen_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.firstmessageidx_) -
     reinterpret_cast<char*>(&_impl_.messagesseen_)) + sizeof(_impl_.firstmessageidx_));
-  // @@protoc_insertion_point(copy_constructor:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(copy_constructor:chatservice.messagesSeenMessage)
 }
 
 inline void messagesSeenMessage::SharedCtor(
@@ -3915,7 +3915,7 @@ inline void messagesSeenMessage::SharedCtor(
 }
 
 messagesSeenMessage::~messagesSeenMessage() {
-  // @@protoc_insertion_point(destructor:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(destructor:chatservice.messagesSeenMessage)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3932,7 +3932,7 @@ void messagesSeenMessage::SetCachedSize(int size) const {
 }
 
 void messagesSeenMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.messagesSeenMessage)
+// @@protoc_insertion_point(message_clear_start:chatservice.messagesSeenMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3990,7 +3990,7 @@ failure:
 
 uint8_t* messagesSeenMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.messagesSeenMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4010,12 +4010,12 @@ uint8_t* messagesSeenMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.messagesSeenMessage)
   return target;
 }
 
 size_t messagesSeenMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.messagesSeenMessage)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.messagesSeenMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4045,7 +4045,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*messagesSeenMessage::GetClassD
 void messagesSeenMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<messagesSeenMessage*>(&to_msg);
   auto& from = static_cast<const messagesSeenMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.messagesSeenMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4060,7 +4060,7 @@ void messagesSeenMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
 }
 
 void messagesSeenMessage::CopyFrom(const messagesSeenMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.messagesSeenMessage)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.messagesSeenMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4097,7 +4097,7 @@ newMessageReply::newMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:chatService.newMessageReply)
+  // @@protoc_insertion_point(arena_constructor:chatservice.newMessageReply)
 }
 newMessageReply::newMessageReply(const newMessageReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4108,7 +4108,7 @@ newMessageReply::newMessageReply(const newMessageReply& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.received_ = from._impl_.received_;
-  // @@protoc_insertion_point(copy_constructor:chatService.newMessageReply)
+  // @@protoc_insertion_point(copy_constructor:chatservice.newMessageReply)
 }
 
 inline void newMessageReply::SharedCtor(
@@ -4122,7 +4122,7 @@ inline void newMessageReply::SharedCtor(
 }
 
 newMessageReply::~newMessageReply() {
-  // @@protoc_insertion_point(destructor:chatService.newMessageReply)
+  // @@protoc_insertion_point(destructor:chatservice.newMessageReply)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4139,7 +4139,7 @@ void newMessageReply::SetCachedSize(int size) const {
 }
 
 void newMessageReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:chatService.newMessageReply)
+// @@protoc_insertion_point(message_clear_start:chatservice.newMessageReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4187,7 +4187,7 @@ failure:
 
 uint8_t* newMessageReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chatService.newMessageReply)
+  // @@protoc_insertion_point(serialize_to_array_start:chatservice.newMessageReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4201,12 +4201,12 @@ uint8_t* newMessageReply::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:chatService.newMessageReply)
+  // @@protoc_insertion_point(serialize_to_array_end:chatservice.newMessageReply)
   return target;
 }
 
 size_t newMessageReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:chatService.newMessageReply)
+// @@protoc_insertion_point(message_byte_size_start:chatservice.newMessageReply)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4231,7 +4231,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*newMessageReply::GetClassData(
 void newMessageReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<newMessageReply*>(&to_msg);
   auto& from = static_cast<const newMessageReply&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:chatService.newMessageReply)
+  // @@protoc_insertion_point(class_specific_merge_from_start:chatservice.newMessageReply)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4243,7 +4243,7 @@ void newMessageReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
 }
 
 void newMessageReply::CopyFrom(const newMessageReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:chatService.newMessageReply)
+// @@protoc_insertion_point(class_specific_copy_from_start:chatservice.newMessageReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4266,75 +4266,75 @@ void newMessageReply::InternalSwap(newMessageReply* other) {
 }
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace chatService
+}  // namespace chatservice
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::chatService::createAccountMessage*
-Arena::CreateMaybeMessage< ::chatService::createAccountMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::createAccountMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::createAccountMessage*
+Arena::CreateMaybeMessage< ::chatservice::createAccountMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::createAccountMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::createAccountReply*
-Arena::CreateMaybeMessage< ::chatService::createAccountReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::createAccountReply >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::createAccountReply*
+Arena::CreateMaybeMessage< ::chatservice::createAccountReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::createAccountReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::loginMessage*
-Arena::CreateMaybeMessage< ::chatService::loginMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::loginMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::loginMessage*
+Arena::CreateMaybeMessage< ::chatservice::loginMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::loginMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::loginReply*
-Arena::CreateMaybeMessage< ::chatService::loginReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::loginReply >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::loginReply*
+Arena::CreateMaybeMessage< ::chatservice::loginReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::loginReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::logoutMessage*
-Arena::CreateMaybeMessage< ::chatService::logoutMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::logoutMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::logoutMessage*
+Arena::CreateMaybeMessage< ::chatservice::logoutMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::logoutMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::logoutReply*
-Arena::CreateMaybeMessage< ::chatService::logoutReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::logoutReply >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::logoutReply*
+Arena::CreateMaybeMessage< ::chatservice::logoutReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::logoutReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::queryUsersMessage*
-Arena::CreateMaybeMessage< ::chatService::queryUsersMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::queryUsersMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::queryUsersMessage*
+Arena::CreateMaybeMessage< ::chatservice::queryUsersMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::queryUsersMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::user*
-Arena::CreateMaybeMessage< ::chatService::user >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::user >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::user*
+Arena::CreateMaybeMessage< ::chatservice::user >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::user >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::sendMessageReply*
-Arena::CreateMaybeMessage< ::chatService::sendMessageReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::sendMessageReply >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::sendMessageReply*
+Arena::CreateMaybeMessage< ::chatservice::sendMessageReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::sendMessageReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::queryNotificationsMessage*
-Arena::CreateMaybeMessage< ::chatService::queryNotificationsMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::queryNotificationsMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::queryNotificationsMessage*
+Arena::CreateMaybeMessage< ::chatservice::queryNotificationsMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::queryNotificationsMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::notification*
-Arena::CreateMaybeMessage< ::chatService::notification >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::notification >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::notification*
+Arena::CreateMaybeMessage< ::chatservice::notification >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::notification >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::queryMessagesMessage*
-Arena::CreateMaybeMessage< ::chatService::queryMessagesMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::queryMessagesMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::queryMessagesMessage*
+Arena::CreateMaybeMessage< ::chatservice::queryMessagesMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::queryMessagesMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::chatMessage*
-Arena::CreateMaybeMessage< ::chatService::chatMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::chatMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::chatMessage*
+Arena::CreateMaybeMessage< ::chatservice::chatMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::chatMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::deleteAccountMessage*
-Arena::CreateMaybeMessage< ::chatService::deleteAccountMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::deleteAccountMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::deleteAccountMessage*
+Arena::CreateMaybeMessage< ::chatservice::deleteAccountMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::deleteAccountMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::deleteAccountReply*
-Arena::CreateMaybeMessage< ::chatService::deleteAccountReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::deleteAccountReply >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::deleteAccountReply*
+Arena::CreateMaybeMessage< ::chatservice::deleteAccountReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::deleteAccountReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::messagesSeenMessage*
-Arena::CreateMaybeMessage< ::chatService::messagesSeenMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::messagesSeenMessage >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::messagesSeenMessage*
+Arena::CreateMaybeMessage< ::chatservice::messagesSeenMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::messagesSeenMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chatService::newMessageReply*
-Arena::CreateMaybeMessage< ::chatService::newMessageReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::chatService::newMessageReply >(arena);
+template<> PROTOBUF_NOINLINE ::chatservice::newMessageReply*
+Arena::CreateMaybeMessage< ::chatservice::newMessageReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::chatservice::newMessageReply >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

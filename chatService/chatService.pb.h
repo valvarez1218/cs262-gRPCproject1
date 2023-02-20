@@ -44,7 +44,7 @@ struct TableStruct_chatService_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_chatService_2eproto;
-namespace chatService {
+namespace chatservice {
 class chatMessage;
 struct chatMessageDefaultTypeInternal;
 extern chatMessageDefaultTypeInternal _chatMessage_default_instance_;
@@ -96,32 +96,32 @@ extern sendMessageReplyDefaultTypeInternal _sendMessageReply_default_instance_;
 class user;
 struct userDefaultTypeInternal;
 extern userDefaultTypeInternal _user_default_instance_;
-}  // namespace chatService
+}  // namespace chatservice
 PROTOBUF_NAMESPACE_OPEN
-template<> ::chatService::chatMessage* Arena::CreateMaybeMessage<::chatService::chatMessage>(Arena*);
-template<> ::chatService::createAccountMessage* Arena::CreateMaybeMessage<::chatService::createAccountMessage>(Arena*);
-template<> ::chatService::createAccountReply* Arena::CreateMaybeMessage<::chatService::createAccountReply>(Arena*);
-template<> ::chatService::deleteAccountMessage* Arena::CreateMaybeMessage<::chatService::deleteAccountMessage>(Arena*);
-template<> ::chatService::deleteAccountReply* Arena::CreateMaybeMessage<::chatService::deleteAccountReply>(Arena*);
-template<> ::chatService::loginMessage* Arena::CreateMaybeMessage<::chatService::loginMessage>(Arena*);
-template<> ::chatService::loginReply* Arena::CreateMaybeMessage<::chatService::loginReply>(Arena*);
-template<> ::chatService::logoutMessage* Arena::CreateMaybeMessage<::chatService::logoutMessage>(Arena*);
-template<> ::chatService::logoutReply* Arena::CreateMaybeMessage<::chatService::logoutReply>(Arena*);
-template<> ::chatService::messagesSeenMessage* Arena::CreateMaybeMessage<::chatService::messagesSeenMessage>(Arena*);
-template<> ::chatService::newMessageReply* Arena::CreateMaybeMessage<::chatService::newMessageReply>(Arena*);
-template<> ::chatService::notification* Arena::CreateMaybeMessage<::chatService::notification>(Arena*);
-template<> ::chatService::queryMessagesMessage* Arena::CreateMaybeMessage<::chatService::queryMessagesMessage>(Arena*);
-template<> ::chatService::queryNotificationsMessage* Arena::CreateMaybeMessage<::chatService::queryNotificationsMessage>(Arena*);
-template<> ::chatService::queryUsersMessage* Arena::CreateMaybeMessage<::chatService::queryUsersMessage>(Arena*);
-template<> ::chatService::sendMessageReply* Arena::CreateMaybeMessage<::chatService::sendMessageReply>(Arena*);
-template<> ::chatService::user* Arena::CreateMaybeMessage<::chatService::user>(Arena*);
+template<> ::chatservice::chatMessage* Arena::CreateMaybeMessage<::chatservice::chatMessage>(Arena*);
+template<> ::chatservice::createAccountMessage* Arena::CreateMaybeMessage<::chatservice::createAccountMessage>(Arena*);
+template<> ::chatservice::createAccountReply* Arena::CreateMaybeMessage<::chatservice::createAccountReply>(Arena*);
+template<> ::chatservice::deleteAccountMessage* Arena::CreateMaybeMessage<::chatservice::deleteAccountMessage>(Arena*);
+template<> ::chatservice::deleteAccountReply* Arena::CreateMaybeMessage<::chatservice::deleteAccountReply>(Arena*);
+template<> ::chatservice::loginMessage* Arena::CreateMaybeMessage<::chatservice::loginMessage>(Arena*);
+template<> ::chatservice::loginReply* Arena::CreateMaybeMessage<::chatservice::loginReply>(Arena*);
+template<> ::chatservice::logoutMessage* Arena::CreateMaybeMessage<::chatservice::logoutMessage>(Arena*);
+template<> ::chatservice::logoutReply* Arena::CreateMaybeMessage<::chatservice::logoutReply>(Arena*);
+template<> ::chatservice::messagesSeenMessage* Arena::CreateMaybeMessage<::chatservice::messagesSeenMessage>(Arena*);
+template<> ::chatservice::newMessageReply* Arena::CreateMaybeMessage<::chatservice::newMessageReply>(Arena*);
+template<> ::chatservice::notification* Arena::CreateMaybeMessage<::chatservice::notification>(Arena*);
+template<> ::chatservice::queryMessagesMessage* Arena::CreateMaybeMessage<::chatservice::queryMessagesMessage>(Arena*);
+template<> ::chatservice::queryNotificationsMessage* Arena::CreateMaybeMessage<::chatservice::queryNotificationsMessage>(Arena*);
+template<> ::chatservice::queryUsersMessage* Arena::CreateMaybeMessage<::chatservice::queryUsersMessage>(Arena*);
+template<> ::chatservice::sendMessageReply* Arena::CreateMaybeMessage<::chatservice::sendMessageReply>(Arena*);
+template<> ::chatservice::user* Arena::CreateMaybeMessage<::chatservice::user>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace chatService {
+namespace chatservice {
 
 // ===================================================================
 
 class createAccountMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.createAccountMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.createAccountMessage) */ {
  public:
   inline createAccountMessage() : createAccountMessage(nullptr) {}
   ~createAccountMessage() override;
@@ -224,7 +224,7 @@ class createAccountMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.createAccountMessage";
+    return "chatservice.createAccountMessage";
   }
   protected:
   explicit createAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -272,7 +272,7 @@ class createAccountMessage final :
   std::string* _internal_mutable_password();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.createAccountMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.createAccountMessage)
  private:
   class _Internal;
 
@@ -290,7 +290,7 @@ class createAccountMessage final :
 // -------------------------------------------------------------------
 
 class createAccountReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.createAccountReply) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.createAccountReply) */ {
  public:
   inline createAccountReply() : createAccountReply(nullptr) {}
   ~createAccountReply() override;
@@ -393,7 +393,7 @@ class createAccountReply final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.createAccountReply";
+    return "chatservice.createAccountReply";
   }
   protected:
   explicit createAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -440,7 +440,7 @@ class createAccountReply final :
   void _internal_set_createaccountsuccess(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.createAccountReply)
+  // @@protoc_insertion_point(class_scope:chatservice.createAccountReply)
  private:
   class _Internal;
 
@@ -459,7 +459,7 @@ class createAccountReply final :
 // -------------------------------------------------------------------
 
 class loginMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.loginMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.loginMessage) */ {
  public:
   inline loginMessage() : loginMessage(nullptr) {}
   ~loginMessage() override;
@@ -562,7 +562,7 @@ class loginMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.loginMessage";
+    return "chatservice.loginMessage";
   }
   protected:
   explicit loginMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -610,7 +610,7 @@ class loginMessage final :
   std::string* _internal_mutable_password();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.loginMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.loginMessage)
  private:
   class _Internal;
 
@@ -628,7 +628,7 @@ class loginMessage final :
 // -------------------------------------------------------------------
 
 class loginReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.loginReply) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.loginReply) */ {
  public:
   inline loginReply() : loginReply(nullptr) {}
   ~loginReply() override;
@@ -731,7 +731,7 @@ class loginReply final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.loginReply";
+    return "chatservice.loginReply";
   }
   protected:
   explicit loginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -778,7 +778,7 @@ class loginReply final :
   void _internal_set_loginsuccess(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.loginReply)
+  // @@protoc_insertion_point(class_scope:chatservice.loginReply)
  private:
   class _Internal;
 
@@ -797,7 +797,7 @@ class loginReply final :
 // -------------------------------------------------------------------
 
 class logoutMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.logoutMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.logoutMessage) */ {
  public:
   inline logoutMessage() : logoutMessage(nullptr) {}
   ~logoutMessage() override;
@@ -900,7 +900,7 @@ class logoutMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.logoutMessage";
+    return "chatservice.logoutMessage";
   }
   protected:
   explicit logoutMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -928,7 +928,7 @@ class logoutMessage final :
   void _internal_set_loggingout(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.logoutMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.logoutMessage)
  private:
   class _Internal;
 
@@ -945,7 +945,7 @@ class logoutMessage final :
 // -------------------------------------------------------------------
 
 class logoutReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.logoutReply) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.logoutReply) */ {
  public:
   inline logoutReply() : logoutReply(nullptr) {}
   ~logoutReply() override;
@@ -1048,7 +1048,7 @@ class logoutReply final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.logoutReply";
+    return "chatservice.logoutReply";
   }
   protected:
   explicit logoutReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1095,7 +1095,7 @@ class logoutReply final :
   void _internal_set_loggedout(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.logoutReply)
+  // @@protoc_insertion_point(class_scope:chatservice.logoutReply)
  private:
   class _Internal;
 
@@ -1114,7 +1114,7 @@ class logoutReply final :
 // -------------------------------------------------------------------
 
 class queryUsersMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.queryUsersMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.queryUsersMessage) */ {
  public:
   inline queryUsersMessage() : queryUsersMessage(nullptr) {}
   ~queryUsersMessage() override;
@@ -1217,7 +1217,7 @@ class queryUsersMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.queryUsersMessage";
+    return "chatservice.queryUsersMessage";
   }
   protected:
   explicit queryUsersMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1254,7 +1254,7 @@ class queryUsersMessage final :
   std::string* _internal_mutable_username();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.queryUsersMessage)
  private:
   class _Internal;
 
@@ -1272,7 +1272,7 @@ class queryUsersMessage final :
 // -------------------------------------------------------------------
 
 class user final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.user) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.user) */ {
  public:
   inline user() : user(nullptr) {}
   ~user() override;
@@ -1375,7 +1375,7 @@ class user final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.user";
+    return "chatservice.user";
   }
   protected:
   explicit user(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1408,7 +1408,7 @@ class user final :
   std::string* _internal_mutable_username();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.user)
+  // @@protoc_insertion_point(class_scope:chatservice.user)
  private:
   class _Internal;
 
@@ -1425,7 +1425,7 @@ class user final :
 // -------------------------------------------------------------------
 
 class sendMessageReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.sendMessageReply) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.sendMessageReply) */ {
  public:
   inline sendMessageReply() : sendMessageReply(nullptr) {}
   ~sendMessageReply() override;
@@ -1528,7 +1528,7 @@ class sendMessageReply final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.sendMessageReply";
+    return "chatservice.sendMessageReply";
   }
   protected:
   explicit sendMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1575,7 +1575,7 @@ class sendMessageReply final :
   void _internal_set_messagesent(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.sendMessageReply)
+  // @@protoc_insertion_point(class_scope:chatservice.sendMessageReply)
  private:
   class _Internal;
 
@@ -1594,7 +1594,7 @@ class sendMessageReply final :
 // -------------------------------------------------------------------
 
 class queryNotificationsMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.queryNotificationsMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.queryNotificationsMessage) */ {
  public:
   inline queryNotificationsMessage() : queryNotificationsMessage(nullptr) {}
   ~queryNotificationsMessage() override;
@@ -1697,7 +1697,7 @@ class queryNotificationsMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.queryNotificationsMessage";
+    return "chatservice.queryNotificationsMessage";
   }
   protected:
   explicit queryNotificationsMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1725,7 +1725,7 @@ class queryNotificationsMessage final :
   void _internal_set_queryingnotifications(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.queryNotificationsMessage)
  private:
   class _Internal;
 
@@ -1742,7 +1742,7 @@ class queryNotificationsMessage final :
 // -------------------------------------------------------------------
 
 class notification final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.notification) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.notification) */ {
  public:
   inline notification() : notification(nullptr) {}
   ~notification() override;
@@ -1845,7 +1845,7 @@ class notification final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.notification";
+    return "chatservice.notification";
   }
   protected:
   explicit notification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1888,7 +1888,7 @@ class notification final :
   void _internal_set_numberofnotifications(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.notification)
+  // @@protoc_insertion_point(class_scope:chatservice.notification)
  private:
   class _Internal;
 
@@ -1906,7 +1906,7 @@ class notification final :
 // -------------------------------------------------------------------
 
 class queryMessagesMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.queryMessagesMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.queryMessagesMessage) */ {
  public:
   inline queryMessagesMessage() : queryMessagesMessage(nullptr) {}
   ~queryMessagesMessage() override;
@@ -2009,7 +2009,7 @@ class queryMessagesMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.queryMessagesMessage";
+    return "chatservice.queryMessagesMessage";
   }
   protected:
   explicit queryMessagesMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2042,7 +2042,7 @@ class queryMessagesMessage final :
   std::string* _internal_mutable_username();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.queryMessagesMessage)
  private:
   class _Internal;
 
@@ -2059,7 +2059,7 @@ class queryMessagesMessage final :
 // -------------------------------------------------------------------
 
 class chatMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.chatMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.chatMessage) */ {
  public:
   inline chatMessage() : chatMessage(nullptr) {}
   ~chatMessage() override;
@@ -2162,7 +2162,7 @@ class chatMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.chatMessage";
+    return "chatservice.chatMessage";
   }
   protected:
   explicit chatMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2210,7 +2210,7 @@ class chatMessage final :
   std::string* _internal_mutable_msgcontent();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.chatMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.chatMessage)
  private:
   class _Internal;
 
@@ -2228,7 +2228,7 @@ class chatMessage final :
 // -------------------------------------------------------------------
 
 class deleteAccountMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.deleteAccountMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.deleteAccountMessage) */ {
  public:
   inline deleteAccountMessage() : deleteAccountMessage(nullptr) {}
   ~deleteAccountMessage() override;
@@ -2331,7 +2331,7 @@ class deleteAccountMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.deleteAccountMessage";
+    return "chatservice.deleteAccountMessage";
   }
   protected:
   explicit deleteAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2359,7 +2359,7 @@ class deleteAccountMessage final :
   void _internal_set_deletingaccount(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.deleteAccountMessage)
  private:
   class _Internal;
 
@@ -2376,7 +2376,7 @@ class deleteAccountMessage final :
 // -------------------------------------------------------------------
 
 class deleteAccountReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.deleteAccountReply) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.deleteAccountReply) */ {
  public:
   inline deleteAccountReply() : deleteAccountReply(nullptr) {}
   ~deleteAccountReply() override;
@@ -2479,7 +2479,7 @@ class deleteAccountReply final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.deleteAccountReply";
+    return "chatservice.deleteAccountReply";
   }
   protected:
   explicit deleteAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2526,7 +2526,7 @@ class deleteAccountReply final :
   void _internal_set_deletedaccount(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(class_scope:chatservice.deleteAccountReply)
  private:
   class _Internal;
 
@@ -2545,7 +2545,7 @@ class deleteAccountReply final :
 // -------------------------------------------------------------------
 
 class messagesSeenMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.messagesSeenMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.messagesSeenMessage) */ {
  public:
   inline messagesSeenMessage() : messagesSeenMessage(nullptr) {}
   ~messagesSeenMessage() override;
@@ -2648,7 +2648,7 @@ class messagesSeenMessage final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.messagesSeenMessage";
+    return "chatservice.messagesSeenMessage";
   }
   protected:
   explicit messagesSeenMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2686,7 +2686,7 @@ class messagesSeenMessage final :
   void _internal_set_firstmessageidx(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.messagesSeenMessage)
  private:
   class _Internal;
 
@@ -2704,7 +2704,7 @@ class messagesSeenMessage final :
 // -------------------------------------------------------------------
 
 class newMessageReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.newMessageReply) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.newMessageReply) */ {
  public:
   inline newMessageReply() : newMessageReply(nullptr) {}
   ~newMessageReply() override;
@@ -2807,7 +2807,7 @@ class newMessageReply final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.newMessageReply";
+    return "chatservice.newMessageReply";
   }
   protected:
   explicit newMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2835,7 +2835,7 @@ class newMessageReply final :
   void _internal_set_received(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.newMessageReply)
+  // @@protoc_insertion_point(class_scope:chatservice.newMessageReply)
  private:
   class _Internal;
 
@@ -2865,7 +2865,7 @@ inline void createAccountMessage::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
 inline const std::string& createAccountMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_get:chatservice.createAccountMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
@@ -2873,11 +2873,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void createAccountMessage::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.createAccountMessage.username)
 }
 inline std::string* createAccountMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.createAccountMessage.username)
   return _s;
 }
 inline const std::string& createAccountMessage::_internal_username() const {
@@ -2892,7 +2892,7 @@ inline std::string* createAccountMessage::_internal_mutable_username() {
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
 inline std::string* createAccountMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_release:chatservice.createAccountMessage.username)
   return _impl_.username_.Release();
 }
 inline void createAccountMessage::set_allocated_username(std::string* username) {
@@ -2907,7 +2907,7 @@ inline void createAccountMessage::set_allocated_username(std::string* username) 
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.createAccountMessage.username)
 }
 
 // string password = 2;
@@ -2915,7 +2915,7 @@ inline void createAccountMessage::clear_password() {
   _impl_.password_.ClearToEmpty();
 }
 inline const std::string& createAccountMessage::password() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_get:chatservice.createAccountMessage.password)
   return _internal_password();
 }
 template <typename ArgT0, typename... ArgT>
@@ -2923,11 +2923,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void createAccountMessage::set_password(ArgT0&& arg0, ArgT... args) {
  
  _impl_.password_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_set:chatservice.createAccountMessage.password)
 }
 inline std::string* createAccountMessage::mutable_password() {
   std::string* _s = _internal_mutable_password();
-  // @@protoc_insertion_point(field_mutable:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_mutable:chatservice.createAccountMessage.password)
   return _s;
 }
 inline const std::string& createAccountMessage::_internal_password() const {
@@ -2942,7 +2942,7 @@ inline std::string* createAccountMessage::_internal_mutable_password() {
   return _impl_.password_.Mutable(GetArenaForAllocation());
 }
 inline std::string* createAccountMessage::release_password() {
-  // @@protoc_insertion_point(field_release:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_release:chatservice.createAccountMessage.password)
   return _impl_.password_.Release();
 }
 inline void createAccountMessage::set_allocated_password(std::string* password) {
@@ -2957,7 +2957,7 @@ inline void createAccountMessage::set_allocated_password(std::string* password) 
     _impl_.password_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.createAccountMessage.password)
 }
 
 // -------------------------------------------------------------------
@@ -2972,7 +2972,7 @@ inline bool createAccountReply::_internal_createaccountsuccess() const {
   return _impl_.createaccountsuccess_;
 }
 inline bool createAccountReply::createaccountsuccess() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountReply.createAccountSuccess)
+  // @@protoc_insertion_point(field_get:chatservice.createAccountReply.createAccountSuccess)
   return _internal_createaccountsuccess();
 }
 inline void createAccountReply::_internal_set_createaccountsuccess(bool value) {
@@ -2981,7 +2981,7 @@ inline void createAccountReply::_internal_set_createaccountsuccess(bool value) {
 }
 inline void createAccountReply::set_createaccountsuccess(bool value) {
   _internal_set_createaccountsuccess(value);
-  // @@protoc_insertion_point(field_set:chatService.createAccountReply.createAccountSuccess)
+  // @@protoc_insertion_point(field_set:chatservice.createAccountReply.createAccountSuccess)
 }
 
 // optional string errorMsg = 2;
@@ -2997,7 +2997,7 @@ inline void createAccountReply::clear_errormsg() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& createAccountReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_get:chatservice.createAccountReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3005,11 +3005,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void createAccountReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.createAccountReply.errorMsg)
 }
 inline std::string* createAccountReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.createAccountReply.errorMsg)
   return _s;
 }
 inline const std::string& createAccountReply::_internal_errormsg() const {
@@ -3024,7 +3024,7 @@ inline std::string* createAccountReply::_internal_mutable_errormsg() {
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
 inline std::string* createAccountReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_release:chatservice.createAccountReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3049,7 +3049,7 @@ inline void createAccountReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.createAccountReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
@@ -3061,7 +3061,7 @@ inline void loginMessage::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
 inline const std::string& loginMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_get:chatservice.loginMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3069,11 +3069,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void loginMessage::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.loginMessage.username)
 }
 inline std::string* loginMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.loginMessage.username)
   return _s;
 }
 inline const std::string& loginMessage::_internal_username() const {
@@ -3088,7 +3088,7 @@ inline std::string* loginMessage::_internal_mutable_username() {
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
 inline std::string* loginMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_release:chatservice.loginMessage.username)
   return _impl_.username_.Release();
 }
 inline void loginMessage::set_allocated_username(std::string* username) {
@@ -3103,7 +3103,7 @@ inline void loginMessage::set_allocated_username(std::string* username) {
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.loginMessage.username)
 }
 
 // string password = 2;
@@ -3111,7 +3111,7 @@ inline void loginMessage::clear_password() {
   _impl_.password_.ClearToEmpty();
 }
 inline const std::string& loginMessage::password() const {
-  // @@protoc_insertion_point(field_get:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_get:chatservice.loginMessage.password)
   return _internal_password();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3119,11 +3119,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void loginMessage::set_password(ArgT0&& arg0, ArgT... args) {
  
  _impl_.password_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_set:chatservice.loginMessage.password)
 }
 inline std::string* loginMessage::mutable_password() {
   std::string* _s = _internal_mutable_password();
-  // @@protoc_insertion_point(field_mutable:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_mutable:chatservice.loginMessage.password)
   return _s;
 }
 inline const std::string& loginMessage::_internal_password() const {
@@ -3138,7 +3138,7 @@ inline std::string* loginMessage::_internal_mutable_password() {
   return _impl_.password_.Mutable(GetArenaForAllocation());
 }
 inline std::string* loginMessage::release_password() {
-  // @@protoc_insertion_point(field_release:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_release:chatservice.loginMessage.password)
   return _impl_.password_.Release();
 }
 inline void loginMessage::set_allocated_password(std::string* password) {
@@ -3153,7 +3153,7 @@ inline void loginMessage::set_allocated_password(std::string* password) {
     _impl_.password_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.loginMessage.password)
 }
 
 // -------------------------------------------------------------------
@@ -3168,7 +3168,7 @@ inline bool loginReply::_internal_loginsuccess() const {
   return _impl_.loginsuccess_;
 }
 inline bool loginReply::loginsuccess() const {
-  // @@protoc_insertion_point(field_get:chatService.loginReply.loginSuccess)
+  // @@protoc_insertion_point(field_get:chatservice.loginReply.loginSuccess)
   return _internal_loginsuccess();
 }
 inline void loginReply::_internal_set_loginsuccess(bool value) {
@@ -3177,7 +3177,7 @@ inline void loginReply::_internal_set_loginsuccess(bool value) {
 }
 inline void loginReply::set_loginsuccess(bool value) {
   _internal_set_loginsuccess(value);
-  // @@protoc_insertion_point(field_set:chatService.loginReply.loginSuccess)
+  // @@protoc_insertion_point(field_set:chatservice.loginReply.loginSuccess)
 }
 
 // optional string errorMsg = 2;
@@ -3193,7 +3193,7 @@ inline void loginReply::clear_errormsg() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& loginReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_get:chatservice.loginReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3201,11 +3201,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void loginReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.loginReply.errorMsg)
 }
 inline std::string* loginReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.loginReply.errorMsg)
   return _s;
 }
 inline const std::string& loginReply::_internal_errormsg() const {
@@ -3220,7 +3220,7 @@ inline std::string* loginReply::_internal_mutable_errormsg() {
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
 inline std::string* loginReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_release:chatservice.loginReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3245,7 +3245,7 @@ inline void loginReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.loginReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
@@ -3260,7 +3260,7 @@ inline bool logoutMessage::_internal_loggingout() const {
   return _impl_.loggingout_;
 }
 inline bool logoutMessage::loggingout() const {
-  // @@protoc_insertion_point(field_get:chatService.logoutMessage.loggingOut)
+  // @@protoc_insertion_point(field_get:chatservice.logoutMessage.loggingOut)
   return _internal_loggingout();
 }
 inline void logoutMessage::_internal_set_loggingout(bool value) {
@@ -3269,7 +3269,7 @@ inline void logoutMessage::_internal_set_loggingout(bool value) {
 }
 inline void logoutMessage::set_loggingout(bool value) {
   _internal_set_loggingout(value);
-  // @@protoc_insertion_point(field_set:chatService.logoutMessage.loggingOut)
+  // @@protoc_insertion_point(field_set:chatservice.logoutMessage.loggingOut)
 }
 
 // -------------------------------------------------------------------
@@ -3284,7 +3284,7 @@ inline bool logoutReply::_internal_loggedout() const {
   return _impl_.loggedout_;
 }
 inline bool logoutReply::loggedout() const {
-  // @@protoc_insertion_point(field_get:chatService.logoutReply.loggedOut)
+  // @@protoc_insertion_point(field_get:chatservice.logoutReply.loggedOut)
   return _internal_loggedout();
 }
 inline void logoutReply::_internal_set_loggedout(bool value) {
@@ -3293,7 +3293,7 @@ inline void logoutReply::_internal_set_loggedout(bool value) {
 }
 inline void logoutReply::set_loggedout(bool value) {
   _internal_set_loggedout(value);
-  // @@protoc_insertion_point(field_set:chatService.logoutReply.loggedOut)
+  // @@protoc_insertion_point(field_set:chatservice.logoutReply.loggedOut)
 }
 
 // optional string errorMsg = 2;
@@ -3309,7 +3309,7 @@ inline void logoutReply::clear_errormsg() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& logoutReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_get:chatservice.logoutReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3317,11 +3317,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void logoutReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.logoutReply.errorMsg)
 }
 inline std::string* logoutReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.logoutReply.errorMsg)
   return _s;
 }
 inline const std::string& logoutReply::_internal_errormsg() const {
@@ -3336,7 +3336,7 @@ inline std::string* logoutReply::_internal_mutable_errormsg() {
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
 inline std::string* logoutReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_release:chatservice.logoutReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3361,7 +3361,7 @@ inline void logoutReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.logoutReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
@@ -3381,7 +3381,7 @@ inline void queryUsersMessage::clear_username() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& queryUsersMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_get:chatservice.queryUsersMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3389,11 +3389,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void queryUsersMessage::set_username(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.queryUsersMessage.username)
 }
 inline std::string* queryUsersMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.queryUsersMessage.username)
   return _s;
 }
 inline const std::string& queryUsersMessage::_internal_username() const {
@@ -3408,7 +3408,7 @@ inline std::string* queryUsersMessage::_internal_mutable_username() {
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
 inline std::string* queryUsersMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_release:chatservice.queryUsersMessage.username)
   if (!_internal_has_username()) {
     return nullptr;
   }
@@ -3433,7 +3433,7 @@ inline void queryUsersMessage::set_allocated_username(std::string* username) {
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.queryUsersMessage.username)
 }
 
 // -------------------------------------------------------------------
@@ -3445,7 +3445,7 @@ inline void user::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
 inline const std::string& user::username() const {
-  // @@protoc_insertion_point(field_get:chatService.user.username)
+  // @@protoc_insertion_point(field_get:chatservice.user.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3453,11 +3453,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void user::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.user.username)
+  // @@protoc_insertion_point(field_set:chatservice.user.username)
 }
 inline std::string* user::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.user.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.user.username)
   return _s;
 }
 inline const std::string& user::_internal_username() const {
@@ -3472,7 +3472,7 @@ inline std::string* user::_internal_mutable_username() {
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
 inline std::string* user::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.user.username)
+  // @@protoc_insertion_point(field_release:chatservice.user.username)
   return _impl_.username_.Release();
 }
 inline void user::set_allocated_username(std::string* username) {
@@ -3487,7 +3487,7 @@ inline void user::set_allocated_username(std::string* username) {
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.user.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.user.username)
 }
 
 // -------------------------------------------------------------------
@@ -3502,7 +3502,7 @@ inline bool sendMessageReply::_internal_messagesent() const {
   return _impl_.messagesent_;
 }
 inline bool sendMessageReply::messagesent() const {
-  // @@protoc_insertion_point(field_get:chatService.sendMessageReply.messageSent)
+  // @@protoc_insertion_point(field_get:chatservice.sendMessageReply.messageSent)
   return _internal_messagesent();
 }
 inline void sendMessageReply::_internal_set_messagesent(bool value) {
@@ -3511,7 +3511,7 @@ inline void sendMessageReply::_internal_set_messagesent(bool value) {
 }
 inline void sendMessageReply::set_messagesent(bool value) {
   _internal_set_messagesent(value);
-  // @@protoc_insertion_point(field_set:chatService.sendMessageReply.messageSent)
+  // @@protoc_insertion_point(field_set:chatservice.sendMessageReply.messageSent)
 }
 
 // optional string errorMsg = 2;
@@ -3527,7 +3527,7 @@ inline void sendMessageReply::clear_errormsg() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& sendMessageReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_get:chatservice.sendMessageReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3535,11 +3535,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void sendMessageReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.sendMessageReply.errorMsg)
 }
 inline std::string* sendMessageReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.sendMessageReply.errorMsg)
   return _s;
 }
 inline const std::string& sendMessageReply::_internal_errormsg() const {
@@ -3554,7 +3554,7 @@ inline std::string* sendMessageReply::_internal_mutable_errormsg() {
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
 inline std::string* sendMessageReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_release:chatservice.sendMessageReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3579,7 +3579,7 @@ inline void sendMessageReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.sendMessageReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
@@ -3594,7 +3594,7 @@ inline bool queryNotificationsMessage::_internal_queryingnotifications() const {
   return _impl_.queryingnotifications_;
 }
 inline bool queryNotificationsMessage::queryingnotifications() const {
-  // @@protoc_insertion_point(field_get:chatService.queryNotificationsMessage.queryingNotifications)
+  // @@protoc_insertion_point(field_get:chatservice.queryNotificationsMessage.queryingNotifications)
   return _internal_queryingnotifications();
 }
 inline void queryNotificationsMessage::_internal_set_queryingnotifications(bool value) {
@@ -3603,7 +3603,7 @@ inline void queryNotificationsMessage::_internal_set_queryingnotifications(bool 
 }
 inline void queryNotificationsMessage::set_queryingnotifications(bool value) {
   _internal_set_queryingnotifications(value);
-  // @@protoc_insertion_point(field_set:chatService.queryNotificationsMessage.queryingNotifications)
+  // @@protoc_insertion_point(field_set:chatservice.queryNotificationsMessage.queryingNotifications)
 }
 
 // -------------------------------------------------------------------
@@ -3615,7 +3615,7 @@ inline void notification::clear_user() {
   _impl_.user_.ClearToEmpty();
 }
 inline const std::string& notification::user() const {
-  // @@protoc_insertion_point(field_get:chatService.notification.user)
+  // @@protoc_insertion_point(field_get:chatservice.notification.user)
   return _internal_user();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3623,11 +3623,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void notification::set_user(ArgT0&& arg0, ArgT... args) {
  
  _impl_.user_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.notification.user)
+  // @@protoc_insertion_point(field_set:chatservice.notification.user)
 }
 inline std::string* notification::mutable_user() {
   std::string* _s = _internal_mutable_user();
-  // @@protoc_insertion_point(field_mutable:chatService.notification.user)
+  // @@protoc_insertion_point(field_mutable:chatservice.notification.user)
   return _s;
 }
 inline const std::string& notification::_internal_user() const {
@@ -3642,7 +3642,7 @@ inline std::string* notification::_internal_mutable_user() {
   return _impl_.user_.Mutable(GetArenaForAllocation());
 }
 inline std::string* notification::release_user() {
-  // @@protoc_insertion_point(field_release:chatService.notification.user)
+  // @@protoc_insertion_point(field_release:chatservice.notification.user)
   return _impl_.user_.Release();
 }
 inline void notification::set_allocated_user(std::string* user) {
@@ -3657,7 +3657,7 @@ inline void notification::set_allocated_user(std::string* user) {
     _impl_.user_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.notification.user)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.notification.user)
 }
 
 // int32 numberOfNotifications = 2;
@@ -3668,7 +3668,7 @@ inline int32_t notification::_internal_numberofnotifications() const {
   return _impl_.numberofnotifications_;
 }
 inline int32_t notification::numberofnotifications() const {
-  // @@protoc_insertion_point(field_get:chatService.notification.numberOfNotifications)
+  // @@protoc_insertion_point(field_get:chatservice.notification.numberOfNotifications)
   return _internal_numberofnotifications();
 }
 inline void notification::_internal_set_numberofnotifications(int32_t value) {
@@ -3677,7 +3677,7 @@ inline void notification::_internal_set_numberofnotifications(int32_t value) {
 }
 inline void notification::set_numberofnotifications(int32_t value) {
   _internal_set_numberofnotifications(value);
-  // @@protoc_insertion_point(field_set:chatService.notification.numberOfNotifications)
+  // @@protoc_insertion_point(field_set:chatservice.notification.numberOfNotifications)
 }
 
 // -------------------------------------------------------------------
@@ -3689,7 +3689,7 @@ inline void queryMessagesMessage::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
 inline const std::string& queryMessagesMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_get:chatservice.queryMessagesMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3697,11 +3697,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void queryMessagesMessage::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.queryMessagesMessage.username)
 }
 inline std::string* queryMessagesMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.queryMessagesMessage.username)
   return _s;
 }
 inline const std::string& queryMessagesMessage::_internal_username() const {
@@ -3716,7 +3716,7 @@ inline std::string* queryMessagesMessage::_internal_mutable_username() {
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
 inline std::string* queryMessagesMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_release:chatservice.queryMessagesMessage.username)
   return _impl_.username_.Release();
 }
 inline void queryMessagesMessage::set_allocated_username(std::string* username) {
@@ -3731,7 +3731,7 @@ inline void queryMessagesMessage::set_allocated_username(std::string* username) 
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.queryMessagesMessage.username)
 }
 
 // -------------------------------------------------------------------
@@ -3743,7 +3743,7 @@ inline void chatMessage::clear_senderusername() {
   _impl_.senderusername_.ClearToEmpty();
 }
 inline const std::string& chatMessage::senderusername() const {
-  // @@protoc_insertion_point(field_get:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_get:chatservice.chatMessage.senderUsername)
   return _internal_senderusername();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3751,11 +3751,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void chatMessage::set_senderusername(ArgT0&& arg0, ArgT... args) {
  
  _impl_.senderusername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_set:chatservice.chatMessage.senderUsername)
 }
 inline std::string* chatMessage::mutable_senderusername() {
   std::string* _s = _internal_mutable_senderusername();
-  // @@protoc_insertion_point(field_mutable:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_mutable:chatservice.chatMessage.senderUsername)
   return _s;
 }
 inline const std::string& chatMessage::_internal_senderusername() const {
@@ -3770,7 +3770,7 @@ inline std::string* chatMessage::_internal_mutable_senderusername() {
   return _impl_.senderusername_.Mutable(GetArenaForAllocation());
 }
 inline std::string* chatMessage::release_senderusername() {
-  // @@protoc_insertion_point(field_release:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_release:chatservice.chatMessage.senderUsername)
   return _impl_.senderusername_.Release();
 }
 inline void chatMessage::set_allocated_senderusername(std::string* senderusername) {
@@ -3785,7 +3785,7 @@ inline void chatMessage::set_allocated_senderusername(std::string* senderusernam
     _impl_.senderusername_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.chatMessage.senderUsername)
 }
 
 // string msgContent = 2;
@@ -3793,7 +3793,7 @@ inline void chatMessage::clear_msgcontent() {
   _impl_.msgcontent_.ClearToEmpty();
 }
 inline const std::string& chatMessage::msgcontent() const {
-  // @@protoc_insertion_point(field_get:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_get:chatservice.chatMessage.msgContent)
   return _internal_msgcontent();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3801,11 +3801,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void chatMessage::set_msgcontent(ArgT0&& arg0, ArgT... args) {
  
  _impl_.msgcontent_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_set:chatservice.chatMessage.msgContent)
 }
 inline std::string* chatMessage::mutable_msgcontent() {
   std::string* _s = _internal_mutable_msgcontent();
-  // @@protoc_insertion_point(field_mutable:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_mutable:chatservice.chatMessage.msgContent)
   return _s;
 }
 inline const std::string& chatMessage::_internal_msgcontent() const {
@@ -3820,7 +3820,7 @@ inline std::string* chatMessage::_internal_mutable_msgcontent() {
   return _impl_.msgcontent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* chatMessage::release_msgcontent() {
-  // @@protoc_insertion_point(field_release:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_release:chatservice.chatMessage.msgContent)
   return _impl_.msgcontent_.Release();
 }
 inline void chatMessage::set_allocated_msgcontent(std::string* msgcontent) {
@@ -3835,7 +3835,7 @@ inline void chatMessage::set_allocated_msgcontent(std::string* msgcontent) {
     _impl_.msgcontent_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.chatMessage.msgContent)
 }
 
 // -------------------------------------------------------------------
@@ -3850,7 +3850,7 @@ inline bool deleteAccountMessage::_internal_deletingaccount() const {
   return _impl_.deletingaccount_;
 }
 inline bool deleteAccountMessage::deletingaccount() const {
-  // @@protoc_insertion_point(field_get:chatService.deleteAccountMessage.deletingAccount)
+  // @@protoc_insertion_point(field_get:chatservice.deleteAccountMessage.deletingAccount)
   return _internal_deletingaccount();
 }
 inline void deleteAccountMessage::_internal_set_deletingaccount(bool value) {
@@ -3859,7 +3859,7 @@ inline void deleteAccountMessage::_internal_set_deletingaccount(bool value) {
 }
 inline void deleteAccountMessage::set_deletingaccount(bool value) {
   _internal_set_deletingaccount(value);
-  // @@protoc_insertion_point(field_set:chatService.deleteAccountMessage.deletingAccount)
+  // @@protoc_insertion_point(field_set:chatservice.deleteAccountMessage.deletingAccount)
 }
 
 // -------------------------------------------------------------------
@@ -3874,7 +3874,7 @@ inline bool deleteAccountReply::_internal_deletedaccount() const {
   return _impl_.deletedaccount_;
 }
 inline bool deleteAccountReply::deletedaccount() const {
-  // @@protoc_insertion_point(field_get:chatService.deleteAccountReply.deletedAccount)
+  // @@protoc_insertion_point(field_get:chatservice.deleteAccountReply.deletedAccount)
   return _internal_deletedaccount();
 }
 inline void deleteAccountReply::_internal_set_deletedaccount(bool value) {
@@ -3883,7 +3883,7 @@ inline void deleteAccountReply::_internal_set_deletedaccount(bool value) {
 }
 inline void deleteAccountReply::set_deletedaccount(bool value) {
   _internal_set_deletedaccount(value);
-  // @@protoc_insertion_point(field_set:chatService.deleteAccountReply.deletedAccount)
+  // @@protoc_insertion_point(field_set:chatservice.deleteAccountReply.deletedAccount)
 }
 
 // optional string errorMsg = 2;
@@ -3899,7 +3899,7 @@ inline void deleteAccountReply::clear_errormsg() {
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& deleteAccountReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_get:chatservice.deleteAccountReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3907,11 +3907,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void deleteAccountReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.deleteAccountReply.errorMsg)
 }
 inline std::string* deleteAccountReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.deleteAccountReply.errorMsg)
   return _s;
 }
 inline const std::string& deleteAccountReply::_internal_errormsg() const {
@@ -3926,7 +3926,7 @@ inline std::string* deleteAccountReply::_internal_mutable_errormsg() {
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
 inline std::string* deleteAccountReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_release:chatservice.deleteAccountReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3951,7 +3951,7 @@ inline void deleteAccountReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.deleteAccountReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
@@ -3966,7 +3966,7 @@ inline int32_t messagesSeenMessage::_internal_messagesseen() const {
   return _impl_.messagesseen_;
 }
 inline int32_t messagesSeenMessage::messagesseen() const {
-  // @@protoc_insertion_point(field_get:chatService.messagesSeenMessage.messagesSeen)
+  // @@protoc_insertion_point(field_get:chatservice.messagesSeenMessage.messagesSeen)
   return _internal_messagesseen();
 }
 inline void messagesSeenMessage::_internal_set_messagesseen(int32_t value) {
@@ -3975,7 +3975,7 @@ inline void messagesSeenMessage::_internal_set_messagesseen(int32_t value) {
 }
 inline void messagesSeenMessage::set_messagesseen(int32_t value) {
   _internal_set_messagesseen(value);
-  // @@protoc_insertion_point(field_set:chatService.messagesSeenMessage.messagesSeen)
+  // @@protoc_insertion_point(field_set:chatservice.messagesSeenMessage.messagesSeen)
 }
 
 // int32 firstMessageIdx = 2;
@@ -3986,7 +3986,7 @@ inline int32_t messagesSeenMessage::_internal_firstmessageidx() const {
   return _impl_.firstmessageidx_;
 }
 inline int32_t messagesSeenMessage::firstmessageidx() const {
-  // @@protoc_insertion_point(field_get:chatService.messagesSeenMessage.firstMessageIdx)
+  // @@protoc_insertion_point(field_get:chatservice.messagesSeenMessage.firstMessageIdx)
   return _internal_firstmessageidx();
 }
 inline void messagesSeenMessage::_internal_set_firstmessageidx(int32_t value) {
@@ -3995,7 +3995,7 @@ inline void messagesSeenMessage::_internal_set_firstmessageidx(int32_t value) {
 }
 inline void messagesSeenMessage::set_firstmessageidx(int32_t value) {
   _internal_set_firstmessageidx(value);
-  // @@protoc_insertion_point(field_set:chatService.messagesSeenMessage.firstMessageIdx)
+  // @@protoc_insertion_point(field_set:chatservice.messagesSeenMessage.firstMessageIdx)
 }
 
 // -------------------------------------------------------------------
@@ -4010,7 +4010,7 @@ inline bool newMessageReply::_internal_received() const {
   return _impl_.received_;
 }
 inline bool newMessageReply::received() const {
-  // @@protoc_insertion_point(field_get:chatService.newMessageReply.received)
+  // @@protoc_insertion_point(field_get:chatservice.newMessageReply.received)
   return _internal_received();
 }
 inline void newMessageReply::_internal_set_received(bool value) {
@@ -4019,7 +4019,7 @@ inline void newMessageReply::_internal_set_received(bool value) {
 }
 inline void newMessageReply::set_received(bool value) {
   _internal_set_received(value);
-  // @@protoc_insertion_point(field_set:chatService.newMessageReply.received)
+  // @@protoc_insertion_point(field_set:chatservice.newMessageReply.received)
 }
 
 #ifdef __GNUC__
@@ -4060,7 +4060,7 @@ inline void newMessageReply::set_received(bool value) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace chatService
+}  // namespace chatservice
 
 // @@protoc_insertion_point(global_scope)
 
