@@ -44,100 +44,100 @@ struct TableStruct_chatService_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_chatService_2eproto;
-namespace chatService {
-class chatMessage;
-struct chatMessageDefaultTypeInternal;
-extern chatMessageDefaultTypeInternal _chatMessage_default_instance_;
-class createAccountMessage;
-struct createAccountMessageDefaultTypeInternal;
-extern createAccountMessageDefaultTypeInternal _createAccountMessage_default_instance_;
-class createAccountReply;
-struct createAccountReplyDefaultTypeInternal;
-extern createAccountReplyDefaultTypeInternal _createAccountReply_default_instance_;
-class deleteAccountMessage;
-struct deleteAccountMessageDefaultTypeInternal;
-extern deleteAccountMessageDefaultTypeInternal _deleteAccountMessage_default_instance_;
-class deleteAccountReply;
-struct deleteAccountReplyDefaultTypeInternal;
-extern deleteAccountReplyDefaultTypeInternal _deleteAccountReply_default_instance_;
-class loginMessage;
-struct loginMessageDefaultTypeInternal;
-extern loginMessageDefaultTypeInternal _loginMessage_default_instance_;
-class loginReply;
-struct loginReplyDefaultTypeInternal;
-extern loginReplyDefaultTypeInternal _loginReply_default_instance_;
-class logoutMessage;
-struct logoutMessageDefaultTypeInternal;
-extern logoutMessageDefaultTypeInternal _logoutMessage_default_instance_;
-class logoutReply;
-struct logoutReplyDefaultTypeInternal;
-extern logoutReplyDefaultTypeInternal _logoutReply_default_instance_;
-class messagesSeenMessage;
-struct messagesSeenMessageDefaultTypeInternal;
-extern messagesSeenMessageDefaultTypeInternal _messagesSeenMessage_default_instance_;
-class newMessageReply;
-struct newMessageReplyDefaultTypeInternal;
-extern newMessageReplyDefaultTypeInternal _newMessageReply_default_instance_;
-class notification;
-struct notificationDefaultTypeInternal;
-extern notificationDefaultTypeInternal _notification_default_instance_;
-class queryMessagesMessage;
-struct queryMessagesMessageDefaultTypeInternal;
-extern queryMessagesMessageDefaultTypeInternal _queryMessagesMessage_default_instance_;
-class queryNotificationsMessage;
-struct queryNotificationsMessageDefaultTypeInternal;
-extern queryNotificationsMessageDefaultTypeInternal _queryNotificationsMessage_default_instance_;
-class queryUsersMessage;
-struct queryUsersMessageDefaultTypeInternal;
-extern queryUsersMessageDefaultTypeInternal _queryUsersMessage_default_instance_;
-class sendMessageReply;
-struct sendMessageReplyDefaultTypeInternal;
-extern sendMessageReplyDefaultTypeInternal _sendMessageReply_default_instance_;
-class user;
-struct userDefaultTypeInternal;
-extern userDefaultTypeInternal _user_default_instance_;
-}  // namespace chatService
+namespace chatservice {
+class ChatMessage;
+struct ChatMessageDefaultTypeInternal;
+extern ChatMessageDefaultTypeInternal _ChatMessage_default_instance_;
+class CreateAccountMessage;
+struct CreateAccountMessageDefaultTypeInternal;
+extern CreateAccountMessageDefaultTypeInternal _CreateAccountMessage_default_instance_;
+class CreateAccountReply;
+struct CreateAccountReplyDefaultTypeInternal;
+extern CreateAccountReplyDefaultTypeInternal _CreateAccountReply_default_instance_;
+class DeleteAccountMessage;
+struct DeleteAccountMessageDefaultTypeInternal;
+extern DeleteAccountMessageDefaultTypeInternal _DeleteAccountMessage_default_instance_;
+class DeleteAccountReply;
+struct DeleteAccountReplyDefaultTypeInternal;
+extern DeleteAccountReplyDefaultTypeInternal _DeleteAccountReply_default_instance_;
+class LoginMessage;
+struct LoginMessageDefaultTypeInternal;
+extern LoginMessageDefaultTypeInternal _LoginMessage_default_instance_;
+class LoginReply;
+struct LoginReplyDefaultTypeInternal;
+extern LoginReplyDefaultTypeInternal _LoginReply_default_instance_;
+class LogoutMessage;
+struct LogoutMessageDefaultTypeInternal;
+extern LogoutMessageDefaultTypeInternal _LogoutMessage_default_instance_;
+class LogoutReply;
+struct LogoutReplyDefaultTypeInternal;
+extern LogoutReplyDefaultTypeInternal _LogoutReply_default_instance_;
+class MessagesSeenMessage;
+struct MessagesSeenMessageDefaultTypeInternal;
+extern MessagesSeenMessageDefaultTypeInternal _MessagesSeenMessage_default_instance_;
+class NewMessageReply;
+struct NewMessageReplyDefaultTypeInternal;
+extern NewMessageReplyDefaultTypeInternal _NewMessageReply_default_instance_;
+class Notification;
+struct NotificationDefaultTypeInternal;
+extern NotificationDefaultTypeInternal _Notification_default_instance_;
+class QueryMessagesMessage;
+struct QueryMessagesMessageDefaultTypeInternal;
+extern QueryMessagesMessageDefaultTypeInternal _QueryMessagesMessage_default_instance_;
+class QueryNotificationsMessage;
+struct QueryNotificationsMessageDefaultTypeInternal;
+extern QueryNotificationsMessageDefaultTypeInternal _QueryNotificationsMessage_default_instance_;
+class QueryUsersMessage;
+struct QueryUsersMessageDefaultTypeInternal;
+extern QueryUsersMessageDefaultTypeInternal _QueryUsersMessage_default_instance_;
+class SendMessageReply;
+struct SendMessageReplyDefaultTypeInternal;
+extern SendMessageReplyDefaultTypeInternal _SendMessageReply_default_instance_;
+class User;
+struct UserDefaultTypeInternal;
+extern UserDefaultTypeInternal _User_default_instance_;
+}  // namespace chatservice
 PROTOBUF_NAMESPACE_OPEN
-template<> ::chatService::chatMessage* Arena::CreateMaybeMessage<::chatService::chatMessage>(Arena*);
-template<> ::chatService::createAccountMessage* Arena::CreateMaybeMessage<::chatService::createAccountMessage>(Arena*);
-template<> ::chatService::createAccountReply* Arena::CreateMaybeMessage<::chatService::createAccountReply>(Arena*);
-template<> ::chatService::deleteAccountMessage* Arena::CreateMaybeMessage<::chatService::deleteAccountMessage>(Arena*);
-template<> ::chatService::deleteAccountReply* Arena::CreateMaybeMessage<::chatService::deleteAccountReply>(Arena*);
-template<> ::chatService::loginMessage* Arena::CreateMaybeMessage<::chatService::loginMessage>(Arena*);
-template<> ::chatService::loginReply* Arena::CreateMaybeMessage<::chatService::loginReply>(Arena*);
-template<> ::chatService::logoutMessage* Arena::CreateMaybeMessage<::chatService::logoutMessage>(Arena*);
-template<> ::chatService::logoutReply* Arena::CreateMaybeMessage<::chatService::logoutReply>(Arena*);
-template<> ::chatService::messagesSeenMessage* Arena::CreateMaybeMessage<::chatService::messagesSeenMessage>(Arena*);
-template<> ::chatService::newMessageReply* Arena::CreateMaybeMessage<::chatService::newMessageReply>(Arena*);
-template<> ::chatService::notification* Arena::CreateMaybeMessage<::chatService::notification>(Arena*);
-template<> ::chatService::queryMessagesMessage* Arena::CreateMaybeMessage<::chatService::queryMessagesMessage>(Arena*);
-template<> ::chatService::queryNotificationsMessage* Arena::CreateMaybeMessage<::chatService::queryNotificationsMessage>(Arena*);
-template<> ::chatService::queryUsersMessage* Arena::CreateMaybeMessage<::chatService::queryUsersMessage>(Arena*);
-template<> ::chatService::sendMessageReply* Arena::CreateMaybeMessage<::chatService::sendMessageReply>(Arena*);
-template<> ::chatService::user* Arena::CreateMaybeMessage<::chatService::user>(Arena*);
+template<> ::chatservice::ChatMessage* Arena::CreateMaybeMessage<::chatservice::ChatMessage>(Arena*);
+template<> ::chatservice::CreateAccountMessage* Arena::CreateMaybeMessage<::chatservice::CreateAccountMessage>(Arena*);
+template<> ::chatservice::CreateAccountReply* Arena::CreateMaybeMessage<::chatservice::CreateAccountReply>(Arena*);
+template<> ::chatservice::DeleteAccountMessage* Arena::CreateMaybeMessage<::chatservice::DeleteAccountMessage>(Arena*);
+template<> ::chatservice::DeleteAccountReply* Arena::CreateMaybeMessage<::chatservice::DeleteAccountReply>(Arena*);
+template<> ::chatservice::LoginMessage* Arena::CreateMaybeMessage<::chatservice::LoginMessage>(Arena*);
+template<> ::chatservice::LoginReply* Arena::CreateMaybeMessage<::chatservice::LoginReply>(Arena*);
+template<> ::chatservice::LogoutMessage* Arena::CreateMaybeMessage<::chatservice::LogoutMessage>(Arena*);
+template<> ::chatservice::LogoutReply* Arena::CreateMaybeMessage<::chatservice::LogoutReply>(Arena*);
+template<> ::chatservice::MessagesSeenMessage* Arena::CreateMaybeMessage<::chatservice::MessagesSeenMessage>(Arena*);
+template<> ::chatservice::NewMessageReply* Arena::CreateMaybeMessage<::chatservice::NewMessageReply>(Arena*);
+template<> ::chatservice::Notification* Arena::CreateMaybeMessage<::chatservice::Notification>(Arena*);
+template<> ::chatservice::QueryMessagesMessage* Arena::CreateMaybeMessage<::chatservice::QueryMessagesMessage>(Arena*);
+template<> ::chatservice::QueryNotificationsMessage* Arena::CreateMaybeMessage<::chatservice::QueryNotificationsMessage>(Arena*);
+template<> ::chatservice::QueryUsersMessage* Arena::CreateMaybeMessage<::chatservice::QueryUsersMessage>(Arena*);
+template<> ::chatservice::SendMessageReply* Arena::CreateMaybeMessage<::chatservice::SendMessageReply>(Arena*);
+template<> ::chatservice::User* Arena::CreateMaybeMessage<::chatservice::User>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace chatService {
+namespace chatservice {
 
 // ===================================================================
 
-class createAccountMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.createAccountMessage) */ {
+class CreateAccountMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.CreateAccountMessage) */ {
  public:
-  inline createAccountMessage() : createAccountMessage(nullptr) {}
-  ~createAccountMessage() override;
-  explicit PROTOBUF_CONSTEXPR createAccountMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CreateAccountMessage() : CreateAccountMessage(nullptr) {}
+  ~CreateAccountMessage() override;
+  explicit PROTOBUF_CONSTEXPR CreateAccountMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  createAccountMessage(const createAccountMessage& from);
-  createAccountMessage(createAccountMessage&& from) noexcept
-    : createAccountMessage() {
+  CreateAccountMessage(const CreateAccountMessage& from);
+  CreateAccountMessage(CreateAccountMessage&& from) noexcept
+    : CreateAccountMessage() {
     *this = ::std::move(from);
   }
 
-  inline createAccountMessage& operator=(const createAccountMessage& from) {
+  inline CreateAccountMessage& operator=(const CreateAccountMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline createAccountMessage& operator=(createAccountMessage&& from) noexcept {
+  inline CreateAccountMessage& operator=(CreateAccountMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -160,20 +160,20 @@ class createAccountMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const createAccountMessage& default_instance() {
+  static const CreateAccountMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const createAccountMessage* internal_default_instance() {
-    return reinterpret_cast<const createAccountMessage*>(
-               &_createAccountMessage_default_instance_);
+  static inline const CreateAccountMessage* internal_default_instance() {
+    return reinterpret_cast<const CreateAccountMessage*>(
+               &_CreateAccountMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(createAccountMessage& a, createAccountMessage& b) {
+  friend void swap(CreateAccountMessage& a, CreateAccountMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(createAccountMessage* other) {
+  inline void Swap(CreateAccountMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -186,7 +186,7 @@ class createAccountMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(createAccountMessage* other) {
+  void UnsafeArenaSwap(CreateAccountMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -194,14 +194,14 @@ class createAccountMessage final :
 
   // implements Message ----------------------------------------------
 
-  createAccountMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<createAccountMessage>(arena);
+  CreateAccountMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CreateAccountMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const createAccountMessage& from);
+  void CopyFrom(const CreateAccountMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const createAccountMessage& from) {
-    createAccountMessage::MergeImpl(*this, from);
+  void MergeFrom( const CreateAccountMessage& from) {
+    CreateAccountMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -219,15 +219,15 @@ class createAccountMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(createAccountMessage* other);
+  void InternalSwap(CreateAccountMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.createAccountMessage";
+    return "chatservice.CreateAccountMessage";
   }
   protected:
-  explicit createAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CreateAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -272,7 +272,7 @@ class createAccountMessage final :
   std::string* _internal_mutable_password();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.createAccountMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.CreateAccountMessage)
  private:
   class _Internal;
 
@@ -289,24 +289,24 @@ class createAccountMessage final :
 };
 // -------------------------------------------------------------------
 
-class createAccountReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.createAccountReply) */ {
+class CreateAccountReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.CreateAccountReply) */ {
  public:
-  inline createAccountReply() : createAccountReply(nullptr) {}
-  ~createAccountReply() override;
-  explicit PROTOBUF_CONSTEXPR createAccountReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CreateAccountReply() : CreateAccountReply(nullptr) {}
+  ~CreateAccountReply() override;
+  explicit PROTOBUF_CONSTEXPR CreateAccountReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  createAccountReply(const createAccountReply& from);
-  createAccountReply(createAccountReply&& from) noexcept
-    : createAccountReply() {
+  CreateAccountReply(const CreateAccountReply& from);
+  CreateAccountReply(CreateAccountReply&& from) noexcept
+    : CreateAccountReply() {
     *this = ::std::move(from);
   }
 
-  inline createAccountReply& operator=(const createAccountReply& from) {
+  inline CreateAccountReply& operator=(const CreateAccountReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline createAccountReply& operator=(createAccountReply&& from) noexcept {
+  inline CreateAccountReply& operator=(CreateAccountReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -329,20 +329,20 @@ class createAccountReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const createAccountReply& default_instance() {
+  static const CreateAccountReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const createAccountReply* internal_default_instance() {
-    return reinterpret_cast<const createAccountReply*>(
-               &_createAccountReply_default_instance_);
+  static inline const CreateAccountReply* internal_default_instance() {
+    return reinterpret_cast<const CreateAccountReply*>(
+               &_CreateAccountReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(createAccountReply& a, createAccountReply& b) {
+  friend void swap(CreateAccountReply& a, CreateAccountReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(createAccountReply* other) {
+  inline void Swap(CreateAccountReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -355,7 +355,7 @@ class createAccountReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(createAccountReply* other) {
+  void UnsafeArenaSwap(CreateAccountReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -363,14 +363,14 @@ class createAccountReply final :
 
   // implements Message ----------------------------------------------
 
-  createAccountReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<createAccountReply>(arena);
+  CreateAccountReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CreateAccountReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const createAccountReply& from);
+  void CopyFrom(const CreateAccountReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const createAccountReply& from) {
-    createAccountReply::MergeImpl(*this, from);
+  void MergeFrom( const CreateAccountReply& from) {
+    CreateAccountReply::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -388,15 +388,15 @@ class createAccountReply final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(createAccountReply* other);
+  void InternalSwap(CreateAccountReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.createAccountReply";
+    return "chatservice.CreateAccountReply";
   }
   protected:
-  explicit createAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CreateAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -440,7 +440,7 @@ class createAccountReply final :
   void _internal_set_createaccountsuccess(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.createAccountReply)
+  // @@protoc_insertion_point(class_scope:chatservice.CreateAccountReply)
  private:
   class _Internal;
 
@@ -458,24 +458,24 @@ class createAccountReply final :
 };
 // -------------------------------------------------------------------
 
-class loginMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.loginMessage) */ {
+class LoginMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.LoginMessage) */ {
  public:
-  inline loginMessage() : loginMessage(nullptr) {}
-  ~loginMessage() override;
-  explicit PROTOBUF_CONSTEXPR loginMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LoginMessage() : LoginMessage(nullptr) {}
+  ~LoginMessage() override;
+  explicit PROTOBUF_CONSTEXPR LoginMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  loginMessage(const loginMessage& from);
-  loginMessage(loginMessage&& from) noexcept
-    : loginMessage() {
+  LoginMessage(const LoginMessage& from);
+  LoginMessage(LoginMessage&& from) noexcept
+    : LoginMessage() {
     *this = ::std::move(from);
   }
 
-  inline loginMessage& operator=(const loginMessage& from) {
+  inline LoginMessage& operator=(const LoginMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline loginMessage& operator=(loginMessage&& from) noexcept {
+  inline LoginMessage& operator=(LoginMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -498,20 +498,20 @@ class loginMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const loginMessage& default_instance() {
+  static const LoginMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const loginMessage* internal_default_instance() {
-    return reinterpret_cast<const loginMessage*>(
-               &_loginMessage_default_instance_);
+  static inline const LoginMessage* internal_default_instance() {
+    return reinterpret_cast<const LoginMessage*>(
+               &_LoginMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(loginMessage& a, loginMessage& b) {
+  friend void swap(LoginMessage& a, LoginMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(loginMessage* other) {
+  inline void Swap(LoginMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -524,7 +524,7 @@ class loginMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(loginMessage* other) {
+  void UnsafeArenaSwap(LoginMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -532,14 +532,14 @@ class loginMessage final :
 
   // implements Message ----------------------------------------------
 
-  loginMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<loginMessage>(arena);
+  LoginMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoginMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const loginMessage& from);
+  void CopyFrom(const LoginMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const loginMessage& from) {
-    loginMessage::MergeImpl(*this, from);
+  void MergeFrom( const LoginMessage& from) {
+    LoginMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -557,15 +557,15 @@ class loginMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(loginMessage* other);
+  void InternalSwap(LoginMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.loginMessage";
+    return "chatservice.LoginMessage";
   }
   protected:
-  explicit loginMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LoginMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -610,7 +610,7 @@ class loginMessage final :
   std::string* _internal_mutable_password();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.loginMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.LoginMessage)
  private:
   class _Internal;
 
@@ -627,24 +627,24 @@ class loginMessage final :
 };
 // -------------------------------------------------------------------
 
-class loginReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.loginReply) */ {
+class LoginReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.LoginReply) */ {
  public:
-  inline loginReply() : loginReply(nullptr) {}
-  ~loginReply() override;
-  explicit PROTOBUF_CONSTEXPR loginReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LoginReply() : LoginReply(nullptr) {}
+  ~LoginReply() override;
+  explicit PROTOBUF_CONSTEXPR LoginReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  loginReply(const loginReply& from);
-  loginReply(loginReply&& from) noexcept
-    : loginReply() {
+  LoginReply(const LoginReply& from);
+  LoginReply(LoginReply&& from) noexcept
+    : LoginReply() {
     *this = ::std::move(from);
   }
 
-  inline loginReply& operator=(const loginReply& from) {
+  inline LoginReply& operator=(const LoginReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline loginReply& operator=(loginReply&& from) noexcept {
+  inline LoginReply& operator=(LoginReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -667,20 +667,20 @@ class loginReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const loginReply& default_instance() {
+  static const LoginReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const loginReply* internal_default_instance() {
-    return reinterpret_cast<const loginReply*>(
-               &_loginReply_default_instance_);
+  static inline const LoginReply* internal_default_instance() {
+    return reinterpret_cast<const LoginReply*>(
+               &_LoginReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(loginReply& a, loginReply& b) {
+  friend void swap(LoginReply& a, LoginReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(loginReply* other) {
+  inline void Swap(LoginReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -693,7 +693,7 @@ class loginReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(loginReply* other) {
+  void UnsafeArenaSwap(LoginReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -701,14 +701,14 @@ class loginReply final :
 
   // implements Message ----------------------------------------------
 
-  loginReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<loginReply>(arena);
+  LoginReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoginReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const loginReply& from);
+  void CopyFrom(const LoginReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const loginReply& from) {
-    loginReply::MergeImpl(*this, from);
+  void MergeFrom( const LoginReply& from) {
+    LoginReply::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -726,15 +726,15 @@ class loginReply final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(loginReply* other);
+  void InternalSwap(LoginReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.loginReply";
+    return "chatservice.LoginReply";
   }
   protected:
-  explicit loginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LoginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -778,7 +778,7 @@ class loginReply final :
   void _internal_set_loginsuccess(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.loginReply)
+  // @@protoc_insertion_point(class_scope:chatservice.LoginReply)
  private:
   class _Internal;
 
@@ -796,24 +796,24 @@ class loginReply final :
 };
 // -------------------------------------------------------------------
 
-class logoutMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.logoutMessage) */ {
+class LogoutMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.LogoutMessage) */ {
  public:
-  inline logoutMessage() : logoutMessage(nullptr) {}
-  ~logoutMessage() override;
-  explicit PROTOBUF_CONSTEXPR logoutMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LogoutMessage() : LogoutMessage(nullptr) {}
+  ~LogoutMessage() override;
+  explicit PROTOBUF_CONSTEXPR LogoutMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  logoutMessage(const logoutMessage& from);
-  logoutMessage(logoutMessage&& from) noexcept
-    : logoutMessage() {
+  LogoutMessage(const LogoutMessage& from);
+  LogoutMessage(LogoutMessage&& from) noexcept
+    : LogoutMessage() {
     *this = ::std::move(from);
   }
 
-  inline logoutMessage& operator=(const logoutMessage& from) {
+  inline LogoutMessage& operator=(const LogoutMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline logoutMessage& operator=(logoutMessage&& from) noexcept {
+  inline LogoutMessage& operator=(LogoutMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -836,20 +836,20 @@ class logoutMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const logoutMessage& default_instance() {
+  static const LogoutMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const logoutMessage* internal_default_instance() {
-    return reinterpret_cast<const logoutMessage*>(
-               &_logoutMessage_default_instance_);
+  static inline const LogoutMessage* internal_default_instance() {
+    return reinterpret_cast<const LogoutMessage*>(
+               &_LogoutMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(logoutMessage& a, logoutMessage& b) {
+  friend void swap(LogoutMessage& a, LogoutMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(logoutMessage* other) {
+  inline void Swap(LogoutMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -862,7 +862,7 @@ class logoutMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(logoutMessage* other) {
+  void UnsafeArenaSwap(LogoutMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -870,14 +870,14 @@ class logoutMessage final :
 
   // implements Message ----------------------------------------------
 
-  logoutMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<logoutMessage>(arena);
+  LogoutMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LogoutMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const logoutMessage& from);
+  void CopyFrom(const LogoutMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const logoutMessage& from) {
-    logoutMessage::MergeImpl(*this, from);
+  void MergeFrom( const LogoutMessage& from) {
+    LogoutMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -895,15 +895,15 @@ class logoutMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(logoutMessage* other);
+  void InternalSwap(LogoutMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.logoutMessage";
+    return "chatservice.LogoutMessage";
   }
   protected:
-  explicit logoutMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LogoutMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -928,7 +928,7 @@ class logoutMessage final :
   void _internal_set_loggingout(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.logoutMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.LogoutMessage)
  private:
   class _Internal;
 
@@ -944,24 +944,24 @@ class logoutMessage final :
 };
 // -------------------------------------------------------------------
 
-class logoutReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.logoutReply) */ {
+class LogoutReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.LogoutReply) */ {
  public:
-  inline logoutReply() : logoutReply(nullptr) {}
-  ~logoutReply() override;
-  explicit PROTOBUF_CONSTEXPR logoutReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LogoutReply() : LogoutReply(nullptr) {}
+  ~LogoutReply() override;
+  explicit PROTOBUF_CONSTEXPR LogoutReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  logoutReply(const logoutReply& from);
-  logoutReply(logoutReply&& from) noexcept
-    : logoutReply() {
+  LogoutReply(const LogoutReply& from);
+  LogoutReply(LogoutReply&& from) noexcept
+    : LogoutReply() {
     *this = ::std::move(from);
   }
 
-  inline logoutReply& operator=(const logoutReply& from) {
+  inline LogoutReply& operator=(const LogoutReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline logoutReply& operator=(logoutReply&& from) noexcept {
+  inline LogoutReply& operator=(LogoutReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -984,20 +984,20 @@ class logoutReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const logoutReply& default_instance() {
+  static const LogoutReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const logoutReply* internal_default_instance() {
-    return reinterpret_cast<const logoutReply*>(
-               &_logoutReply_default_instance_);
+  static inline const LogoutReply* internal_default_instance() {
+    return reinterpret_cast<const LogoutReply*>(
+               &_LogoutReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(logoutReply& a, logoutReply& b) {
+  friend void swap(LogoutReply& a, LogoutReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(logoutReply* other) {
+  inline void Swap(LogoutReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1010,7 +1010,7 @@ class logoutReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(logoutReply* other) {
+  void UnsafeArenaSwap(LogoutReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1018,14 +1018,14 @@ class logoutReply final :
 
   // implements Message ----------------------------------------------
 
-  logoutReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<logoutReply>(arena);
+  LogoutReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LogoutReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const logoutReply& from);
+  void CopyFrom(const LogoutReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const logoutReply& from) {
-    logoutReply::MergeImpl(*this, from);
+  void MergeFrom( const LogoutReply& from) {
+    LogoutReply::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1043,15 +1043,15 @@ class logoutReply final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(logoutReply* other);
+  void InternalSwap(LogoutReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.logoutReply";
+    return "chatservice.LogoutReply";
   }
   protected:
-  explicit logoutReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LogoutReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1095,7 +1095,7 @@ class logoutReply final :
   void _internal_set_loggedout(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.logoutReply)
+  // @@protoc_insertion_point(class_scope:chatservice.LogoutReply)
  private:
   class _Internal;
 
@@ -1113,24 +1113,24 @@ class logoutReply final :
 };
 // -------------------------------------------------------------------
 
-class queryUsersMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.queryUsersMessage) */ {
+class QueryUsersMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.QueryUsersMessage) */ {
  public:
-  inline queryUsersMessage() : queryUsersMessage(nullptr) {}
-  ~queryUsersMessage() override;
-  explicit PROTOBUF_CONSTEXPR queryUsersMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline QueryUsersMessage() : QueryUsersMessage(nullptr) {}
+  ~QueryUsersMessage() override;
+  explicit PROTOBUF_CONSTEXPR QueryUsersMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  queryUsersMessage(const queryUsersMessage& from);
-  queryUsersMessage(queryUsersMessage&& from) noexcept
-    : queryUsersMessage() {
+  QueryUsersMessage(const QueryUsersMessage& from);
+  QueryUsersMessage(QueryUsersMessage&& from) noexcept
+    : QueryUsersMessage() {
     *this = ::std::move(from);
   }
 
-  inline queryUsersMessage& operator=(const queryUsersMessage& from) {
+  inline QueryUsersMessage& operator=(const QueryUsersMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline queryUsersMessage& operator=(queryUsersMessage&& from) noexcept {
+  inline QueryUsersMessage& operator=(QueryUsersMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1153,20 +1153,20 @@ class queryUsersMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const queryUsersMessage& default_instance() {
+  static const QueryUsersMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const queryUsersMessage* internal_default_instance() {
-    return reinterpret_cast<const queryUsersMessage*>(
-               &_queryUsersMessage_default_instance_);
+  static inline const QueryUsersMessage* internal_default_instance() {
+    return reinterpret_cast<const QueryUsersMessage*>(
+               &_QueryUsersMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  friend void swap(queryUsersMessage& a, queryUsersMessage& b) {
+  friend void swap(QueryUsersMessage& a, QueryUsersMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(queryUsersMessage* other) {
+  inline void Swap(QueryUsersMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1179,7 +1179,7 @@ class queryUsersMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(queryUsersMessage* other) {
+  void UnsafeArenaSwap(QueryUsersMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1187,14 +1187,14 @@ class queryUsersMessage final :
 
   // implements Message ----------------------------------------------
 
-  queryUsersMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<queryUsersMessage>(arena);
+  QueryUsersMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<QueryUsersMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const queryUsersMessage& from);
+  void CopyFrom(const QueryUsersMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const queryUsersMessage& from) {
-    queryUsersMessage::MergeImpl(*this, from);
+  void MergeFrom( const QueryUsersMessage& from) {
+    QueryUsersMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1212,15 +1212,15 @@ class queryUsersMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(queryUsersMessage* other);
+  void InternalSwap(QueryUsersMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.queryUsersMessage";
+    return "chatservice.QueryUsersMessage";
   }
   protected:
-  explicit queryUsersMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit QueryUsersMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1254,7 +1254,7 @@ class queryUsersMessage final :
   std::string* _internal_mutable_username();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.queryUsersMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.QueryUsersMessage)
  private:
   class _Internal;
 
@@ -1271,24 +1271,24 @@ class queryUsersMessage final :
 };
 // -------------------------------------------------------------------
 
-class user final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.user) */ {
+class User final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.User) */ {
  public:
-  inline user() : user(nullptr) {}
-  ~user() override;
-  explicit PROTOBUF_CONSTEXPR user(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline User() : User(nullptr) {}
+  ~User() override;
+  explicit PROTOBUF_CONSTEXPR User(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  user(const user& from);
-  user(user&& from) noexcept
-    : user() {
+  User(const User& from);
+  User(User&& from) noexcept
+    : User() {
     *this = ::std::move(from);
   }
 
-  inline user& operator=(const user& from) {
+  inline User& operator=(const User& from) {
     CopyFrom(from);
     return *this;
   }
-  inline user& operator=(user&& from) noexcept {
+  inline User& operator=(User&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1311,20 +1311,20 @@ class user final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const user& default_instance() {
+  static const User& default_instance() {
     return *internal_default_instance();
   }
-  static inline const user* internal_default_instance() {
-    return reinterpret_cast<const user*>(
-               &_user_default_instance_);
+  static inline const User* internal_default_instance() {
+    return reinterpret_cast<const User*>(
+               &_User_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     7;
 
-  friend void swap(user& a, user& b) {
+  friend void swap(User& a, User& b) {
     a.Swap(&b);
   }
-  inline void Swap(user* other) {
+  inline void Swap(User* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1337,7 +1337,7 @@ class user final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(user* other) {
+  void UnsafeArenaSwap(User* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1345,14 +1345,14 @@ class user final :
 
   // implements Message ----------------------------------------------
 
-  user* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<user>(arena);
+  User* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<User>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const user& from);
+  void CopyFrom(const User& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const user& from) {
-    user::MergeImpl(*this, from);
+  void MergeFrom( const User& from) {
+    User::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1370,15 +1370,15 @@ class user final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(user* other);
+  void InternalSwap(User* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.user";
+    return "chatservice.User";
   }
   protected:
-  explicit user(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit User(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1408,7 +1408,7 @@ class user final :
   std::string* _internal_mutable_username();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.user)
+  // @@protoc_insertion_point(class_scope:chatservice.User)
  private:
   class _Internal;
 
@@ -1424,24 +1424,24 @@ class user final :
 };
 // -------------------------------------------------------------------
 
-class sendMessageReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.sendMessageReply) */ {
+class SendMessageReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.SendMessageReply) */ {
  public:
-  inline sendMessageReply() : sendMessageReply(nullptr) {}
-  ~sendMessageReply() override;
-  explicit PROTOBUF_CONSTEXPR sendMessageReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline SendMessageReply() : SendMessageReply(nullptr) {}
+  ~SendMessageReply() override;
+  explicit PROTOBUF_CONSTEXPR SendMessageReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  sendMessageReply(const sendMessageReply& from);
-  sendMessageReply(sendMessageReply&& from) noexcept
-    : sendMessageReply() {
+  SendMessageReply(const SendMessageReply& from);
+  SendMessageReply(SendMessageReply&& from) noexcept
+    : SendMessageReply() {
     *this = ::std::move(from);
   }
 
-  inline sendMessageReply& operator=(const sendMessageReply& from) {
+  inline SendMessageReply& operator=(const SendMessageReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline sendMessageReply& operator=(sendMessageReply&& from) noexcept {
+  inline SendMessageReply& operator=(SendMessageReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1464,20 +1464,20 @@ class sendMessageReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const sendMessageReply& default_instance() {
+  static const SendMessageReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const sendMessageReply* internal_default_instance() {
-    return reinterpret_cast<const sendMessageReply*>(
-               &_sendMessageReply_default_instance_);
+  static inline const SendMessageReply* internal_default_instance() {
+    return reinterpret_cast<const SendMessageReply*>(
+               &_SendMessageReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(sendMessageReply& a, sendMessageReply& b) {
+  friend void swap(SendMessageReply& a, SendMessageReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(sendMessageReply* other) {
+  inline void Swap(SendMessageReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1490,7 +1490,7 @@ class sendMessageReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(sendMessageReply* other) {
+  void UnsafeArenaSwap(SendMessageReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1498,14 +1498,14 @@ class sendMessageReply final :
 
   // implements Message ----------------------------------------------
 
-  sendMessageReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<sendMessageReply>(arena);
+  SendMessageReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SendMessageReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const sendMessageReply& from);
+  void CopyFrom(const SendMessageReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const sendMessageReply& from) {
-    sendMessageReply::MergeImpl(*this, from);
+  void MergeFrom( const SendMessageReply& from) {
+    SendMessageReply::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1523,15 +1523,15 @@ class sendMessageReply final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(sendMessageReply* other);
+  void InternalSwap(SendMessageReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.sendMessageReply";
+    return "chatservice.SendMessageReply";
   }
   protected:
-  explicit sendMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit SendMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1575,7 +1575,7 @@ class sendMessageReply final :
   void _internal_set_messagesent(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.sendMessageReply)
+  // @@protoc_insertion_point(class_scope:chatservice.SendMessageReply)
  private:
   class _Internal;
 
@@ -1593,24 +1593,24 @@ class sendMessageReply final :
 };
 // -------------------------------------------------------------------
 
-class queryNotificationsMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.queryNotificationsMessage) */ {
+class QueryNotificationsMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.QueryNotificationsMessage) */ {
  public:
-  inline queryNotificationsMessage() : queryNotificationsMessage(nullptr) {}
-  ~queryNotificationsMessage() override;
-  explicit PROTOBUF_CONSTEXPR queryNotificationsMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline QueryNotificationsMessage() : QueryNotificationsMessage(nullptr) {}
+  ~QueryNotificationsMessage() override;
+  explicit PROTOBUF_CONSTEXPR QueryNotificationsMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  queryNotificationsMessage(const queryNotificationsMessage& from);
-  queryNotificationsMessage(queryNotificationsMessage&& from) noexcept
-    : queryNotificationsMessage() {
+  QueryNotificationsMessage(const QueryNotificationsMessage& from);
+  QueryNotificationsMessage(QueryNotificationsMessage&& from) noexcept
+    : QueryNotificationsMessage() {
     *this = ::std::move(from);
   }
 
-  inline queryNotificationsMessage& operator=(const queryNotificationsMessage& from) {
+  inline QueryNotificationsMessage& operator=(const QueryNotificationsMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline queryNotificationsMessage& operator=(queryNotificationsMessage&& from) noexcept {
+  inline QueryNotificationsMessage& operator=(QueryNotificationsMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1633,20 +1633,20 @@ class queryNotificationsMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const queryNotificationsMessage& default_instance() {
+  static const QueryNotificationsMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const queryNotificationsMessage* internal_default_instance() {
-    return reinterpret_cast<const queryNotificationsMessage*>(
-               &_queryNotificationsMessage_default_instance_);
+  static inline const QueryNotificationsMessage* internal_default_instance() {
+    return reinterpret_cast<const QueryNotificationsMessage*>(
+               &_QueryNotificationsMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(queryNotificationsMessage& a, queryNotificationsMessage& b) {
+  friend void swap(QueryNotificationsMessage& a, QueryNotificationsMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(queryNotificationsMessage* other) {
+  inline void Swap(QueryNotificationsMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1659,7 +1659,7 @@ class queryNotificationsMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(queryNotificationsMessage* other) {
+  void UnsafeArenaSwap(QueryNotificationsMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1667,14 +1667,14 @@ class queryNotificationsMessage final :
 
   // implements Message ----------------------------------------------
 
-  queryNotificationsMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<queryNotificationsMessage>(arena);
+  QueryNotificationsMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<QueryNotificationsMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const queryNotificationsMessage& from);
+  void CopyFrom(const QueryNotificationsMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const queryNotificationsMessage& from) {
-    queryNotificationsMessage::MergeImpl(*this, from);
+  void MergeFrom( const QueryNotificationsMessage& from) {
+    QueryNotificationsMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1692,15 +1692,15 @@ class queryNotificationsMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(queryNotificationsMessage* other);
+  void InternalSwap(QueryNotificationsMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.queryNotificationsMessage";
+    return "chatservice.QueryNotificationsMessage";
   }
   protected:
-  explicit queryNotificationsMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit QueryNotificationsMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1725,7 +1725,7 @@ class queryNotificationsMessage final :
   void _internal_set_queryingnotifications(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.queryNotificationsMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.QueryNotificationsMessage)
  private:
   class _Internal;
 
@@ -1741,24 +1741,24 @@ class queryNotificationsMessage final :
 };
 // -------------------------------------------------------------------
 
-class notification final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.notification) */ {
+class Notification final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.Notification) */ {
  public:
-  inline notification() : notification(nullptr) {}
-  ~notification() override;
-  explicit PROTOBUF_CONSTEXPR notification(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline Notification() : Notification(nullptr) {}
+  ~Notification() override;
+  explicit PROTOBUF_CONSTEXPR Notification(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  notification(const notification& from);
-  notification(notification&& from) noexcept
-    : notification() {
+  Notification(const Notification& from);
+  Notification(Notification&& from) noexcept
+    : Notification() {
     *this = ::std::move(from);
   }
 
-  inline notification& operator=(const notification& from) {
+  inline Notification& operator=(const Notification& from) {
     CopyFrom(from);
     return *this;
   }
-  inline notification& operator=(notification&& from) noexcept {
+  inline Notification& operator=(Notification&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1781,20 +1781,20 @@ class notification final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const notification& default_instance() {
+  static const Notification& default_instance() {
     return *internal_default_instance();
   }
-  static inline const notification* internal_default_instance() {
-    return reinterpret_cast<const notification*>(
-               &_notification_default_instance_);
+  static inline const Notification* internal_default_instance() {
+    return reinterpret_cast<const Notification*>(
+               &_Notification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     10;
 
-  friend void swap(notification& a, notification& b) {
+  friend void swap(Notification& a, Notification& b) {
     a.Swap(&b);
   }
-  inline void Swap(notification* other) {
+  inline void Swap(Notification* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1807,7 +1807,7 @@ class notification final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(notification* other) {
+  void UnsafeArenaSwap(Notification* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1815,14 +1815,14 @@ class notification final :
 
   // implements Message ----------------------------------------------
 
-  notification* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<notification>(arena);
+  Notification* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Notification>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const notification& from);
+  void CopyFrom(const Notification& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const notification& from) {
-    notification::MergeImpl(*this, from);
+  void MergeFrom( const Notification& from) {
+    Notification::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1840,15 +1840,15 @@ class notification final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(notification* other);
+  void InternalSwap(Notification* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.notification";
+    return "chatservice.Notification";
   }
   protected:
-  explicit notification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit Notification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1888,7 +1888,7 @@ class notification final :
   void _internal_set_numberofnotifications(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.notification)
+  // @@protoc_insertion_point(class_scope:chatservice.Notification)
  private:
   class _Internal;
 
@@ -1905,24 +1905,24 @@ class notification final :
 };
 // -------------------------------------------------------------------
 
-class queryMessagesMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.queryMessagesMessage) */ {
+class QueryMessagesMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.QueryMessagesMessage) */ {
  public:
-  inline queryMessagesMessage() : queryMessagesMessage(nullptr) {}
-  ~queryMessagesMessage() override;
-  explicit PROTOBUF_CONSTEXPR queryMessagesMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline QueryMessagesMessage() : QueryMessagesMessage(nullptr) {}
+  ~QueryMessagesMessage() override;
+  explicit PROTOBUF_CONSTEXPR QueryMessagesMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  queryMessagesMessage(const queryMessagesMessage& from);
-  queryMessagesMessage(queryMessagesMessage&& from) noexcept
-    : queryMessagesMessage() {
+  QueryMessagesMessage(const QueryMessagesMessage& from);
+  QueryMessagesMessage(QueryMessagesMessage&& from) noexcept
+    : QueryMessagesMessage() {
     *this = ::std::move(from);
   }
 
-  inline queryMessagesMessage& operator=(const queryMessagesMessage& from) {
+  inline QueryMessagesMessage& operator=(const QueryMessagesMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline queryMessagesMessage& operator=(queryMessagesMessage&& from) noexcept {
+  inline QueryMessagesMessage& operator=(QueryMessagesMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1945,20 +1945,20 @@ class queryMessagesMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const queryMessagesMessage& default_instance() {
+  static const QueryMessagesMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const queryMessagesMessage* internal_default_instance() {
-    return reinterpret_cast<const queryMessagesMessage*>(
-               &_queryMessagesMessage_default_instance_);
+  static inline const QueryMessagesMessage* internal_default_instance() {
+    return reinterpret_cast<const QueryMessagesMessage*>(
+               &_QueryMessagesMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     11;
 
-  friend void swap(queryMessagesMessage& a, queryMessagesMessage& b) {
+  friend void swap(QueryMessagesMessage& a, QueryMessagesMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(queryMessagesMessage* other) {
+  inline void Swap(QueryMessagesMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1971,7 +1971,7 @@ class queryMessagesMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(queryMessagesMessage* other) {
+  void UnsafeArenaSwap(QueryMessagesMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1979,14 +1979,14 @@ class queryMessagesMessage final :
 
   // implements Message ----------------------------------------------
 
-  queryMessagesMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<queryMessagesMessage>(arena);
+  QueryMessagesMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<QueryMessagesMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const queryMessagesMessage& from);
+  void CopyFrom(const QueryMessagesMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const queryMessagesMessage& from) {
-    queryMessagesMessage::MergeImpl(*this, from);
+  void MergeFrom( const QueryMessagesMessage& from) {
+    QueryMessagesMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2004,15 +2004,15 @@ class queryMessagesMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(queryMessagesMessage* other);
+  void InternalSwap(QueryMessagesMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.queryMessagesMessage";
+    return "chatservice.QueryMessagesMessage";
   }
   protected:
-  explicit queryMessagesMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit QueryMessagesMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2042,7 +2042,7 @@ class queryMessagesMessage final :
   std::string* _internal_mutable_username();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.queryMessagesMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.QueryMessagesMessage)
  private:
   class _Internal;
 
@@ -2058,24 +2058,24 @@ class queryMessagesMessage final :
 };
 // -------------------------------------------------------------------
 
-class chatMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.chatMessage) */ {
+class ChatMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.ChatMessage) */ {
  public:
-  inline chatMessage() : chatMessage(nullptr) {}
-  ~chatMessage() override;
-  explicit PROTOBUF_CONSTEXPR chatMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ChatMessage() : ChatMessage(nullptr) {}
+  ~ChatMessage() override;
+  explicit PROTOBUF_CONSTEXPR ChatMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  chatMessage(const chatMessage& from);
-  chatMessage(chatMessage&& from) noexcept
-    : chatMessage() {
+  ChatMessage(const ChatMessage& from);
+  ChatMessage(ChatMessage&& from) noexcept
+    : ChatMessage() {
     *this = ::std::move(from);
   }
 
-  inline chatMessage& operator=(const chatMessage& from) {
+  inline ChatMessage& operator=(const ChatMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline chatMessage& operator=(chatMessage&& from) noexcept {
+  inline ChatMessage& operator=(ChatMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2098,20 +2098,20 @@ class chatMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const chatMessage& default_instance() {
+  static const ChatMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const chatMessage* internal_default_instance() {
-    return reinterpret_cast<const chatMessage*>(
-               &_chatMessage_default_instance_);
+  static inline const ChatMessage* internal_default_instance() {
+    return reinterpret_cast<const ChatMessage*>(
+               &_ChatMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     12;
 
-  friend void swap(chatMessage& a, chatMessage& b) {
+  friend void swap(ChatMessage& a, ChatMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(chatMessage* other) {
+  inline void Swap(ChatMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2124,7 +2124,7 @@ class chatMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(chatMessage* other) {
+  void UnsafeArenaSwap(ChatMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2132,14 +2132,14 @@ class chatMessage final :
 
   // implements Message ----------------------------------------------
 
-  chatMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<chatMessage>(arena);
+  ChatMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ChatMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const chatMessage& from);
+  void CopyFrom(const ChatMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const chatMessage& from) {
-    chatMessage::MergeImpl(*this, from);
+  void MergeFrom( const ChatMessage& from) {
+    ChatMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2157,15 +2157,15 @@ class chatMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(chatMessage* other);
+  void InternalSwap(ChatMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.chatMessage";
+    return "chatservice.ChatMessage";
   }
   protected:
-  explicit chatMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ChatMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2210,7 +2210,7 @@ class chatMessage final :
   std::string* _internal_mutable_msgcontent();
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.chatMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.ChatMessage)
  private:
   class _Internal;
 
@@ -2227,24 +2227,24 @@ class chatMessage final :
 };
 // -------------------------------------------------------------------
 
-class deleteAccountMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.deleteAccountMessage) */ {
+class DeleteAccountMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.DeleteAccountMessage) */ {
  public:
-  inline deleteAccountMessage() : deleteAccountMessage(nullptr) {}
-  ~deleteAccountMessage() override;
-  explicit PROTOBUF_CONSTEXPR deleteAccountMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline DeleteAccountMessage() : DeleteAccountMessage(nullptr) {}
+  ~DeleteAccountMessage() override;
+  explicit PROTOBUF_CONSTEXPR DeleteAccountMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  deleteAccountMessage(const deleteAccountMessage& from);
-  deleteAccountMessage(deleteAccountMessage&& from) noexcept
-    : deleteAccountMessage() {
+  DeleteAccountMessage(const DeleteAccountMessage& from);
+  DeleteAccountMessage(DeleteAccountMessage&& from) noexcept
+    : DeleteAccountMessage() {
     *this = ::std::move(from);
   }
 
-  inline deleteAccountMessage& operator=(const deleteAccountMessage& from) {
+  inline DeleteAccountMessage& operator=(const DeleteAccountMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline deleteAccountMessage& operator=(deleteAccountMessage&& from) noexcept {
+  inline DeleteAccountMessage& operator=(DeleteAccountMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2267,20 +2267,20 @@ class deleteAccountMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const deleteAccountMessage& default_instance() {
+  static const DeleteAccountMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const deleteAccountMessage* internal_default_instance() {
-    return reinterpret_cast<const deleteAccountMessage*>(
-               &_deleteAccountMessage_default_instance_);
+  static inline const DeleteAccountMessage* internal_default_instance() {
+    return reinterpret_cast<const DeleteAccountMessage*>(
+               &_DeleteAccountMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     13;
 
-  friend void swap(deleteAccountMessage& a, deleteAccountMessage& b) {
+  friend void swap(DeleteAccountMessage& a, DeleteAccountMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(deleteAccountMessage* other) {
+  inline void Swap(DeleteAccountMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2293,7 +2293,7 @@ class deleteAccountMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(deleteAccountMessage* other) {
+  void UnsafeArenaSwap(DeleteAccountMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2301,14 +2301,14 @@ class deleteAccountMessage final :
 
   // implements Message ----------------------------------------------
 
-  deleteAccountMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<deleteAccountMessage>(arena);
+  DeleteAccountMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<DeleteAccountMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const deleteAccountMessage& from);
+  void CopyFrom(const DeleteAccountMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const deleteAccountMessage& from) {
-    deleteAccountMessage::MergeImpl(*this, from);
+  void MergeFrom( const DeleteAccountMessage& from) {
+    DeleteAccountMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2326,15 +2326,15 @@ class deleteAccountMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(deleteAccountMessage* other);
+  void InternalSwap(DeleteAccountMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.deleteAccountMessage";
+    return "chatservice.DeleteAccountMessage";
   }
   protected:
-  explicit deleteAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit DeleteAccountMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2359,7 +2359,7 @@ class deleteAccountMessage final :
   void _internal_set_deletingaccount(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.deleteAccountMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.DeleteAccountMessage)
  private:
   class _Internal;
 
@@ -2375,24 +2375,24 @@ class deleteAccountMessage final :
 };
 // -------------------------------------------------------------------
 
-class deleteAccountReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.deleteAccountReply) */ {
+class DeleteAccountReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.DeleteAccountReply) */ {
  public:
-  inline deleteAccountReply() : deleteAccountReply(nullptr) {}
-  ~deleteAccountReply() override;
-  explicit PROTOBUF_CONSTEXPR deleteAccountReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline DeleteAccountReply() : DeleteAccountReply(nullptr) {}
+  ~DeleteAccountReply() override;
+  explicit PROTOBUF_CONSTEXPR DeleteAccountReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  deleteAccountReply(const deleteAccountReply& from);
-  deleteAccountReply(deleteAccountReply&& from) noexcept
-    : deleteAccountReply() {
+  DeleteAccountReply(const DeleteAccountReply& from);
+  DeleteAccountReply(DeleteAccountReply&& from) noexcept
+    : DeleteAccountReply() {
     *this = ::std::move(from);
   }
 
-  inline deleteAccountReply& operator=(const deleteAccountReply& from) {
+  inline DeleteAccountReply& operator=(const DeleteAccountReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline deleteAccountReply& operator=(deleteAccountReply&& from) noexcept {
+  inline DeleteAccountReply& operator=(DeleteAccountReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2415,20 +2415,20 @@ class deleteAccountReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const deleteAccountReply& default_instance() {
+  static const DeleteAccountReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const deleteAccountReply* internal_default_instance() {
-    return reinterpret_cast<const deleteAccountReply*>(
-               &_deleteAccountReply_default_instance_);
+  static inline const DeleteAccountReply* internal_default_instance() {
+    return reinterpret_cast<const DeleteAccountReply*>(
+               &_DeleteAccountReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     14;
 
-  friend void swap(deleteAccountReply& a, deleteAccountReply& b) {
+  friend void swap(DeleteAccountReply& a, DeleteAccountReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(deleteAccountReply* other) {
+  inline void Swap(DeleteAccountReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2441,7 +2441,7 @@ class deleteAccountReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(deleteAccountReply* other) {
+  void UnsafeArenaSwap(DeleteAccountReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2449,14 +2449,14 @@ class deleteAccountReply final :
 
   // implements Message ----------------------------------------------
 
-  deleteAccountReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<deleteAccountReply>(arena);
+  DeleteAccountReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<DeleteAccountReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const deleteAccountReply& from);
+  void CopyFrom(const DeleteAccountReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const deleteAccountReply& from) {
-    deleteAccountReply::MergeImpl(*this, from);
+  void MergeFrom( const DeleteAccountReply& from) {
+    DeleteAccountReply::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2474,15 +2474,15 @@ class deleteAccountReply final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(deleteAccountReply* other);
+  void InternalSwap(DeleteAccountReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.deleteAccountReply";
+    return "chatservice.DeleteAccountReply";
   }
   protected:
-  explicit deleteAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit DeleteAccountReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2526,7 +2526,7 @@ class deleteAccountReply final :
   void _internal_set_deletedaccount(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.deleteAccountReply)
+  // @@protoc_insertion_point(class_scope:chatservice.DeleteAccountReply)
  private:
   class _Internal;
 
@@ -2544,24 +2544,24 @@ class deleteAccountReply final :
 };
 // -------------------------------------------------------------------
 
-class messagesSeenMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.messagesSeenMessage) */ {
+class MessagesSeenMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.MessagesSeenMessage) */ {
  public:
-  inline messagesSeenMessage() : messagesSeenMessage(nullptr) {}
-  ~messagesSeenMessage() override;
-  explicit PROTOBUF_CONSTEXPR messagesSeenMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline MessagesSeenMessage() : MessagesSeenMessage(nullptr) {}
+  ~MessagesSeenMessage() override;
+  explicit PROTOBUF_CONSTEXPR MessagesSeenMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  messagesSeenMessage(const messagesSeenMessage& from);
-  messagesSeenMessage(messagesSeenMessage&& from) noexcept
-    : messagesSeenMessage() {
+  MessagesSeenMessage(const MessagesSeenMessage& from);
+  MessagesSeenMessage(MessagesSeenMessage&& from) noexcept
+    : MessagesSeenMessage() {
     *this = ::std::move(from);
   }
 
-  inline messagesSeenMessage& operator=(const messagesSeenMessage& from) {
+  inline MessagesSeenMessage& operator=(const MessagesSeenMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline messagesSeenMessage& operator=(messagesSeenMessage&& from) noexcept {
+  inline MessagesSeenMessage& operator=(MessagesSeenMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2584,20 +2584,20 @@ class messagesSeenMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const messagesSeenMessage& default_instance() {
+  static const MessagesSeenMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const messagesSeenMessage* internal_default_instance() {
-    return reinterpret_cast<const messagesSeenMessage*>(
-               &_messagesSeenMessage_default_instance_);
+  static inline const MessagesSeenMessage* internal_default_instance() {
+    return reinterpret_cast<const MessagesSeenMessage*>(
+               &_MessagesSeenMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     15;
 
-  friend void swap(messagesSeenMessage& a, messagesSeenMessage& b) {
+  friend void swap(MessagesSeenMessage& a, MessagesSeenMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(messagesSeenMessage* other) {
+  inline void Swap(MessagesSeenMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2610,7 +2610,7 @@ class messagesSeenMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(messagesSeenMessage* other) {
+  void UnsafeArenaSwap(MessagesSeenMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2618,14 +2618,14 @@ class messagesSeenMessage final :
 
   // implements Message ----------------------------------------------
 
-  messagesSeenMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<messagesSeenMessage>(arena);
+  MessagesSeenMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<MessagesSeenMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const messagesSeenMessage& from);
+  void CopyFrom(const MessagesSeenMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const messagesSeenMessage& from) {
-    messagesSeenMessage::MergeImpl(*this, from);
+  void MergeFrom( const MessagesSeenMessage& from) {
+    MessagesSeenMessage::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2643,15 +2643,15 @@ class messagesSeenMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(messagesSeenMessage* other);
+  void InternalSwap(MessagesSeenMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.messagesSeenMessage";
+    return "chatservice.MessagesSeenMessage";
   }
   protected:
-  explicit messagesSeenMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit MessagesSeenMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2686,7 +2686,7 @@ class messagesSeenMessage final :
   void _internal_set_firstmessageidx(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.messagesSeenMessage)
+  // @@protoc_insertion_point(class_scope:chatservice.MessagesSeenMessage)
  private:
   class _Internal;
 
@@ -2703,24 +2703,24 @@ class messagesSeenMessage final :
 };
 // -------------------------------------------------------------------
 
-class newMessageReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatService.newMessageReply) */ {
+class NewMessageReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.NewMessageReply) */ {
  public:
-  inline newMessageReply() : newMessageReply(nullptr) {}
-  ~newMessageReply() override;
-  explicit PROTOBUF_CONSTEXPR newMessageReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline NewMessageReply() : NewMessageReply(nullptr) {}
+  ~NewMessageReply() override;
+  explicit PROTOBUF_CONSTEXPR NewMessageReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  newMessageReply(const newMessageReply& from);
-  newMessageReply(newMessageReply&& from) noexcept
-    : newMessageReply() {
+  NewMessageReply(const NewMessageReply& from);
+  NewMessageReply(NewMessageReply&& from) noexcept
+    : NewMessageReply() {
     *this = ::std::move(from);
   }
 
-  inline newMessageReply& operator=(const newMessageReply& from) {
+  inline NewMessageReply& operator=(const NewMessageReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline newMessageReply& operator=(newMessageReply&& from) noexcept {
+  inline NewMessageReply& operator=(NewMessageReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2743,20 +2743,20 @@ class newMessageReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const newMessageReply& default_instance() {
+  static const NewMessageReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const newMessageReply* internal_default_instance() {
-    return reinterpret_cast<const newMessageReply*>(
-               &_newMessageReply_default_instance_);
+  static inline const NewMessageReply* internal_default_instance() {
+    return reinterpret_cast<const NewMessageReply*>(
+               &_NewMessageReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     16;
 
-  friend void swap(newMessageReply& a, newMessageReply& b) {
+  friend void swap(NewMessageReply& a, NewMessageReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(newMessageReply* other) {
+  inline void Swap(NewMessageReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2769,7 +2769,7 @@ class newMessageReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(newMessageReply* other) {
+  void UnsafeArenaSwap(NewMessageReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2777,14 +2777,14 @@ class newMessageReply final :
 
   // implements Message ----------------------------------------------
 
-  newMessageReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<newMessageReply>(arena);
+  NewMessageReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<NewMessageReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const newMessageReply& from);
+  void CopyFrom(const NewMessageReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const newMessageReply& from) {
-    newMessageReply::MergeImpl(*this, from);
+  void MergeFrom( const NewMessageReply& from) {
+    NewMessageReply::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2802,15 +2802,15 @@ class newMessageReply final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(newMessageReply* other);
+  void InternalSwap(NewMessageReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "chatService.newMessageReply";
+    return "chatservice.NewMessageReply";
   }
   protected:
-  explicit newMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit NewMessageReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2835,7 +2835,7 @@ class newMessageReply final :
   void _internal_set_received(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:chatService.newMessageReply)
+  // @@protoc_insertion_point(class_scope:chatservice.NewMessageReply)
  private:
   class _Internal;
 
@@ -2858,44 +2858,44 @@ class newMessageReply final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// createAccountMessage
+// CreateAccountMessage
 
 // string username = 1;
-inline void createAccountMessage::clear_username() {
+inline void CreateAccountMessage::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
-inline const std::string& createAccountMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountMessage.username)
+inline const std::string& CreateAccountMessage::username() const {
+  // @@protoc_insertion_point(field_get:chatservice.CreateAccountMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void createAccountMessage::set_username(ArgT0&& arg0, ArgT... args) {
+void CreateAccountMessage::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.CreateAccountMessage.username)
 }
-inline std::string* createAccountMessage::mutable_username() {
+inline std::string* CreateAccountMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.CreateAccountMessage.username)
   return _s;
 }
-inline const std::string& createAccountMessage::_internal_username() const {
+inline const std::string& CreateAccountMessage::_internal_username() const {
   return _impl_.username_.Get();
 }
-inline void createAccountMessage::_internal_set_username(const std::string& value) {
+inline void CreateAccountMessage::_internal_set_username(const std::string& value) {
   
   _impl_.username_.Set(value, GetArenaForAllocation());
 }
-inline std::string* createAccountMessage::_internal_mutable_username() {
+inline std::string* CreateAccountMessage::_internal_mutable_username() {
   
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
-inline std::string* createAccountMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.createAccountMessage.username)
+inline std::string* CreateAccountMessage::release_username() {
+  // @@protoc_insertion_point(field_release:chatservice.CreateAccountMessage.username)
   return _impl_.username_.Release();
 }
-inline void createAccountMessage::set_allocated_username(std::string* username) {
+inline void CreateAccountMessage::set_allocated_username(std::string* username) {
   if (username != nullptr) {
     
   } else {
@@ -2907,45 +2907,45 @@ inline void createAccountMessage::set_allocated_username(std::string* username) 
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.createAccountMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.CreateAccountMessage.username)
 }
 
 // string password = 2;
-inline void createAccountMessage::clear_password() {
+inline void CreateAccountMessage::clear_password() {
   _impl_.password_.ClearToEmpty();
 }
-inline const std::string& createAccountMessage::password() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountMessage.password)
+inline const std::string& CreateAccountMessage::password() const {
+  // @@protoc_insertion_point(field_get:chatservice.CreateAccountMessage.password)
   return _internal_password();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void createAccountMessage::set_password(ArgT0&& arg0, ArgT... args) {
+void CreateAccountMessage::set_password(ArgT0&& arg0, ArgT... args) {
  
  _impl_.password_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_set:chatservice.CreateAccountMessage.password)
 }
-inline std::string* createAccountMessage::mutable_password() {
+inline std::string* CreateAccountMessage::mutable_password() {
   std::string* _s = _internal_mutable_password();
-  // @@protoc_insertion_point(field_mutable:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_mutable:chatservice.CreateAccountMessage.password)
   return _s;
 }
-inline const std::string& createAccountMessage::_internal_password() const {
+inline const std::string& CreateAccountMessage::_internal_password() const {
   return _impl_.password_.Get();
 }
-inline void createAccountMessage::_internal_set_password(const std::string& value) {
+inline void CreateAccountMessage::_internal_set_password(const std::string& value) {
   
   _impl_.password_.Set(value, GetArenaForAllocation());
 }
-inline std::string* createAccountMessage::_internal_mutable_password() {
+inline std::string* CreateAccountMessage::_internal_mutable_password() {
   
   return _impl_.password_.Mutable(GetArenaForAllocation());
 }
-inline std::string* createAccountMessage::release_password() {
-  // @@protoc_insertion_point(field_release:chatService.createAccountMessage.password)
+inline std::string* CreateAccountMessage::release_password() {
+  // @@protoc_insertion_point(field_release:chatservice.CreateAccountMessage.password)
   return _impl_.password_.Release();
 }
-inline void createAccountMessage::set_allocated_password(std::string* password) {
+inline void CreateAccountMessage::set_allocated_password(std::string* password) {
   if (password != nullptr) {
     
   } else {
@@ -2957,74 +2957,74 @@ inline void createAccountMessage::set_allocated_password(std::string* password) 
     _impl_.password_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.createAccountMessage.password)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.CreateAccountMessage.password)
 }
 
 // -------------------------------------------------------------------
 
-// createAccountReply
+// CreateAccountReply
 
 // bool createAccountSuccess = 1;
-inline void createAccountReply::clear_createaccountsuccess() {
+inline void CreateAccountReply::clear_createaccountsuccess() {
   _impl_.createaccountsuccess_ = false;
 }
-inline bool createAccountReply::_internal_createaccountsuccess() const {
+inline bool CreateAccountReply::_internal_createaccountsuccess() const {
   return _impl_.createaccountsuccess_;
 }
-inline bool createAccountReply::createaccountsuccess() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountReply.createAccountSuccess)
+inline bool CreateAccountReply::createaccountsuccess() const {
+  // @@protoc_insertion_point(field_get:chatservice.CreateAccountReply.createAccountSuccess)
   return _internal_createaccountsuccess();
 }
-inline void createAccountReply::_internal_set_createaccountsuccess(bool value) {
+inline void CreateAccountReply::_internal_set_createaccountsuccess(bool value) {
   
   _impl_.createaccountsuccess_ = value;
 }
-inline void createAccountReply::set_createaccountsuccess(bool value) {
+inline void CreateAccountReply::set_createaccountsuccess(bool value) {
   _internal_set_createaccountsuccess(value);
-  // @@protoc_insertion_point(field_set:chatService.createAccountReply.createAccountSuccess)
+  // @@protoc_insertion_point(field_set:chatservice.CreateAccountReply.createAccountSuccess)
 }
 
 // optional string errorMsg = 2;
-inline bool createAccountReply::_internal_has_errormsg() const {
+inline bool CreateAccountReply::_internal_has_errormsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool createAccountReply::has_errormsg() const {
+inline bool CreateAccountReply::has_errormsg() const {
   return _internal_has_errormsg();
 }
-inline void createAccountReply::clear_errormsg() {
+inline void CreateAccountReply::clear_errormsg() {
   _impl_.errormsg_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& createAccountReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.createAccountReply.errorMsg)
+inline const std::string& CreateAccountReply::errormsg() const {
+  // @@protoc_insertion_point(field_get:chatservice.CreateAccountReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void createAccountReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
+void CreateAccountReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.CreateAccountReply.errorMsg)
 }
-inline std::string* createAccountReply::mutable_errormsg() {
+inline std::string* CreateAccountReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.CreateAccountReply.errorMsg)
   return _s;
 }
-inline const std::string& createAccountReply::_internal_errormsg() const {
+inline const std::string& CreateAccountReply::_internal_errormsg() const {
   return _impl_.errormsg_.Get();
 }
-inline void createAccountReply::_internal_set_errormsg(const std::string& value) {
+inline void CreateAccountReply::_internal_set_errormsg(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.errormsg_.Set(value, GetArenaForAllocation());
 }
-inline std::string* createAccountReply::_internal_mutable_errormsg() {
+inline std::string* CreateAccountReply::_internal_mutable_errormsg() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
-inline std::string* createAccountReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.createAccountReply.errorMsg)
+inline std::string* CreateAccountReply::release_errormsg() {
+  // @@protoc_insertion_point(field_release:chatservice.CreateAccountReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3037,7 +3037,7 @@ inline std::string* createAccountReply::release_errormsg() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void createAccountReply::set_allocated_errormsg(std::string* errormsg) {
+inline void CreateAccountReply::set_allocated_errormsg(std::string* errormsg) {
   if (errormsg != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3049,49 +3049,49 @@ inline void createAccountReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.createAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.CreateAccountReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
 
-// loginMessage
+// LoginMessage
 
 // string username = 1;
-inline void loginMessage::clear_username() {
+inline void LoginMessage::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
-inline const std::string& loginMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.loginMessage.username)
+inline const std::string& LoginMessage::username() const {
+  // @@protoc_insertion_point(field_get:chatservice.LoginMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void loginMessage::set_username(ArgT0&& arg0, ArgT... args) {
+void LoginMessage::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.LoginMessage.username)
 }
-inline std::string* loginMessage::mutable_username() {
+inline std::string* LoginMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.LoginMessage.username)
   return _s;
 }
-inline const std::string& loginMessage::_internal_username() const {
+inline const std::string& LoginMessage::_internal_username() const {
   return _impl_.username_.Get();
 }
-inline void loginMessage::_internal_set_username(const std::string& value) {
+inline void LoginMessage::_internal_set_username(const std::string& value) {
   
   _impl_.username_.Set(value, GetArenaForAllocation());
 }
-inline std::string* loginMessage::_internal_mutable_username() {
+inline std::string* LoginMessage::_internal_mutable_username() {
   
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
-inline std::string* loginMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.loginMessage.username)
+inline std::string* LoginMessage::release_username() {
+  // @@protoc_insertion_point(field_release:chatservice.LoginMessage.username)
   return _impl_.username_.Release();
 }
-inline void loginMessage::set_allocated_username(std::string* username) {
+inline void LoginMessage::set_allocated_username(std::string* username) {
   if (username != nullptr) {
     
   } else {
@@ -3103,45 +3103,45 @@ inline void loginMessage::set_allocated_username(std::string* username) {
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.loginMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.LoginMessage.username)
 }
 
 // string password = 2;
-inline void loginMessage::clear_password() {
+inline void LoginMessage::clear_password() {
   _impl_.password_.ClearToEmpty();
 }
-inline const std::string& loginMessage::password() const {
-  // @@protoc_insertion_point(field_get:chatService.loginMessage.password)
+inline const std::string& LoginMessage::password() const {
+  // @@protoc_insertion_point(field_get:chatservice.LoginMessage.password)
   return _internal_password();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void loginMessage::set_password(ArgT0&& arg0, ArgT... args) {
+void LoginMessage::set_password(ArgT0&& arg0, ArgT... args) {
  
  _impl_.password_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_set:chatservice.LoginMessage.password)
 }
-inline std::string* loginMessage::mutable_password() {
+inline std::string* LoginMessage::mutable_password() {
   std::string* _s = _internal_mutable_password();
-  // @@protoc_insertion_point(field_mutable:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_mutable:chatservice.LoginMessage.password)
   return _s;
 }
-inline const std::string& loginMessage::_internal_password() const {
+inline const std::string& LoginMessage::_internal_password() const {
   return _impl_.password_.Get();
 }
-inline void loginMessage::_internal_set_password(const std::string& value) {
+inline void LoginMessage::_internal_set_password(const std::string& value) {
   
   _impl_.password_.Set(value, GetArenaForAllocation());
 }
-inline std::string* loginMessage::_internal_mutable_password() {
+inline std::string* LoginMessage::_internal_mutable_password() {
   
   return _impl_.password_.Mutable(GetArenaForAllocation());
 }
-inline std::string* loginMessage::release_password() {
-  // @@protoc_insertion_point(field_release:chatService.loginMessage.password)
+inline std::string* LoginMessage::release_password() {
+  // @@protoc_insertion_point(field_release:chatservice.LoginMessage.password)
   return _impl_.password_.Release();
 }
-inline void loginMessage::set_allocated_password(std::string* password) {
+inline void LoginMessage::set_allocated_password(std::string* password) {
   if (password != nullptr) {
     
   } else {
@@ -3153,74 +3153,74 @@ inline void loginMessage::set_allocated_password(std::string* password) {
     _impl_.password_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.loginMessage.password)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.LoginMessage.password)
 }
 
 // -------------------------------------------------------------------
 
-// loginReply
+// LoginReply
 
 // bool loginSuccess = 1;
-inline void loginReply::clear_loginsuccess() {
+inline void LoginReply::clear_loginsuccess() {
   _impl_.loginsuccess_ = false;
 }
-inline bool loginReply::_internal_loginsuccess() const {
+inline bool LoginReply::_internal_loginsuccess() const {
   return _impl_.loginsuccess_;
 }
-inline bool loginReply::loginsuccess() const {
-  // @@protoc_insertion_point(field_get:chatService.loginReply.loginSuccess)
+inline bool LoginReply::loginsuccess() const {
+  // @@protoc_insertion_point(field_get:chatservice.LoginReply.loginSuccess)
   return _internal_loginsuccess();
 }
-inline void loginReply::_internal_set_loginsuccess(bool value) {
+inline void LoginReply::_internal_set_loginsuccess(bool value) {
   
   _impl_.loginsuccess_ = value;
 }
-inline void loginReply::set_loginsuccess(bool value) {
+inline void LoginReply::set_loginsuccess(bool value) {
   _internal_set_loginsuccess(value);
-  // @@protoc_insertion_point(field_set:chatService.loginReply.loginSuccess)
+  // @@protoc_insertion_point(field_set:chatservice.LoginReply.loginSuccess)
 }
 
 // optional string errorMsg = 2;
-inline bool loginReply::_internal_has_errormsg() const {
+inline bool LoginReply::_internal_has_errormsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool loginReply::has_errormsg() const {
+inline bool LoginReply::has_errormsg() const {
   return _internal_has_errormsg();
 }
-inline void loginReply::clear_errormsg() {
+inline void LoginReply::clear_errormsg() {
   _impl_.errormsg_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& loginReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.loginReply.errorMsg)
+inline const std::string& LoginReply::errormsg() const {
+  // @@protoc_insertion_point(field_get:chatservice.LoginReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void loginReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
+void LoginReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.LoginReply.errorMsg)
 }
-inline std::string* loginReply::mutable_errormsg() {
+inline std::string* LoginReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.LoginReply.errorMsg)
   return _s;
 }
-inline const std::string& loginReply::_internal_errormsg() const {
+inline const std::string& LoginReply::_internal_errormsg() const {
   return _impl_.errormsg_.Get();
 }
-inline void loginReply::_internal_set_errormsg(const std::string& value) {
+inline void LoginReply::_internal_set_errormsg(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.errormsg_.Set(value, GetArenaForAllocation());
 }
-inline std::string* loginReply::_internal_mutable_errormsg() {
+inline std::string* LoginReply::_internal_mutable_errormsg() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
-inline std::string* loginReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.loginReply.errorMsg)
+inline std::string* LoginReply::release_errormsg() {
+  // @@protoc_insertion_point(field_release:chatservice.LoginReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3233,7 +3233,7 @@ inline std::string* loginReply::release_errormsg() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void loginReply::set_allocated_errormsg(std::string* errormsg) {
+inline void LoginReply::set_allocated_errormsg(std::string* errormsg) {
   if (errormsg != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3245,98 +3245,98 @@ inline void loginReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.loginReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.LoginReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
 
-// logoutMessage
+// LogoutMessage
 
 // bool loggingOut = 1;
-inline void logoutMessage::clear_loggingout() {
+inline void LogoutMessage::clear_loggingout() {
   _impl_.loggingout_ = false;
 }
-inline bool logoutMessage::_internal_loggingout() const {
+inline bool LogoutMessage::_internal_loggingout() const {
   return _impl_.loggingout_;
 }
-inline bool logoutMessage::loggingout() const {
-  // @@protoc_insertion_point(field_get:chatService.logoutMessage.loggingOut)
+inline bool LogoutMessage::loggingout() const {
+  // @@protoc_insertion_point(field_get:chatservice.LogoutMessage.loggingOut)
   return _internal_loggingout();
 }
-inline void logoutMessage::_internal_set_loggingout(bool value) {
+inline void LogoutMessage::_internal_set_loggingout(bool value) {
   
   _impl_.loggingout_ = value;
 }
-inline void logoutMessage::set_loggingout(bool value) {
+inline void LogoutMessage::set_loggingout(bool value) {
   _internal_set_loggingout(value);
-  // @@protoc_insertion_point(field_set:chatService.logoutMessage.loggingOut)
+  // @@protoc_insertion_point(field_set:chatservice.LogoutMessage.loggingOut)
 }
 
 // -------------------------------------------------------------------
 
-// logoutReply
+// LogoutReply
 
 // bool loggedOut = 1;
-inline void logoutReply::clear_loggedout() {
+inline void LogoutReply::clear_loggedout() {
   _impl_.loggedout_ = false;
 }
-inline bool logoutReply::_internal_loggedout() const {
+inline bool LogoutReply::_internal_loggedout() const {
   return _impl_.loggedout_;
 }
-inline bool logoutReply::loggedout() const {
-  // @@protoc_insertion_point(field_get:chatService.logoutReply.loggedOut)
+inline bool LogoutReply::loggedout() const {
+  // @@protoc_insertion_point(field_get:chatservice.LogoutReply.loggedOut)
   return _internal_loggedout();
 }
-inline void logoutReply::_internal_set_loggedout(bool value) {
+inline void LogoutReply::_internal_set_loggedout(bool value) {
   
   _impl_.loggedout_ = value;
 }
-inline void logoutReply::set_loggedout(bool value) {
+inline void LogoutReply::set_loggedout(bool value) {
   _internal_set_loggedout(value);
-  // @@protoc_insertion_point(field_set:chatService.logoutReply.loggedOut)
+  // @@protoc_insertion_point(field_set:chatservice.LogoutReply.loggedOut)
 }
 
 // optional string errorMsg = 2;
-inline bool logoutReply::_internal_has_errormsg() const {
+inline bool LogoutReply::_internal_has_errormsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool logoutReply::has_errormsg() const {
+inline bool LogoutReply::has_errormsg() const {
   return _internal_has_errormsg();
 }
-inline void logoutReply::clear_errormsg() {
+inline void LogoutReply::clear_errormsg() {
   _impl_.errormsg_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& logoutReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.logoutReply.errorMsg)
+inline const std::string& LogoutReply::errormsg() const {
+  // @@protoc_insertion_point(field_get:chatservice.LogoutReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void logoutReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
+void LogoutReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.LogoutReply.errorMsg)
 }
-inline std::string* logoutReply::mutable_errormsg() {
+inline std::string* LogoutReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.LogoutReply.errorMsg)
   return _s;
 }
-inline const std::string& logoutReply::_internal_errormsg() const {
+inline const std::string& LogoutReply::_internal_errormsg() const {
   return _impl_.errormsg_.Get();
 }
-inline void logoutReply::_internal_set_errormsg(const std::string& value) {
+inline void LogoutReply::_internal_set_errormsg(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.errormsg_.Set(value, GetArenaForAllocation());
 }
-inline std::string* logoutReply::_internal_mutable_errormsg() {
+inline std::string* LogoutReply::_internal_mutable_errormsg() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
-inline std::string* logoutReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.logoutReply.errorMsg)
+inline std::string* LogoutReply::release_errormsg() {
+  // @@protoc_insertion_point(field_release:chatservice.LogoutReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3349,7 +3349,7 @@ inline std::string* logoutReply::release_errormsg() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void logoutReply::set_allocated_errormsg(std::string* errormsg) {
+inline void LogoutReply::set_allocated_errormsg(std::string* errormsg) {
   if (errormsg != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3361,54 +3361,54 @@ inline void logoutReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.logoutReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.LogoutReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
 
-// queryUsersMessage
+// QueryUsersMessage
 
 // optional string username = 1;
-inline bool queryUsersMessage::_internal_has_username() const {
+inline bool QueryUsersMessage::_internal_has_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool queryUsersMessage::has_username() const {
+inline bool QueryUsersMessage::has_username() const {
   return _internal_has_username();
 }
-inline void queryUsersMessage::clear_username() {
+inline void QueryUsersMessage::clear_username() {
   _impl_.username_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& queryUsersMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.queryUsersMessage.username)
+inline const std::string& QueryUsersMessage::username() const {
+  // @@protoc_insertion_point(field_get:chatservice.QueryUsersMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void queryUsersMessage::set_username(ArgT0&& arg0, ArgT... args) {
+void QueryUsersMessage::set_username(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.QueryUsersMessage.username)
 }
-inline std::string* queryUsersMessage::mutable_username() {
+inline std::string* QueryUsersMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.QueryUsersMessage.username)
   return _s;
 }
-inline const std::string& queryUsersMessage::_internal_username() const {
+inline const std::string& QueryUsersMessage::_internal_username() const {
   return _impl_.username_.Get();
 }
-inline void queryUsersMessage::_internal_set_username(const std::string& value) {
+inline void QueryUsersMessage::_internal_set_username(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.username_.Set(value, GetArenaForAllocation());
 }
-inline std::string* queryUsersMessage::_internal_mutable_username() {
+inline std::string* QueryUsersMessage::_internal_mutable_username() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
-inline std::string* queryUsersMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.queryUsersMessage.username)
+inline std::string* QueryUsersMessage::release_username() {
+  // @@protoc_insertion_point(field_release:chatservice.QueryUsersMessage.username)
   if (!_internal_has_username()) {
     return nullptr;
   }
@@ -3421,7 +3421,7 @@ inline std::string* queryUsersMessage::release_username() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void queryUsersMessage::set_allocated_username(std::string* username) {
+inline void QueryUsersMessage::set_allocated_username(std::string* username) {
   if (username != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3433,49 +3433,49 @@ inline void queryUsersMessage::set_allocated_username(std::string* username) {
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.queryUsersMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.QueryUsersMessage.username)
 }
 
 // -------------------------------------------------------------------
 
-// user
+// User
 
 // string username = 1;
-inline void user::clear_username() {
+inline void User::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
-inline const std::string& user::username() const {
-  // @@protoc_insertion_point(field_get:chatService.user.username)
+inline const std::string& User::username() const {
+  // @@protoc_insertion_point(field_get:chatservice.User.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void user::set_username(ArgT0&& arg0, ArgT... args) {
+void User::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.user.username)
+  // @@protoc_insertion_point(field_set:chatservice.User.username)
 }
-inline std::string* user::mutable_username() {
+inline std::string* User::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.user.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.User.username)
   return _s;
 }
-inline const std::string& user::_internal_username() const {
+inline const std::string& User::_internal_username() const {
   return _impl_.username_.Get();
 }
-inline void user::_internal_set_username(const std::string& value) {
+inline void User::_internal_set_username(const std::string& value) {
   
   _impl_.username_.Set(value, GetArenaForAllocation());
 }
-inline std::string* user::_internal_mutable_username() {
+inline std::string* User::_internal_mutable_username() {
   
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
-inline std::string* user::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.user.username)
+inline std::string* User::release_username() {
+  // @@protoc_insertion_point(field_release:chatservice.User.username)
   return _impl_.username_.Release();
 }
-inline void user::set_allocated_username(std::string* username) {
+inline void User::set_allocated_username(std::string* username) {
   if (username != nullptr) {
     
   } else {
@@ -3487,74 +3487,74 @@ inline void user::set_allocated_username(std::string* username) {
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.user.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.User.username)
 }
 
 // -------------------------------------------------------------------
 
-// sendMessageReply
+// SendMessageReply
 
 // bool messageSent = 1;
-inline void sendMessageReply::clear_messagesent() {
+inline void SendMessageReply::clear_messagesent() {
   _impl_.messagesent_ = false;
 }
-inline bool sendMessageReply::_internal_messagesent() const {
+inline bool SendMessageReply::_internal_messagesent() const {
   return _impl_.messagesent_;
 }
-inline bool sendMessageReply::messagesent() const {
-  // @@protoc_insertion_point(field_get:chatService.sendMessageReply.messageSent)
+inline bool SendMessageReply::messagesent() const {
+  // @@protoc_insertion_point(field_get:chatservice.SendMessageReply.messageSent)
   return _internal_messagesent();
 }
-inline void sendMessageReply::_internal_set_messagesent(bool value) {
+inline void SendMessageReply::_internal_set_messagesent(bool value) {
   
   _impl_.messagesent_ = value;
 }
-inline void sendMessageReply::set_messagesent(bool value) {
+inline void SendMessageReply::set_messagesent(bool value) {
   _internal_set_messagesent(value);
-  // @@protoc_insertion_point(field_set:chatService.sendMessageReply.messageSent)
+  // @@protoc_insertion_point(field_set:chatservice.SendMessageReply.messageSent)
 }
 
 // optional string errorMsg = 2;
-inline bool sendMessageReply::_internal_has_errormsg() const {
+inline bool SendMessageReply::_internal_has_errormsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool sendMessageReply::has_errormsg() const {
+inline bool SendMessageReply::has_errormsg() const {
   return _internal_has_errormsg();
 }
-inline void sendMessageReply::clear_errormsg() {
+inline void SendMessageReply::clear_errormsg() {
   _impl_.errormsg_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& sendMessageReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.sendMessageReply.errorMsg)
+inline const std::string& SendMessageReply::errormsg() const {
+  // @@protoc_insertion_point(field_get:chatservice.SendMessageReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void sendMessageReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
+void SendMessageReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.SendMessageReply.errorMsg)
 }
-inline std::string* sendMessageReply::mutable_errormsg() {
+inline std::string* SendMessageReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.SendMessageReply.errorMsg)
   return _s;
 }
-inline const std::string& sendMessageReply::_internal_errormsg() const {
+inline const std::string& SendMessageReply::_internal_errormsg() const {
   return _impl_.errormsg_.Get();
 }
-inline void sendMessageReply::_internal_set_errormsg(const std::string& value) {
+inline void SendMessageReply::_internal_set_errormsg(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.errormsg_.Set(value, GetArenaForAllocation());
 }
-inline std::string* sendMessageReply::_internal_mutable_errormsg() {
+inline std::string* SendMessageReply::_internal_mutable_errormsg() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
-inline std::string* sendMessageReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.sendMessageReply.errorMsg)
+inline std::string* SendMessageReply::release_errormsg() {
+  // @@protoc_insertion_point(field_release:chatservice.SendMessageReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3567,7 +3567,7 @@ inline std::string* sendMessageReply::release_errormsg() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void sendMessageReply::set_allocated_errormsg(std::string* errormsg) {
+inline void SendMessageReply::set_allocated_errormsg(std::string* errormsg) {
   if (errormsg != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3579,73 +3579,73 @@ inline void sendMessageReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.sendMessageReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.SendMessageReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
 
-// queryNotificationsMessage
+// QueryNotificationsMessage
 
 // bool queryingNotifications = 1;
-inline void queryNotificationsMessage::clear_queryingnotifications() {
+inline void QueryNotificationsMessage::clear_queryingnotifications() {
   _impl_.queryingnotifications_ = false;
 }
-inline bool queryNotificationsMessage::_internal_queryingnotifications() const {
+inline bool QueryNotificationsMessage::_internal_queryingnotifications() const {
   return _impl_.queryingnotifications_;
 }
-inline bool queryNotificationsMessage::queryingnotifications() const {
-  // @@protoc_insertion_point(field_get:chatService.queryNotificationsMessage.queryingNotifications)
+inline bool QueryNotificationsMessage::queryingnotifications() const {
+  // @@protoc_insertion_point(field_get:chatservice.QueryNotificationsMessage.queryingNotifications)
   return _internal_queryingnotifications();
 }
-inline void queryNotificationsMessage::_internal_set_queryingnotifications(bool value) {
+inline void QueryNotificationsMessage::_internal_set_queryingnotifications(bool value) {
   
   _impl_.queryingnotifications_ = value;
 }
-inline void queryNotificationsMessage::set_queryingnotifications(bool value) {
+inline void QueryNotificationsMessage::set_queryingnotifications(bool value) {
   _internal_set_queryingnotifications(value);
-  // @@protoc_insertion_point(field_set:chatService.queryNotificationsMessage.queryingNotifications)
+  // @@protoc_insertion_point(field_set:chatservice.QueryNotificationsMessage.queryingNotifications)
 }
 
 // -------------------------------------------------------------------
 
-// notification
+// Notification
 
 // string user = 1;
-inline void notification::clear_user() {
+inline void Notification::clear_user() {
   _impl_.user_.ClearToEmpty();
 }
-inline const std::string& notification::user() const {
-  // @@protoc_insertion_point(field_get:chatService.notification.user)
+inline const std::string& Notification::user() const {
+  // @@protoc_insertion_point(field_get:chatservice.Notification.user)
   return _internal_user();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void notification::set_user(ArgT0&& arg0, ArgT... args) {
+void Notification::set_user(ArgT0&& arg0, ArgT... args) {
  
  _impl_.user_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.notification.user)
+  // @@protoc_insertion_point(field_set:chatservice.Notification.user)
 }
-inline std::string* notification::mutable_user() {
+inline std::string* Notification::mutable_user() {
   std::string* _s = _internal_mutable_user();
-  // @@protoc_insertion_point(field_mutable:chatService.notification.user)
+  // @@protoc_insertion_point(field_mutable:chatservice.Notification.user)
   return _s;
 }
-inline const std::string& notification::_internal_user() const {
+inline const std::string& Notification::_internal_user() const {
   return _impl_.user_.Get();
 }
-inline void notification::_internal_set_user(const std::string& value) {
+inline void Notification::_internal_set_user(const std::string& value) {
   
   _impl_.user_.Set(value, GetArenaForAllocation());
 }
-inline std::string* notification::_internal_mutable_user() {
+inline std::string* Notification::_internal_mutable_user() {
   
   return _impl_.user_.Mutable(GetArenaForAllocation());
 }
-inline std::string* notification::release_user() {
-  // @@protoc_insertion_point(field_release:chatService.notification.user)
+inline std::string* Notification::release_user() {
+  // @@protoc_insertion_point(field_release:chatservice.Notification.user)
   return _impl_.user_.Release();
 }
-inline void notification::set_allocated_user(std::string* user) {
+inline void Notification::set_allocated_user(std::string* user) {
   if (user != nullptr) {
     
   } else {
@@ -3657,69 +3657,69 @@ inline void notification::set_allocated_user(std::string* user) {
     _impl_.user_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.notification.user)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.Notification.user)
 }
 
 // int32 numberOfNotifications = 2;
-inline void notification::clear_numberofnotifications() {
+inline void Notification::clear_numberofnotifications() {
   _impl_.numberofnotifications_ = 0;
 }
-inline int32_t notification::_internal_numberofnotifications() const {
+inline int32_t Notification::_internal_numberofnotifications() const {
   return _impl_.numberofnotifications_;
 }
-inline int32_t notification::numberofnotifications() const {
-  // @@protoc_insertion_point(field_get:chatService.notification.numberOfNotifications)
+inline int32_t Notification::numberofnotifications() const {
+  // @@protoc_insertion_point(field_get:chatservice.Notification.numberOfNotifications)
   return _internal_numberofnotifications();
 }
-inline void notification::_internal_set_numberofnotifications(int32_t value) {
+inline void Notification::_internal_set_numberofnotifications(int32_t value) {
   
   _impl_.numberofnotifications_ = value;
 }
-inline void notification::set_numberofnotifications(int32_t value) {
+inline void Notification::set_numberofnotifications(int32_t value) {
   _internal_set_numberofnotifications(value);
-  // @@protoc_insertion_point(field_set:chatService.notification.numberOfNotifications)
+  // @@protoc_insertion_point(field_set:chatservice.Notification.numberOfNotifications)
 }
 
 // -------------------------------------------------------------------
 
-// queryMessagesMessage
+// QueryMessagesMessage
 
 // string username = 1;
-inline void queryMessagesMessage::clear_username() {
+inline void QueryMessagesMessage::clear_username() {
   _impl_.username_.ClearToEmpty();
 }
-inline const std::string& queryMessagesMessage::username() const {
-  // @@protoc_insertion_point(field_get:chatService.queryMessagesMessage.username)
+inline const std::string& QueryMessagesMessage::username() const {
+  // @@protoc_insertion_point(field_get:chatservice.QueryMessagesMessage.username)
   return _internal_username();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void queryMessagesMessage::set_username(ArgT0&& arg0, ArgT... args) {
+void QueryMessagesMessage::set_username(ArgT0&& arg0, ArgT... args) {
  
  _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_set:chatservice.QueryMessagesMessage.username)
 }
-inline std::string* queryMessagesMessage::mutable_username() {
+inline std::string* QueryMessagesMessage::mutable_username() {
   std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_mutable:chatservice.QueryMessagesMessage.username)
   return _s;
 }
-inline const std::string& queryMessagesMessage::_internal_username() const {
+inline const std::string& QueryMessagesMessage::_internal_username() const {
   return _impl_.username_.Get();
 }
-inline void queryMessagesMessage::_internal_set_username(const std::string& value) {
+inline void QueryMessagesMessage::_internal_set_username(const std::string& value) {
   
   _impl_.username_.Set(value, GetArenaForAllocation());
 }
-inline std::string* queryMessagesMessage::_internal_mutable_username() {
+inline std::string* QueryMessagesMessage::_internal_mutable_username() {
   
   return _impl_.username_.Mutable(GetArenaForAllocation());
 }
-inline std::string* queryMessagesMessage::release_username() {
-  // @@protoc_insertion_point(field_release:chatService.queryMessagesMessage.username)
+inline std::string* QueryMessagesMessage::release_username() {
+  // @@protoc_insertion_point(field_release:chatservice.QueryMessagesMessage.username)
   return _impl_.username_.Release();
 }
-inline void queryMessagesMessage::set_allocated_username(std::string* username) {
+inline void QueryMessagesMessage::set_allocated_username(std::string* username) {
   if (username != nullptr) {
     
   } else {
@@ -3731,49 +3731,49 @@ inline void queryMessagesMessage::set_allocated_username(std::string* username) 
     _impl_.username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.queryMessagesMessage.username)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.QueryMessagesMessage.username)
 }
 
 // -------------------------------------------------------------------
 
-// chatMessage
+// ChatMessage
 
 // string senderUsername = 1;
-inline void chatMessage::clear_senderusername() {
+inline void ChatMessage::clear_senderusername() {
   _impl_.senderusername_.ClearToEmpty();
 }
-inline const std::string& chatMessage::senderusername() const {
-  // @@protoc_insertion_point(field_get:chatService.chatMessage.senderUsername)
+inline const std::string& ChatMessage::senderusername() const {
+  // @@protoc_insertion_point(field_get:chatservice.ChatMessage.senderUsername)
   return _internal_senderusername();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void chatMessage::set_senderusername(ArgT0&& arg0, ArgT... args) {
+void ChatMessage::set_senderusername(ArgT0&& arg0, ArgT... args) {
  
  _impl_.senderusername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_set:chatservice.ChatMessage.senderUsername)
 }
-inline std::string* chatMessage::mutable_senderusername() {
+inline std::string* ChatMessage::mutable_senderusername() {
   std::string* _s = _internal_mutable_senderusername();
-  // @@protoc_insertion_point(field_mutable:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_mutable:chatservice.ChatMessage.senderUsername)
   return _s;
 }
-inline const std::string& chatMessage::_internal_senderusername() const {
+inline const std::string& ChatMessage::_internal_senderusername() const {
   return _impl_.senderusername_.Get();
 }
-inline void chatMessage::_internal_set_senderusername(const std::string& value) {
+inline void ChatMessage::_internal_set_senderusername(const std::string& value) {
   
   _impl_.senderusername_.Set(value, GetArenaForAllocation());
 }
-inline std::string* chatMessage::_internal_mutable_senderusername() {
+inline std::string* ChatMessage::_internal_mutable_senderusername() {
   
   return _impl_.senderusername_.Mutable(GetArenaForAllocation());
 }
-inline std::string* chatMessage::release_senderusername() {
-  // @@protoc_insertion_point(field_release:chatService.chatMessage.senderUsername)
+inline std::string* ChatMessage::release_senderusername() {
+  // @@protoc_insertion_point(field_release:chatservice.ChatMessage.senderUsername)
   return _impl_.senderusername_.Release();
 }
-inline void chatMessage::set_allocated_senderusername(std::string* senderusername) {
+inline void ChatMessage::set_allocated_senderusername(std::string* senderusername) {
   if (senderusername != nullptr) {
     
   } else {
@@ -3785,45 +3785,45 @@ inline void chatMessage::set_allocated_senderusername(std::string* senderusernam
     _impl_.senderusername_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.chatMessage.senderUsername)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.ChatMessage.senderUsername)
 }
 
 // string msgContent = 2;
-inline void chatMessage::clear_msgcontent() {
+inline void ChatMessage::clear_msgcontent() {
   _impl_.msgcontent_.ClearToEmpty();
 }
-inline const std::string& chatMessage::msgcontent() const {
-  // @@protoc_insertion_point(field_get:chatService.chatMessage.msgContent)
+inline const std::string& ChatMessage::msgcontent() const {
+  // @@protoc_insertion_point(field_get:chatservice.ChatMessage.msgContent)
   return _internal_msgcontent();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void chatMessage::set_msgcontent(ArgT0&& arg0, ArgT... args) {
+void ChatMessage::set_msgcontent(ArgT0&& arg0, ArgT... args) {
  
  _impl_.msgcontent_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_set:chatservice.ChatMessage.msgContent)
 }
-inline std::string* chatMessage::mutable_msgcontent() {
+inline std::string* ChatMessage::mutable_msgcontent() {
   std::string* _s = _internal_mutable_msgcontent();
-  // @@protoc_insertion_point(field_mutable:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_mutable:chatservice.ChatMessage.msgContent)
   return _s;
 }
-inline const std::string& chatMessage::_internal_msgcontent() const {
+inline const std::string& ChatMessage::_internal_msgcontent() const {
   return _impl_.msgcontent_.Get();
 }
-inline void chatMessage::_internal_set_msgcontent(const std::string& value) {
+inline void ChatMessage::_internal_set_msgcontent(const std::string& value) {
   
   _impl_.msgcontent_.Set(value, GetArenaForAllocation());
 }
-inline std::string* chatMessage::_internal_mutable_msgcontent() {
+inline std::string* ChatMessage::_internal_mutable_msgcontent() {
   
   return _impl_.msgcontent_.Mutable(GetArenaForAllocation());
 }
-inline std::string* chatMessage::release_msgcontent() {
-  // @@protoc_insertion_point(field_release:chatService.chatMessage.msgContent)
+inline std::string* ChatMessage::release_msgcontent() {
+  // @@protoc_insertion_point(field_release:chatservice.ChatMessage.msgContent)
   return _impl_.msgcontent_.Release();
 }
-inline void chatMessage::set_allocated_msgcontent(std::string* msgcontent) {
+inline void ChatMessage::set_allocated_msgcontent(std::string* msgcontent) {
   if (msgcontent != nullptr) {
     
   } else {
@@ -3835,98 +3835,98 @@ inline void chatMessage::set_allocated_msgcontent(std::string* msgcontent) {
     _impl_.msgcontent_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.chatMessage.msgContent)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.ChatMessage.msgContent)
 }
 
 // -------------------------------------------------------------------
 
-// deleteAccountMessage
+// DeleteAccountMessage
 
 // bool deletingAccount = 1;
-inline void deleteAccountMessage::clear_deletingaccount() {
+inline void DeleteAccountMessage::clear_deletingaccount() {
   _impl_.deletingaccount_ = false;
 }
-inline bool deleteAccountMessage::_internal_deletingaccount() const {
+inline bool DeleteAccountMessage::_internal_deletingaccount() const {
   return _impl_.deletingaccount_;
 }
-inline bool deleteAccountMessage::deletingaccount() const {
-  // @@protoc_insertion_point(field_get:chatService.deleteAccountMessage.deletingAccount)
+inline bool DeleteAccountMessage::deletingaccount() const {
+  // @@protoc_insertion_point(field_get:chatservice.DeleteAccountMessage.deletingAccount)
   return _internal_deletingaccount();
 }
-inline void deleteAccountMessage::_internal_set_deletingaccount(bool value) {
+inline void DeleteAccountMessage::_internal_set_deletingaccount(bool value) {
   
   _impl_.deletingaccount_ = value;
 }
-inline void deleteAccountMessage::set_deletingaccount(bool value) {
+inline void DeleteAccountMessage::set_deletingaccount(bool value) {
   _internal_set_deletingaccount(value);
-  // @@protoc_insertion_point(field_set:chatService.deleteAccountMessage.deletingAccount)
+  // @@protoc_insertion_point(field_set:chatservice.DeleteAccountMessage.deletingAccount)
 }
 
 // -------------------------------------------------------------------
 
-// deleteAccountReply
+// DeleteAccountReply
 
 // bool deletedAccount = 1;
-inline void deleteAccountReply::clear_deletedaccount() {
+inline void DeleteAccountReply::clear_deletedaccount() {
   _impl_.deletedaccount_ = false;
 }
-inline bool deleteAccountReply::_internal_deletedaccount() const {
+inline bool DeleteAccountReply::_internal_deletedaccount() const {
   return _impl_.deletedaccount_;
 }
-inline bool deleteAccountReply::deletedaccount() const {
-  // @@protoc_insertion_point(field_get:chatService.deleteAccountReply.deletedAccount)
+inline bool DeleteAccountReply::deletedaccount() const {
+  // @@protoc_insertion_point(field_get:chatservice.DeleteAccountReply.deletedAccount)
   return _internal_deletedaccount();
 }
-inline void deleteAccountReply::_internal_set_deletedaccount(bool value) {
+inline void DeleteAccountReply::_internal_set_deletedaccount(bool value) {
   
   _impl_.deletedaccount_ = value;
 }
-inline void deleteAccountReply::set_deletedaccount(bool value) {
+inline void DeleteAccountReply::set_deletedaccount(bool value) {
   _internal_set_deletedaccount(value);
-  // @@protoc_insertion_point(field_set:chatService.deleteAccountReply.deletedAccount)
+  // @@protoc_insertion_point(field_set:chatservice.DeleteAccountReply.deletedAccount)
 }
 
 // optional string errorMsg = 2;
-inline bool deleteAccountReply::_internal_has_errormsg() const {
+inline bool DeleteAccountReply::_internal_has_errormsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool deleteAccountReply::has_errormsg() const {
+inline bool DeleteAccountReply::has_errormsg() const {
   return _internal_has_errormsg();
 }
-inline void deleteAccountReply::clear_errormsg() {
+inline void DeleteAccountReply::clear_errormsg() {
   _impl_.errormsg_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& deleteAccountReply::errormsg() const {
-  // @@protoc_insertion_point(field_get:chatService.deleteAccountReply.errorMsg)
+inline const std::string& DeleteAccountReply::errormsg() const {
+  // @@protoc_insertion_point(field_get:chatservice.DeleteAccountReply.errorMsg)
   return _internal_errormsg();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void deleteAccountReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
+void DeleteAccountReply::set_errormsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.errormsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set:chatservice.DeleteAccountReply.errorMsg)
 }
-inline std::string* deleteAccountReply::mutable_errormsg() {
+inline std::string* DeleteAccountReply::mutable_errormsg() {
   std::string* _s = _internal_mutable_errormsg();
-  // @@protoc_insertion_point(field_mutable:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_mutable:chatservice.DeleteAccountReply.errorMsg)
   return _s;
 }
-inline const std::string& deleteAccountReply::_internal_errormsg() const {
+inline const std::string& DeleteAccountReply::_internal_errormsg() const {
   return _impl_.errormsg_.Get();
 }
-inline void deleteAccountReply::_internal_set_errormsg(const std::string& value) {
+inline void DeleteAccountReply::_internal_set_errormsg(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.errormsg_.Set(value, GetArenaForAllocation());
 }
-inline std::string* deleteAccountReply::_internal_mutable_errormsg() {
+inline std::string* DeleteAccountReply::_internal_mutable_errormsg() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.errormsg_.Mutable(GetArenaForAllocation());
 }
-inline std::string* deleteAccountReply::release_errormsg() {
-  // @@protoc_insertion_point(field_release:chatService.deleteAccountReply.errorMsg)
+inline std::string* DeleteAccountReply::release_errormsg() {
+  // @@protoc_insertion_point(field_release:chatservice.DeleteAccountReply.errorMsg)
   if (!_internal_has_errormsg()) {
     return nullptr;
   }
@@ -3939,7 +3939,7 @@ inline std::string* deleteAccountReply::release_errormsg() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void deleteAccountReply::set_allocated_errormsg(std::string* errormsg) {
+inline void DeleteAccountReply::set_allocated_errormsg(std::string* errormsg) {
   if (errormsg != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3951,75 +3951,75 @@ inline void deleteAccountReply::set_allocated_errormsg(std::string* errormsg) {
     _impl_.errormsg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:chatService.deleteAccountReply.errorMsg)
+  // @@protoc_insertion_point(field_set_allocated:chatservice.DeleteAccountReply.errorMsg)
 }
 
 // -------------------------------------------------------------------
 
-// messagesSeenMessage
+// MessagesSeenMessage
 
 // int32 messagesSeen = 1;
-inline void messagesSeenMessage::clear_messagesseen() {
+inline void MessagesSeenMessage::clear_messagesseen() {
   _impl_.messagesseen_ = 0;
 }
-inline int32_t messagesSeenMessage::_internal_messagesseen() const {
+inline int32_t MessagesSeenMessage::_internal_messagesseen() const {
   return _impl_.messagesseen_;
 }
-inline int32_t messagesSeenMessage::messagesseen() const {
-  // @@protoc_insertion_point(field_get:chatService.messagesSeenMessage.messagesSeen)
+inline int32_t MessagesSeenMessage::messagesseen() const {
+  // @@protoc_insertion_point(field_get:chatservice.MessagesSeenMessage.messagesSeen)
   return _internal_messagesseen();
 }
-inline void messagesSeenMessage::_internal_set_messagesseen(int32_t value) {
+inline void MessagesSeenMessage::_internal_set_messagesseen(int32_t value) {
   
   _impl_.messagesseen_ = value;
 }
-inline void messagesSeenMessage::set_messagesseen(int32_t value) {
+inline void MessagesSeenMessage::set_messagesseen(int32_t value) {
   _internal_set_messagesseen(value);
-  // @@protoc_insertion_point(field_set:chatService.messagesSeenMessage.messagesSeen)
+  // @@protoc_insertion_point(field_set:chatservice.MessagesSeenMessage.messagesSeen)
 }
 
 // int32 firstMessageIdx = 2;
-inline void messagesSeenMessage::clear_firstmessageidx() {
+inline void MessagesSeenMessage::clear_firstmessageidx() {
   _impl_.firstmessageidx_ = 0;
 }
-inline int32_t messagesSeenMessage::_internal_firstmessageidx() const {
+inline int32_t MessagesSeenMessage::_internal_firstmessageidx() const {
   return _impl_.firstmessageidx_;
 }
-inline int32_t messagesSeenMessage::firstmessageidx() const {
-  // @@protoc_insertion_point(field_get:chatService.messagesSeenMessage.firstMessageIdx)
+inline int32_t MessagesSeenMessage::firstmessageidx() const {
+  // @@protoc_insertion_point(field_get:chatservice.MessagesSeenMessage.firstMessageIdx)
   return _internal_firstmessageidx();
 }
-inline void messagesSeenMessage::_internal_set_firstmessageidx(int32_t value) {
+inline void MessagesSeenMessage::_internal_set_firstmessageidx(int32_t value) {
   
   _impl_.firstmessageidx_ = value;
 }
-inline void messagesSeenMessage::set_firstmessageidx(int32_t value) {
+inline void MessagesSeenMessage::set_firstmessageidx(int32_t value) {
   _internal_set_firstmessageidx(value);
-  // @@protoc_insertion_point(field_set:chatService.messagesSeenMessage.firstMessageIdx)
+  // @@protoc_insertion_point(field_set:chatservice.MessagesSeenMessage.firstMessageIdx)
 }
 
 // -------------------------------------------------------------------
 
-// newMessageReply
+// NewMessageReply
 
 // bool received = 1;
-inline void newMessageReply::clear_received() {
+inline void NewMessageReply::clear_received() {
   _impl_.received_ = false;
 }
-inline bool newMessageReply::_internal_received() const {
+inline bool NewMessageReply::_internal_received() const {
   return _impl_.received_;
 }
-inline bool newMessageReply::received() const {
-  // @@protoc_insertion_point(field_get:chatService.newMessageReply.received)
+inline bool NewMessageReply::received() const {
+  // @@protoc_insertion_point(field_get:chatservice.NewMessageReply.received)
   return _internal_received();
 }
-inline void newMessageReply::_internal_set_received(bool value) {
+inline void NewMessageReply::_internal_set_received(bool value) {
   
   _impl_.received_ = value;
 }
-inline void newMessageReply::set_received(bool value) {
+inline void NewMessageReply::set_received(bool value) {
   _internal_set_received(value);
-  // @@protoc_insertion_point(field_set:chatService.newMessageReply.received)
+  // @@protoc_insertion_point(field_set:chatservice.NewMessageReply.received)
 }
 
 #ifdef __GNUC__
@@ -4060,7 +4060,7 @@ inline void newMessageReply::set_received(bool value) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace chatService
+}  // namespace chatservice
 
 // @@protoc_insertion_point(global_scope)
 

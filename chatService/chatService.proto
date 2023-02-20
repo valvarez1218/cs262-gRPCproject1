@@ -1,67 +1,67 @@
 syntax = "proto3";
 
-package chatService;
+package chatservice;
 
-service chatService {
-    rpc CreateAccount(createAccountMessage) returns (createAccountReply);
-    rpc Login(loginMessage) returns (loginReply);
-    rpc Logout(logoutMessage) returns (logoutReply);
-    rpc ListUsers(queryUsersMessage) returns (stream user);
-    rpc SendMessage(chatMessage) returns (sendMessageReply);
-    rpc QueryNotifications(queryNotificationsMessage) returns (stream notification);
-    rpc QueryMessages(queryMessagesMessage) returns (stream chatMessage);
-    rpc DeleteAccount(deleteAccountMessage) returns (deleteAccountReply);
+service ChatService {
+    rpc CreateAccount(CreateAccountMessage) returns (CreateAccountReply);
+    rpc Login(LoginMessage) returns (LoginReply);
+    rpc Logout(LogoutMessage) returns (LogoutReply);
+    rpc ListUsers(QueryUsersMessage) returns (stream User);
+    rpc SendMessage(ChatMessage) returns (SendMessageReply);
+    rpc QueryNotifications(QueryNotificationsMessage) returns (stream Notification);
+    rpc QueryMessages(QueryMessagesMessage) returns (stream ChatMessage);
+    rpc DeleteAccount(DeleteAccountMessage) returns (DeleteAccountReply);
 
     // May not need this anymore?
-    rpc MessagesSeen(messagesSeenMessage) returns (messagesSeenMessage);
+    rpc MessagesSeen(MessagesSeenMessage) returns (MessagesSeenMessage);
 
 
     // Server->client
-    rpc NewMessage(chatMessage) returns (newMessageReply);
+    rpc NewMessage(ChatMessage) returns (NewMessageReply);
 }
 
 
-message createAccountMessage {
+message CreateAccountMessage {
     string username=1;
     string password=2;
 }
 
 
-message createAccountReply {
+message CreateAccountReply {
     bool createAccountSuccess=1;
     optional string errorMsg=2;
 }
 
 
-message loginMessage {
+message LoginMessage {
     string username=1;
     string password=2;
 }
 
 
-message loginReply {
+message LoginReply {
     bool loginSuccess=1;
     optional string errorMsg=2;
 }
 
 
-message logoutMessage {
+message LogoutMessage {
     bool loggingOut=1;
 }
 
 
-message logoutReply {
+message LogoutReply {
     bool loggedOut=1;
     optional string errorMsg=2;
 }
 
 
-message queryUsersMessage {
+message QueryUsersMessage {
     optional string username=1;
 }
 
 
-message user {
+message User {
     string username=1;
 }
 
@@ -72,51 +72,51 @@ message user {
 // }
 
 
-message sendMessageReply {
+message SendMessageReply {
     bool messageSent=1;
     optional string errorMsg=2;
 }
 
 
-message queryNotificationsMessage {
+message QueryNotificationsMessage {
     bool queryingNotifications=1;
 }
 
 
-message notification {
+message Notification {
     string user=1;
     int32 numberOfNotifications=2;
 }
 
 
-message queryMessagesMessage {
+message QueryMessagesMessage {
     string username=1;
 }
 
 
-message chatMessage {
+message ChatMessage {
     string senderUsername=1;
     string msgContent=2;
 }
 
 
-message deleteAccountMessage {
+message DeleteAccountMessage {
     bool deletingAccount=1;
 }
 
 
-message deleteAccountReply {
+message DeleteAccountReply {
     bool deletedAccount=1;
     optional string errorMsg=2;
 }
 
 
-message messagesSeenMessage {
+message MessagesSeenMessage {
     int32 messagesSeen=1;
     int32 firstMessageIdx=2;
 }
 
 
-message newMessageReply {
+message NewMessageReply {
     bool received=1;
 }
