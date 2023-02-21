@@ -18,6 +18,7 @@
 
 // namespaces used
 using chatservice::ChatMessage;
+using chatservice::Notification;
 
 // TODO: ask nictor why this doesnt work
 // struct Notifications {
@@ -54,7 +55,7 @@ struct ConversationsDictionary {
     }  
 
     // decrement seen messages
-    void notificationSeen(char senderUsername[g_UsernameLimit], char recipientUsername[g_UsernameLimit]) {
+    void notificationSeen(char senderUsername[g_UsernameLimit], std::string recipientUsername) {
         notificationsMutex.lock();
        conversations[recipientUsername][senderUsername]--;
         notificationsMutex.unlock();
@@ -147,7 +148,7 @@ struct StoredMessages {
     }
 
     // Setting a subset of messages as read given the username of the reader
-    void setRead(int startingIndex, int endingIndex, char readerUsername[g_UsernameLimit]) {
+    void setRead(int startingIndex, int endingIndex, std::string readerUsername) {
         messageMutex.lock();
         for (int i = startingIndex; i < endingIndex + 1; i++) {
             if (messageList[i].senderUsername != readerUsername) {
@@ -379,7 +380,7 @@ UserTrie userTrie;
 
 // Global storage for new messsage operations
 std::mutex queuedOperations_mutex;
-std::unordered_map<std::string, std::vector<ChatMessage>> queuedOperationsDictionary;
+std::unordered_map<std::string, std::vector<Notification>> queuedOperationsDictionary;
 std::unordered_map<int, bool> forceLogoutDictionary;
 
 

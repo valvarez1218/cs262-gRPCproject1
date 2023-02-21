@@ -56,11 +56,9 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
                 userTrie.addUsername(username, password);
                 userTrie_mutex.unlock();
 
-                // TODO: Do we need the handlerDescriptor anymore?
-                // std::pair<std::thread::id, int> handlerDescriptor(thread_id, client_fd);
-                // socketDictionary_mutex.lock();
-                // socketDictionary[username] = handlerDescriptor;
-                // socketDictionary_mutex.unlock();
+                activeUser_mutex.lock();
+                activeUsers.insert(username);
+                activeUser_mutex.unlock();
 
                 // std::cout << "Username '" << username << "' added with client_fd: " << std::to_string(client_fd) << ", and thread id: "<< thread_id << std::endl;
                 std::cout << "Added user " << username << std::endl;
@@ -81,6 +79,9 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             
             if (verified) {
                 server_reply->set_loginsuccess(true);
+                activeUser_mutex.lock();
+                activeUsers.insert(username);
+                activeUser_mutex.unlock();
             } else {
                 server_reply->set_loginsuccess(false);
                 server_reply->set_errormsg("Incorrect username or password.");
@@ -92,6 +93,9 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
         // TODO
         Status Logout(ServerContext* context, const LogoutMessage* logout_message, LogoutReply* server_reply) {
             // close file descriptor and thread
+            activeUser_mutex.lock();
+            activeUsers.erase(logout_message->username());
+            activeUser_mutex.unlock();
             return Status::OK;
         }
 
@@ -127,15 +131,14 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
                 activeUser_mutex.lock();
                 if (activeUsers.find(recipient) != activeUsers.end()) {
                     queuedOperations_mutex.lock();
-                    ChatMessage msg;
-                    msg.set_senderusername(sender);
-                    msg.set_recipientusername(recipient);
-                    msg.set_msgcontent(content);
-                    queuedOperationsDictionary[recipient].push_back(msg);
+                    Notification note;
+                    note.set_user(sender);
+                    queuedOperationsDictionary[recipient].push_back(note);
                     queuedOperations_mutex.unlock();
                 }
                 activeUser_mutex.unlock();
 
+                server_reply->set_messagesent(true);
             } else {
                 std::string errormsg = "Tried to send a message to a user that doesn't exist '" + msg->recipientusername() + "'";
                 server_reply->set_errormsg(errormsg);
@@ -160,7 +163,7 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             return Status::OK;
         }
 
-        // TODO
+
         Status QueryMessages(ServerContext* context, const QueryMessagesMessage* query, 
                             ServerWriter<ChatMessage>* writer) {
             std::cout << "Getting messages between '" << query->clientusername() << "' and '"<< query->otherusername() << "'" << std::endl;
@@ -189,24 +192,43 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             return Status::OK;
         }
 
-        // TODO
         Status DeleteAccount(ServerContext* context, const DeleteAccountMessage* delete_acount_message,
                             DeleteAccountReply* server_reply) {
+            std::cout << "Deleting account of '" << delete_acount_message->username() << "'" << std::endl;
+            // Flag user account as deleted in trie
+            userTrie_mutex.lock();
+            userTrie.deleteUser(delete_acount_message->username());
+            userTrie_mutex.unlock();
 
+            currentConversationsDict.erase(delete_acount_message->username());
+            server_reply->set_deletedaccount(true);
         }
 
-        // TODO: might not need this one either?
+        // TODO
         Status MessagesSeen(ServerContext* context, const MessagesSeenMessage* msg, MessagesSeenMessage* reply) {
-
+                UserPair userPair(msg->clientusername(), msg->otherusername());
+                // if (messagesSeenMessage.startingIndex == -1)
+                messagesDictionary[userPair].setRead(msg->firstmessageidx(), 
+                                                     msg->firstmessageidx()+msg->messagesseen() - 1, msg->clientusername());
         }
 
-        // TODO: might not need this one, it's from server to client
+
         Status NewMessage(ServerContext* context, const ChatMessage* msg, NewMessageReply* client_reply) {
 
         }
 
-        // TODO: send client updates
+
         Status RefreshClient(ServerContext* context, const RefreshRequest* request, RefreshResponse* reply) {
+            std::cout << "Refreshing for " << request->clientusername() << std::endl;
+            if (queuedOperationsDictionary.find(request->clientusername()) != queuedOperationsDictionary.end()) {
+                std::cout << "Running queued operations for '" << request->clientusername() << "'" << std::endl;
+                for (Notification note : queuedOperationsDictionary[request->clientusername()]) {
+                    Notification* n = reply->add_notifications();
+                    n->set_user(note.user());
+                }
+
+                queuedOperationsDictionary.erase(request->clientusername());
+            }
             return Status::OK;
         }
 };

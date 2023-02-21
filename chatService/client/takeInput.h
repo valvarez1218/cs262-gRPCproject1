@@ -15,6 +15,7 @@ const std::unordered_map<std::string, opCode> operationMap {
     {"query_notifications",         QUERY_NOTIFICATIONS},
     {"query_messages",              QUERY_MESSAGES},
     {"delete_account",              DELETE_ACCOUNT},
+    {"help",                        HELP}
 };
 
 

@@ -14,7 +14,7 @@ service ChatService {
     rpc RefreshClient(RefreshRequest) returns (RefreshResponse);
 
     // May not need this anymore?
-    rpc MessagesSeen(MessagesSeenMessage) returns (MessagesSeenMessage);
+    rpc MessagesSeen(MessagesSeenMessage) returns (MessagesSeenReply);
 
 
     // Server->client
@@ -47,7 +47,7 @@ message LoginReply {
 
 
 message LogoutMessage {
-    // bool loggingOut=1;
+    string username=1;
 }
 
 
@@ -65,12 +65,6 @@ message QueryUsersMessage {
 message User {
     string username=1;
 }
-
-
-// message chatMessage {
-//     string recipientUsername=1;
-//     string msgContent=2;
-// }
 
 
 message SendMessageReply {
@@ -117,17 +111,21 @@ message DeleteAccountReply {
 
 
 message MessagesSeenMessage {
-    int32 messagesSeen=1;
-    int32 firstMessageIdx=2;
+    string clientUsername=1;
+    string otherUsername=2;
+    int32 messagesSeen=3;
+    int32 firstMessageIdx=4;
 }
 
+message MessagesSeenReply {
+}
 
 message NewMessageReply {
     bool received=1;
 }
 
 message RefreshRequest {
-    // bool request=1;
+    string clientusername=1;
 }
 
 message RefreshResponse {

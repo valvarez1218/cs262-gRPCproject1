@@ -38,7 +38,7 @@ using chatservice::DeleteAccountReply;
 using chatservice::NewMessageReply;
 using chatservice::RefreshRequest;
 using chatservice::RefreshResponse;
-
+using chatservice::MessagesSeenReply;
 
 
 // Boolean determining whether program is still running
@@ -122,6 +122,7 @@ struct ChatServiceClient {
 
             ClientContext context;
             LogoutMessage message;
+            message.set_username(clientUsername);
             LogoutReply reply;
             Status status = stub_->Logout(&context, message, &reply);
             if (status.ok()) {
@@ -179,7 +180,6 @@ struct ChatServiceClient {
             }
         }
 
-
         void queryNotifications() {
             if (!USER_LOGGED_IN) {
                 throw std::runtime_error(loggedInErrorMsg("query_notifications"));
@@ -191,7 +191,6 @@ struct ChatServiceClient {
             Notification notification;
             
             std::unique_ptr<ClientReader<Notification>> reader(stub_->QueryNotifications(&context, message));
-            std::cout << "Found Following Users:" << std::endl;
             while (reader->Read(&notification)) {
                 std::cout << notification.user() << ": " << std::to_string(notification.numberofnotifications()) << std::endl;
             }
@@ -214,7 +213,6 @@ struct ChatServiceClient {
             ChatMessage msg;
             
             std::unique_ptr<ClientReader<ChatMessage>> reader(stub_->QueryMessages(&context, message));
-            std::cout << "Found Following Users:" << std::endl;
             while (reader->Read(&msg)) {
                 std::cout << msg.senderusername() << ": " << msg.msgcontent() << std::endl;
             }
@@ -222,6 +220,12 @@ struct ChatServiceClient {
             if (!status.ok()) {
                 std::cout << "query_messages failed." << std::endl;
             }
+
+
+            // TODO: send back a messages seen message?
+            ClientContext context;
+            MessagesSeenMessage message;
+            MessagesSeenReply server_reply;
         }
 
 
@@ -256,9 +260,9 @@ struct ChatServiceClient {
                 return;
             }
 
-            std::cout << "Refreshing!" << std::endl;
             ClientContext context;
             RefreshRequest request;
+            request.set_clientusername(clientUsername);
             RefreshResponse reply;
 
             Status status = stub_->RefreshClient(&context, request, &reply);
@@ -274,7 +278,7 @@ struct ChatServiceClient {
 
                 for (int idx=0; idx < reply.notifications_size(); idx++) {
                     const Notification note = reply.notifications(idx);
-                    std::cout << note.user() << ": " << std::to_string(note.numberofnotifications()) << " new message(s)" << std::endl;
+                    std::cout << "New message from " << note.user() << std::endl;
                 }
             }
         }
