@@ -15,10 +15,6 @@ service ChatService {
 
     // May not need this anymore?
     rpc MessagesSeen(MessagesSeenMessage) returns (MessagesSeenReply);
-
-
-    // Server->client
-    rpc NewMessage(ChatMessage) returns (NewMessageReply);
 }
 
 
@@ -114,14 +110,9 @@ message MessagesSeenMessage {
     string clientUsername=1;
     string otherUsername=2;
     int32 messagesSeen=3;
-    int32 firstMessageIdx=4;
 }
 
 message MessagesSeenReply {
-}
-
-message NewMessageReply {
-    bool received=1;
 }
 
 message RefreshRequest {

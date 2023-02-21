@@ -212,21 +212,28 @@ struct ChatServiceClient {
             message.set_clientusername(clientUsername);
 
             ChatMessage msg;
-            
+            int messagesRead = 0;
             std::unique_ptr<ClientReader<ChatMessage>> reader(stub_->QueryMessages(&context, message));
             while (reader->Read(&msg)) {
                 std::cout << msg.senderusername() << ": " << msg.msgcontent() << std::endl;
+                messagesRead++;
             }
             Status status = reader->Finish();
             if (!status.ok()) {
                 std::cout << "query_messages failed." << std::endl;
+                // return;
             }
 
-
-            // TODO: send back a messages seen message?
-            // ClientContext context;
-            // MessagesSeenMessage message;
-            // MessagesSeenReply server_reply;
+            ClientContext context2;
+            MessagesSeenMessage message2;
+            message2.set_messagesseen(messagesRead);
+            message2.set_clientusername(clientUsername);
+            message2.set_otherusername(username);
+            MessagesSeenReply server_reply;
+            status = stub_->MessagesSeen(&context2, message2, &server_reply);
+            if (!status.ok()) {
+                std::cout << status.error_code() << ": " << status.error_message() << std::endl;
+            }
         }
 
 

@@ -31,6 +31,7 @@ using chatservice::DeleteAccountReply;
 using chatservice::NewMessageReply;
 using chatservice::RefreshRequest;
 using chatservice::RefreshResponse;
+using chatservice::MessagesSeenReply;
 
 class ChatServiceImpl final : public chatservice::ChatService::Service {
     private:
@@ -217,18 +218,15 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
         }
 
         // TODO
-        Status MessagesSeen(ServerContext* context, const MessagesSeenMessage* msg, MessagesSeenMessage* reply) {
-                UserPair userPair(msg->clientusername(), msg->otherusername());
-                // if (messagesSeenMessage.startingIndex == -1)
-                messagesDictionary[userPair].setRead(msg->firstmessageidx(), 
-                                                     msg->firstmessageidx()+msg->messagesseen() - 1, msg->clientusername());
+        Status MessagesSeen(ServerContext* context, const MessagesSeenMessage* msg, MessagesSeenReply* reply) {
+            UserPair userPair(msg->clientusername(), msg->otherusername());
+            int startIdx = currentConversationsDict[msg->clientusername()].messagesSentStartIndex;
+            // if (messagesSeenMessage.startingIndex == -1)
+            messagesDictionary[userPair].setRead(startIdx,
+                                                    startIdx+msg->messagesseen() - 1, msg->clientusername());
+
+            return Status::OK;
         }
-
-
-        Status NewMessage(ServerContext* context, const ChatMessage* msg, NewMessageReply* client_reply) {
-
-        }
-
 
         Status RefreshClient(ServerContext* context, const RefreshRequest* request, RefreshResponse* reply) {
             std::cout << "Refreshing for " << request->clientusername() << std::endl;
