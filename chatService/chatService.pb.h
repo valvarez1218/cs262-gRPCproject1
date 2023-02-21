@@ -76,6 +76,9 @@ extern LogoutReplyDefaultTypeInternal _LogoutReply_default_instance_;
 class MessagesSeenMessage;
 struct MessagesSeenMessageDefaultTypeInternal;
 extern MessagesSeenMessageDefaultTypeInternal _MessagesSeenMessage_default_instance_;
+class MessagesSeenReply;
+struct MessagesSeenReplyDefaultTypeInternal;
+extern MessagesSeenReplyDefaultTypeInternal _MessagesSeenReply_default_instance_;
 class NewMessageReply;
 struct NewMessageReplyDefaultTypeInternal;
 extern NewMessageReplyDefaultTypeInternal _NewMessageReply_default_instance_;
@@ -115,6 +118,7 @@ template<> ::chatservice::LoginReply* Arena::CreateMaybeMessage<::chatservice::L
 template<> ::chatservice::LogoutMessage* Arena::CreateMaybeMessage<::chatservice::LogoutMessage>(Arena*);
 template<> ::chatservice::LogoutReply* Arena::CreateMaybeMessage<::chatservice::LogoutReply>(Arena*);
 template<> ::chatservice::MessagesSeenMessage* Arena::CreateMaybeMessage<::chatservice::MessagesSeenMessage>(Arena*);
+template<> ::chatservice::MessagesSeenReply* Arena::CreateMaybeMessage<::chatservice::MessagesSeenReply>(Arena*);
 template<> ::chatservice::NewMessageReply* Arena::CreateMaybeMessage<::chatservice::NewMessageReply>(Arena*);
 template<> ::chatservice::Notification* Arena::CreateMaybeMessage<::chatservice::Notification>(Arena*);
 template<> ::chatservice::QueryMessagesMessage* Arena::CreateMaybeMessage<::chatservice::QueryMessagesMessage>(Arena*);
@@ -806,9 +810,10 @@ class LoginReply final :
 // -------------------------------------------------------------------
 
 class LogoutMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:chatservice.LogoutMessage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.LogoutMessage) */ {
  public:
   inline LogoutMessage() : LogoutMessage(nullptr) {}
+  ~LogoutMessage() override;
   explicit PROTOBUF_CONSTEXPR LogoutMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   LogoutMessage(const LogoutMessage& from);
@@ -881,15 +886,29 @@ class LogoutMessage final :
   LogoutMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LogoutMessage>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const LogoutMessage& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LogoutMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LogoutMessage& from) {
+    LogoutMessage::MergeImpl(*this, from);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const LogoutMessage& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
   public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LogoutMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -910,6 +929,23 @@ class LogoutMessage final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kUsernameFieldNumber = 1,
+  };
+  // string username = 1;
+  void clear_username();
+  const std::string& username() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_username(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_username();
+  PROTOBUF_NODISCARD std::string* release_username();
+  void set_allocated_username(std::string* username);
+  private:
+  const std::string& _internal_username() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_username(const std::string& value);
+  std::string* _internal_mutable_username();
+  public:
+
   // @@protoc_insertion_point(class_scope:chatservice.LogoutMessage)
  private:
   class _Internal;
@@ -918,7 +954,10 @@ class LogoutMessage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_chatService_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2691,10 +2730,40 @@ class MessagesSeenMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessagesSeenFieldNumber = 1,
-    kFirstMessageIdxFieldNumber = 2,
+    kClientUsernameFieldNumber = 1,
+    kOtherUsernameFieldNumber = 2,
+    kMessagesSeenFieldNumber = 3,
+    kFirstMessageIdxFieldNumber = 4,
   };
-  // int32 messagesSeen = 1;
+  // string clientUsername = 1;
+  void clear_clientusername();
+  const std::string& clientusername() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_clientusername(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_clientusername();
+  PROTOBUF_NODISCARD std::string* release_clientusername();
+  void set_allocated_clientusername(std::string* clientusername);
+  private:
+  const std::string& _internal_clientusername() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_clientusername(const std::string& value);
+  std::string* _internal_mutable_clientusername();
+  public:
+
+  // string otherUsername = 2;
+  void clear_otherusername();
+  const std::string& otherusername() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_otherusername(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_otherusername();
+  PROTOBUF_NODISCARD std::string* release_otherusername();
+  void set_allocated_otherusername(std::string* otherusername);
+  private:
+  const std::string& _internal_otherusername() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_otherusername(const std::string& value);
+  std::string* _internal_mutable_otherusername();
+  public:
+
+  // int32 messagesSeen = 3;
   void clear_messagesseen();
   int32_t messagesseen() const;
   void set_messagesseen(int32_t value);
@@ -2703,7 +2772,7 @@ class MessagesSeenMessage final :
   void _internal_set_messagesseen(int32_t value);
   public:
 
-  // int32 firstMessageIdx = 2;
+  // int32 firstMessageIdx = 4;
   void clear_firstmessageidx();
   int32_t firstmessageidx() const;
   void set_firstmessageidx(int32_t value);
@@ -2720,11 +2789,131 @@ class MessagesSeenMessage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr clientusername_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr otherusername_;
     int32_t messagesseen_;
     int32_t firstmessageidx_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
+  friend struct ::TableStruct_chatService_2eproto;
+};
+// -------------------------------------------------------------------
+
+class MessagesSeenReply final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:chatservice.MessagesSeenReply) */ {
+ public:
+  inline MessagesSeenReply() : MessagesSeenReply(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR MessagesSeenReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  MessagesSeenReply(const MessagesSeenReply& from);
+  MessagesSeenReply(MessagesSeenReply&& from) noexcept
+    : MessagesSeenReply() {
+    *this = ::std::move(from);
+  }
+
+  inline MessagesSeenReply& operator=(const MessagesSeenReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline MessagesSeenReply& operator=(MessagesSeenReply&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const MessagesSeenReply& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const MessagesSeenReply* internal_default_instance() {
+    return reinterpret_cast<const MessagesSeenReply*>(
+               &_MessagesSeenReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  friend void swap(MessagesSeenReply& a, MessagesSeenReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(MessagesSeenReply* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(MessagesSeenReply* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  MessagesSeenReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<MessagesSeenReply>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const MessagesSeenReply& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const MessagesSeenReply& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "chatservice.MessagesSeenReply";
+  }
+  protected:
+  explicit MessagesSeenReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:chatservice.MessagesSeenReply)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+  };
   friend struct ::TableStruct_chatService_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2777,7 +2966,7 @@ class NewMessageReply final :
                &_NewMessageReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    17;
 
   friend void swap(NewMessageReply& a, NewMessageReply& b) {
     a.Swap(&b);
@@ -2878,9 +3067,10 @@ class NewMessageReply final :
 // -------------------------------------------------------------------
 
 class RefreshRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:chatservice.RefreshRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:chatservice.RefreshRequest) */ {
  public:
   inline RefreshRequest() : RefreshRequest(nullptr) {}
+  ~RefreshRequest() override;
   explicit PROTOBUF_CONSTEXPR RefreshRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   RefreshRequest(const RefreshRequest& from);
@@ -2924,7 +3114,7 @@ class RefreshRequest final :
                &_RefreshRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    18;
 
   friend void swap(RefreshRequest& a, RefreshRequest& b) {
     a.Swap(&b);
@@ -2953,15 +3143,29 @@ class RefreshRequest final :
   RefreshRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RefreshRequest>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const RefreshRequest& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RefreshRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RefreshRequest& from) {
+    RefreshRequest::MergeImpl(*this, from);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const RefreshRequest& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
   public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RefreshRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2982,6 +3186,23 @@ class RefreshRequest final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kClientusernameFieldNumber = 1,
+  };
+  // string clientusername = 1;
+  void clear_clientusername();
+  const std::string& clientusername() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_clientusername(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_clientusername();
+  PROTOBUF_NODISCARD std::string* release_clientusername();
+  void set_allocated_clientusername(std::string* clientusername);
+  private:
+  const std::string& _internal_clientusername() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_clientusername(const std::string& value);
+  std::string* _internal_mutable_clientusername();
+  public:
+
   // @@protoc_insertion_point(class_scope:chatservice.RefreshRequest)
  private:
   class _Internal;
@@ -2990,7 +3211,10 @@ class RefreshRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr clientusername_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_chatService_2eproto;
 };
 // -------------------------------------------------------------------
@@ -3043,7 +3267,7 @@ class RefreshResponse final :
                &_RefreshResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    19;
 
   friend void swap(RefreshResponse& a, RefreshResponse& b) {
     a.Swap(&b);
@@ -3563,6 +3787,56 @@ inline void LoginReply::set_allocated_errormsg(std::string* errormsg) {
 // -------------------------------------------------------------------
 
 // LogoutMessage
+
+// string username = 1;
+inline void LogoutMessage::clear_username() {
+  _impl_.username_.ClearToEmpty();
+}
+inline const std::string& LogoutMessage::username() const {
+  // @@protoc_insertion_point(field_get:chatservice.LogoutMessage.username)
+  return _internal_username();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LogoutMessage::set_username(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:chatservice.LogoutMessage.username)
+}
+inline std::string* LogoutMessage::mutable_username() {
+  std::string* _s = _internal_mutable_username();
+  // @@protoc_insertion_point(field_mutable:chatservice.LogoutMessage.username)
+  return _s;
+}
+inline const std::string& LogoutMessage::_internal_username() const {
+  return _impl_.username_.Get();
+}
+inline void LogoutMessage::_internal_set_username(const std::string& value) {
+  
+  _impl_.username_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LogoutMessage::_internal_mutable_username() {
+  
+  return _impl_.username_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LogoutMessage::release_username() {
+  // @@protoc_insertion_point(field_release:chatservice.LogoutMessage.username)
+  return _impl_.username_.Release();
+}
+inline void LogoutMessage::set_allocated_username(std::string* username) {
+  if (username != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.username_.SetAllocated(username, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.username_.IsDefault()) {
+    _impl_.username_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:chatservice.LogoutMessage.username)
+}
 
 // -------------------------------------------------------------------
 
@@ -4440,7 +4714,107 @@ inline void DeleteAccountReply::set_allocated_errormsg(std::string* errormsg) {
 
 // MessagesSeenMessage
 
-// int32 messagesSeen = 1;
+// string clientUsername = 1;
+inline void MessagesSeenMessage::clear_clientusername() {
+  _impl_.clientusername_.ClearToEmpty();
+}
+inline const std::string& MessagesSeenMessage::clientusername() const {
+  // @@protoc_insertion_point(field_get:chatservice.MessagesSeenMessage.clientUsername)
+  return _internal_clientusername();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void MessagesSeenMessage::set_clientusername(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.clientusername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:chatservice.MessagesSeenMessage.clientUsername)
+}
+inline std::string* MessagesSeenMessage::mutable_clientusername() {
+  std::string* _s = _internal_mutable_clientusername();
+  // @@protoc_insertion_point(field_mutable:chatservice.MessagesSeenMessage.clientUsername)
+  return _s;
+}
+inline const std::string& MessagesSeenMessage::_internal_clientusername() const {
+  return _impl_.clientusername_.Get();
+}
+inline void MessagesSeenMessage::_internal_set_clientusername(const std::string& value) {
+  
+  _impl_.clientusername_.Set(value, GetArenaForAllocation());
+}
+inline std::string* MessagesSeenMessage::_internal_mutable_clientusername() {
+  
+  return _impl_.clientusername_.Mutable(GetArenaForAllocation());
+}
+inline std::string* MessagesSeenMessage::release_clientusername() {
+  // @@protoc_insertion_point(field_release:chatservice.MessagesSeenMessage.clientUsername)
+  return _impl_.clientusername_.Release();
+}
+inline void MessagesSeenMessage::set_allocated_clientusername(std::string* clientusername) {
+  if (clientusername != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.clientusername_.SetAllocated(clientusername, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.clientusername_.IsDefault()) {
+    _impl_.clientusername_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:chatservice.MessagesSeenMessage.clientUsername)
+}
+
+// string otherUsername = 2;
+inline void MessagesSeenMessage::clear_otherusername() {
+  _impl_.otherusername_.ClearToEmpty();
+}
+inline const std::string& MessagesSeenMessage::otherusername() const {
+  // @@protoc_insertion_point(field_get:chatservice.MessagesSeenMessage.otherUsername)
+  return _internal_otherusername();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void MessagesSeenMessage::set_otherusername(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.otherusername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:chatservice.MessagesSeenMessage.otherUsername)
+}
+inline std::string* MessagesSeenMessage::mutable_otherusername() {
+  std::string* _s = _internal_mutable_otherusername();
+  // @@protoc_insertion_point(field_mutable:chatservice.MessagesSeenMessage.otherUsername)
+  return _s;
+}
+inline const std::string& MessagesSeenMessage::_internal_otherusername() const {
+  return _impl_.otherusername_.Get();
+}
+inline void MessagesSeenMessage::_internal_set_otherusername(const std::string& value) {
+  
+  _impl_.otherusername_.Set(value, GetArenaForAllocation());
+}
+inline std::string* MessagesSeenMessage::_internal_mutable_otherusername() {
+  
+  return _impl_.otherusername_.Mutable(GetArenaForAllocation());
+}
+inline std::string* MessagesSeenMessage::release_otherusername() {
+  // @@protoc_insertion_point(field_release:chatservice.MessagesSeenMessage.otherUsername)
+  return _impl_.otherusername_.Release();
+}
+inline void MessagesSeenMessage::set_allocated_otherusername(std::string* otherusername) {
+  if (otherusername != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.otherusername_.SetAllocated(otherusername, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.otherusername_.IsDefault()) {
+    _impl_.otherusername_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:chatservice.MessagesSeenMessage.otherUsername)
+}
+
+// int32 messagesSeen = 3;
 inline void MessagesSeenMessage::clear_messagesseen() {
   _impl_.messagesseen_ = 0;
 }
@@ -4460,7 +4834,7 @@ inline void MessagesSeenMessage::set_messagesseen(int32_t value) {
   // @@protoc_insertion_point(field_set:chatservice.MessagesSeenMessage.messagesSeen)
 }
 
-// int32 firstMessageIdx = 2;
+// int32 firstMessageIdx = 4;
 inline void MessagesSeenMessage::clear_firstmessageidx() {
   _impl_.firstmessageidx_ = 0;
 }
@@ -4479,6 +4853,10 @@ inline void MessagesSeenMessage::set_firstmessageidx(int32_t value) {
   _internal_set_firstmessageidx(value);
   // @@protoc_insertion_point(field_set:chatservice.MessagesSeenMessage.firstMessageIdx)
 }
+
+// -------------------------------------------------------------------
+
+// MessagesSeenReply
 
 // -------------------------------------------------------------------
 
@@ -4507,6 +4885,56 @@ inline void NewMessageReply::set_received(bool value) {
 // -------------------------------------------------------------------
 
 // RefreshRequest
+
+// string clientusername = 1;
+inline void RefreshRequest::clear_clientusername() {
+  _impl_.clientusername_.ClearToEmpty();
+}
+inline const std::string& RefreshRequest::clientusername() const {
+  // @@protoc_insertion_point(field_get:chatservice.RefreshRequest.clientusername)
+  return _internal_clientusername();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RefreshRequest::set_clientusername(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.clientusername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:chatservice.RefreshRequest.clientusername)
+}
+inline std::string* RefreshRequest::mutable_clientusername() {
+  std::string* _s = _internal_mutable_clientusername();
+  // @@protoc_insertion_point(field_mutable:chatservice.RefreshRequest.clientusername)
+  return _s;
+}
+inline const std::string& RefreshRequest::_internal_clientusername() const {
+  return _impl_.clientusername_.Get();
+}
+inline void RefreshRequest::_internal_set_clientusername(const std::string& value) {
+  
+  _impl_.clientusername_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RefreshRequest::_internal_mutable_clientusername() {
+  
+  return _impl_.clientusername_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RefreshRequest::release_clientusername() {
+  // @@protoc_insertion_point(field_release:chatservice.RefreshRequest.clientusername)
+  return _impl_.clientusername_.Release();
+}
+inline void RefreshRequest::set_allocated_clientusername(std::string* clientusername) {
+  if (clientusername != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.clientusername_.SetAllocated(clientusername, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.clientusername_.IsDefault()) {
+    _impl_.clientusername_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:chatservice.RefreshRequest.clientusername)
+}
 
 // -------------------------------------------------------------------
 
@@ -4575,6 +5003,8 @@ RefreshResponse::notifications() const {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
