@@ -40,7 +40,7 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
     public:
         explicit ChatServiceImpl() {}
 
-        // TODO
+
         Status CreateAccount(ServerContext* context, const CreateAccountMessage* create_account_message, 
                             CreateAccountReply* server_reply) {
             // Mutex lock, check for existing users, add user, etc.
@@ -60,14 +60,13 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
                 activeUsers.insert(username);
                 activeUser_mutex.unlock();
 
-                // std::cout << "Username '" << username << "' added with client_fd: " << std::to_string(client_fd) << ", and thread id: "<< thread_id << std::endl;
                 std::cout << "Added user " << username << std::endl;
                 server_reply->set_createaccountsuccess(true);
             }
             return Status::OK;
         }
 
-        // TODO
+
         Status Login(ServerContext* context, const LoginMessage* login_message, LoginReply* server_reply) {
             // Check for existing user and verify password
             std::string username = login_message->username();
@@ -90,7 +89,7 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             return Status::OK;
         }
 
-        // TODO
+
         Status Logout(ServerContext* context, const LogoutMessage* logout_message, LogoutReply* server_reply) {
             // close file descriptor and thread
             activeUser_mutex.lock();
@@ -99,12 +98,14 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             return Status::OK;
         }
 
-        // TODO
+
         Status ListUsers(ServerContext* context, const QueryUsersMessage* query, ServerWriter<User>* writer) {
             // Mutex lock?
             std::string prefix = query->username();
+            std::vector<std::string> usernames;
             userTrie_mutex.lock();
-            std::vector<std::string> usernames = userTrie.returnUsersWithPrefix(prefix);
+            usernames = userTrie.returnUsersWithPrefix(prefix);
+            std::cout << "returnUsersWithPrefix finished running" << std::endl;
             userTrie_mutex.unlock();
 
             for (std::string username : usernames) {
@@ -115,7 +116,7 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             return Status::OK;
         }
 
-        // TODO
+
         Status SendMessage(ServerContext* context, const ChatMessage* msg, SendMessageReply* server_reply) {
             bool userExists = userTrie.userExists(msg->recipientusername());
 
@@ -146,7 +147,7 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             return Status::OK;
         }
 
-        // TODO
+
         Status QueryNotifications(ServerContext* context, const QueryNotificationsMessage* query, 
                                 ServerWriter<Notification>* writer) {
 

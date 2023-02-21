@@ -153,6 +153,7 @@ struct ChatServiceClient {
             Status status = reader->Finish();
             if (!status.ok()) {
                 std::cout << "list_users failed." << std::endl;
+                std::cout << status.error_code() << ": " << status.error_message() << std::endl;
             }
         }
 
@@ -223,9 +224,9 @@ struct ChatServiceClient {
 
 
             // TODO: send back a messages seen message?
-            ClientContext context;
-            MessagesSeenMessage message;
-            MessagesSeenReply server_reply;
+            // ClientContext context;
+            // MessagesSeenMessage message;
+            // MessagesSeenReply server_reply;
         }
 
 
