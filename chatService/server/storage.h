@@ -288,7 +288,6 @@ struct UserTrie {
                 std::cout << "Got usernames" << std::endl;
                 return usersFound;
             }
-            std::cout << "Finding users with prefix " << usernamePrefix << std::endl;
             std::pair<CharNode*, int> nodeIdxPair = findLongestMatchingPrefix(usernamePrefix);
             CharNode* deepestNode = nodeIdxPair.first;
             int index = nodeIdxPair.second;
@@ -301,7 +300,6 @@ struct UserTrie {
             // Perform DFS starting at deepest node
             std::vector<std::string> usersFound;
             performDFS(usernamePrefix, deepestNode, usersFound);
-            std::cout << "Returning users found" << std::endl;
             return usersFound;
         }
 

@@ -100,12 +100,15 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
 
 
         Status ListUsers(ServerContext* context, const QueryUsersMessage* query, ServerWriter<User>* writer) {
-            // Mutex lock?
             std::string prefix = query->username();
             std::vector<std::string> usernames;
             userTrie_mutex.lock();
-            usernames = userTrie.returnUsersWithPrefix(prefix);
-            std::cout << "returnUsersWithPrefix finished running" << std::endl;
+            try {
+                usernames = userTrie.returnUsersWithPrefix(prefix);
+            } catch (std::runtime_error &e) {
+                std::cout << e.what() << std::endl;
+                usernames = {};
+            }
             userTrie_mutex.unlock();
 
             for (std::string username : usernames) {
@@ -198,11 +201,19 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             std::cout << "Deleting account of '" << delete_acount_message->username() << "'" << std::endl;
             // Flag user account as deleted in trie
             userTrie_mutex.lock();
-            userTrie.deleteUser(delete_acount_message->username());
+            try {
+                userTrie.deleteUser(delete_acount_message->username());
+            } catch (std::runtime_error &e) {
+                std::cout << e.what() << std::endl;
+                server_reply->set_errormsg(e.what());
+                server_reply->set_deletedaccount(false);
+                return Status::OK;
+            }
             userTrie_mutex.unlock();
 
             currentConversationsDict.erase(delete_acount_message->username());
             server_reply->set_deletedaccount(true);
+            return Status::OK;
         }
 
         // TODO
