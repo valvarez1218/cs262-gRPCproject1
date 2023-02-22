@@ -4,10 +4,6 @@
 #include <cstring>
 
 int main (void) {
-
-    // if (!establishConnection()) {
-    //     return -1;
-    // }
     std::string ip_addr;
     std::cout << "Input IP Address of Server: ";
     std::cin >> ip_addr;
