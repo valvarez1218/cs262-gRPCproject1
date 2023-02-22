@@ -30,7 +30,7 @@ std::map<std::string, CurrentConversation> currentConversationsDict;
 // Key: user with active conversations, Value: map from users to number of notifications they have
 struct ConversationsDictionary {
     std::unordered_map<std::string, std::unordered_map<std::string, int> > conversations;
-    std::mutex notificationsMutex; // TODO: had to move lock up 1 level :(
+    std::mutex notificationsMutex;
 
     // increment new messages
     void newNotification(std::string senderUsername, std::string recipientUsername) {
