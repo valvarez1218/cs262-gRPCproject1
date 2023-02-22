@@ -1,4 +1,3 @@
-// #include "../messageTypes.h"
 #include "../chatService.pb.h"
 #include "../globals.h"
 
@@ -19,20 +18,6 @@
 // namespaces used
 using chatservice::ChatMessage;
 using chatservice::Notification;
-
-// TODO: ask nictor why this doesnt work
-// struct Notifications {
-//     int value = 0;
-//     // std::mutex valueMutex;
-
-//     void change(int toAdd) {
-//         // valueMutex.lock();
-//         std::cerr << "value before " << value << "\n";
-//         value += toAdd;
-//         std::cerr << "value after " << value << "\n";
-//         // valueMutex.unlock();
-//     }
-// };
 
 struct CurrentConversation {
     std::string username;
@@ -217,14 +202,8 @@ struct std::hash<UserPair>
 
 std::unordered_map<UserPair, StoredMessages> messagesDictionary;
 
-// std::mutex socketDictionary_mutex;
-// std::map<std::string, std::pair<std::thread::id, int>> socketDictionary;
-
 std::mutex activeUser_mutex;
 std::unordered_set<std::string> activeUsers;
-
-// std::mutex threadDictionary_mutex;
-// std::unordered_map<std::thread::id, pthread_t> threadDictionary;
 
 
 struct CharNode {
@@ -394,7 +373,3 @@ void cleanup(std::string clientUsername, std::thread::id thread_id, int client_f
 }
 
 char threadExitReturnVal [50];
-// Initialize Trie
-// Add user
-// Find all users associated with a substring
-// Verify username/password pair
