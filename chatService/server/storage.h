@@ -46,7 +46,6 @@ struct ConversationsDictionary {
         notificationsMutex.unlock();
     }
 
-    // TODO: Package notifications to be sent out
     std::vector<std::pair<char [g_UsernameLimit], char> > getNotifications(std::string recipientUsername) {
         std::vector<std::pair<char [g_UsernameLimit], char> > allNotifications;
 
@@ -120,7 +119,6 @@ struct StoredMessages {
     std::mutex messageMutex;
 
     // Adding a new message onto the messageList
-    // TODO: have this return thread of the recipient?
     void addMessage(std::string senderUsername, std::string recipientUsername, std::string message) {
         messageMutex.lock();
 
@@ -146,8 +144,6 @@ struct StoredMessages {
     }
 
     // Returning the messages a user queries
-    // TODO: lastMessageDeliveredIndex should be updated upon CONSECUTIVE query messages calls and reset when the user queries other messages
-    // It should also not run if the lastMessageDelivered index is zero, 
     GetStoredMessagesReturnValue getStoredMessages(std::string readerUsername, int lastMessageDeliveredIndex) {
         // assert(lastMessageDeliveredIndex!=0);
         messageMutex.lock();
@@ -338,7 +334,6 @@ struct UserTrie {
                 return false;
             }
 
-            // return strcmp(password.c_str(), (userPasswordMap[nodeIdxPair.first]).c_str()) == 0;
             return password == userPasswordMap[nodeIdxPair.first];
         }
 
@@ -366,9 +361,7 @@ std::unordered_map<int, bool> forceLogoutDictionary;
 // Cleaning up session-related storage structures
 void cleanup(std::string clientUsername, std::thread::id thread_id, int client_fd) {
     std::cout << "killing thread :" << thread_id << std::endl;
-    // threadDictionary.erase(thread_id);
     queuedOperationsDictionary.erase(clientUsername);
-    // socketDictionary.erase(clientUsername);
     close(client_fd);
 }
 
