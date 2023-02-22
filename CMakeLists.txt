@@ -1,8 +1,22 @@
-cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.2)
 
 project(ChatService)
 
 include(./cmake/common.cmake)
+
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/5376968f6948923e2411081fd9372e71a59d8e77.zip
+)
+
+# GoogleTest requires at least C++14
+set(CMAKE_CXX_STANDARD 14)
+
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
 
 # Proto file
 get_filename_component(cs_proto "./chatService/chatService.proto" ABSOLUTE)
@@ -25,6 +39,45 @@ add_custom_command(
 
 # Include generated *.pb.h files
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
+
+find_package(protobuf REQUIRED)
+include_directories(${PROTOBUF_INCLUDE_DIRS})
+
+enable_testing()
+
+add_executable(
+  storageTests
+  ./tests/storageTests.cc
+) 
+
+add_executable(
+  clientTests
+  ./tests/clientTests.cc
+)
+
+add_executable(
+  messageSizeTests
+  ./tests/messageSizeTests.cc
+)
+
+target_link_libraries(
+  storageTests
+  gtest
+  gtest_main
+)
+
+target_link_libraries(
+  clientTests
+  gtest
+  gtest_main
+)
+
+target_link_libraries(
+  messageSizeTests
+  gtest
+  gtest_main
+)
+
 
 # hw_grpc_proto
 add_library(cs_grpc_proto
@@ -51,3 +104,10 @@ target_link_libraries(chatServer
     ${_REFLECTION}
     ${_GRPC_GRPCPP}
     ${_PROTOBUF_LIBPROTOBUF})
+
+
+include(GoogleTest)
+# gtest_discover_tests(storageTests)
+gtest_add_tests(TARGET storageTests)
+gtest_add_tests(TARGET clientTests)
+gtest_add_tests(TARGET messageSizeTests)
