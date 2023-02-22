@@ -41,7 +41,6 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
     public:
         explicit ChatServiceImpl() {}
 
-
         Status CreateAccount(ServerContext* context, const CreateAccountMessage* create_account_message, 
                             CreateAccountReply* server_reply) {
             // Mutex lock, check for existing users, add user, etc.
@@ -92,7 +91,6 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
 
 
         Status Logout(ServerContext* context, const LogoutMessage* logout_message, LogoutReply* server_reply) {
-            // close file descriptor and thread
             activeUser_mutex.lock();
             activeUsers.erase(logout_message->username());
             activeUser_mutex.unlock();
