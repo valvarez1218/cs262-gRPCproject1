@@ -215,7 +215,7 @@ class ChatServiceImpl final : public chatservice::ChatService::Service {
             return Status::OK;
         }
 
-        // TODO
+
         Status MessagesSeen(ServerContext* context, const MessagesSeenMessage* msg, MessagesSeenReply* reply) {
             UserPair userPair(msg->clientusername(), msg->otherusername());
             int startIdx = currentConversationsDict[msg->clientusername()].messagesSentStartIndex;
